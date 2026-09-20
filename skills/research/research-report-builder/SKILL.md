@@ -59,12 +59,12 @@ Tell the user what will be built before building it:
 Don't wait for elaborate confirmation — a simple "yes"/"go"/"do it" is enough, same as the funnel orchestrator's approval gate.
 
 ### Step 3: Set Up the Project Folder and Publish a Skeleton
-Before running any component skill, confirm the brand/business name if it isn't already clear from context — never default to the offer name alone (see `shared/references/output-conventions.md`). Create `[brand-slug]-[idea-slug]-research/` in the user's working directory:
+Before running any component skill, confirm the brand/business name if it isn't already clear from context — never default to the offer name (see `shared/references/output-conventions.md`). The root folder is the brand name alone, exactly as the user writes it (e.g. `SmartBuzzAI`, not slugified); reuse it if it already exists for this business rather than creating a new one. Create `[BrandName]/research/`:
 - `brief/research-report.md` — the compiled report as markdown (written last, Step 5)
 - `data/report-sections.json` — structured section data, updated as each component finishes
 - `report.html` — the rendered page, written immediately with every section marked "researching..." and regenerated after each component completes
 
-Tell the user the file path right away: "I've started your research report at `[folder]/report.html` — open it now and I'll fill it in as each piece finishes." This is the fix for the single biggest failure mode found in testing: don't make the founder wait through a silent multi-minute run and then dump a wall of text — give them something to watch fill in.
+Tell the user the file path right away: "I've started your research report at `[BrandName]/research/report.html` — open it now and I'll fill it in as each piece finishes." This is the fix for the single biggest failure mode found in testing: don't make the founder wait through a silent multi-minute run and then dump a wall of text — give them something to watch fill in.
 
 ### Step 4: Run the Component Skills in Sequence, Updating the Page After Each One
 Run each in order, feeding each one's relevant output into the next where it helps (e.g. the target segment found in Step 4c narrows the market sizing in Step 4a if it wasn't already run):

@@ -333,25 +333,20 @@ You now have everything needed to set it up:
 
 ### Creating the Folder
 
-**Confirm the brand/business name first if it isn't already clear from context** — never derive the folder name from the offer alone. A founder running multiple businesses or brands needs to tell projects apart at a glance in a flat folder listing (see `shared/references/output-conventions.md`).
+**Confirm the brand/business name first if it isn't already clear from context.** The root folder is the brand name alone — exactly as the user writes it (e.g. `SmartBuzzAI`), never slugified, and never with the offer appended. The same way a company isn't named "CrowdStrike-Falcon-EDR" on disk, one business gets one root folder no matter how many offers or funnels it has (see `shared/references/output-conventions.md`). The offer name is a detail inside that folder, not part of its name.
 
-Derive a slug from the brand name AND the offer name:
-- Lowercase, spaces → hyphens, remove special characters
-- Format: `[brand-slug]-[offer-slug]-funnel`
-- Example: brand "Cash Flow Academy", offer "Webinar" → `cash-flow-academy-webinar-funnel` (brand and offer happen to overlap here — for a distinct brand + offer, e.g. brand "SmartBuzzAI", offer "Shadow AI Risk Review", it's `smartbuzzai-shadow-ai-risk-review-funnel`)
+Reuse the brand's existing root folder if one already exists (from a prior research or roadmap run, or a previous funnel) — never create a second root folder for the same business.
 
-Create the folder inside the user's workspace (the mounted folder):
+Create `[BrandName]/funnel/` inside the user's workspace:
 
 ```python
 import os, re, datetime
 
-brand_name = "[BRAND/BUSINESS NAME FROM INTAKE]"
-offer_name = "[OFFER NAME FROM INTAKE]"
+brand_name = "[BRAND/BUSINESS NAME FROM INTAKE]"   # exact user-facing name, e.g. "SmartBuzzAI" — do not lowercase or slugify
+offer_name = "[OFFER NAME FROM INTAKE]"             # used inside the folder for file/brief content, never for the folder name itself
 funnel_type = "[FUNNEL TYPE]"  # e.g. "webinar", "lead-magnet", "book"
 
-brand_slug = re.sub(r"[^a-z0-9]+", "-", brand_name.lower()).strip("-")
-offer_slug = re.sub(r"[^a-z0-9]+", "-", offer_name.lower()).strip("-")
-project_dir = os.path.join("[WORKSPACE PATH]", f"{brand_slug}-{offer_slug}-funnel")
+project_dir = os.path.join("[WORKSPACE PATH]", brand_name, "funnel")
 os.makedirs(project_dir, exist_ok=True)
 
 # Always create these core folders
@@ -420,7 +415,7 @@ This file self-documents the project so any future session can pick up where thi
 
 After creating the folder, say something like:
 
-> "I've set up your project folder: **`[folder-name]-funnel/`**
+> "I've set up your project folder: **`[BrandName]/funnel/`**
 >
 > Everything we build will be saved there as we go. I've also created an
 > `existing/` subfolder — if you have any files you'd like me to read before
@@ -476,7 +471,7 @@ automatically during Step 5 — after writing each asset, immediately save it:
 | Social content pack | `[NN]-social/social-content-pack.md` |
 | Headline variants | `[NN]-headlines/headline-variants.md` |
 | Images (mockups, covers) | `[NN]-images/[name].png` (or `06-images/` for book funnels) |
-| Client brief PDF | `brief/[offer-slug]-funnel-brief.pdf` |
+| Client brief PDF | `brief/[offer-slug]-brief.pdf` |
 
 **Folder number rule:** The `[NN]` prefix for emails, social, and images must
 match the funnel-type subfolder table in Step 3c — not the generic examples above.
@@ -489,7 +484,7 @@ numbered folder prefixes keep assets in build order so the folder reads like a
 checklist.
 
 **After saving each file**, include a one-liner in the chat output:
-> `✓ Saved → cash-flow-academy-webinar-funnel/01-webinar-script/webinar-script.md`
+> `✓ Saved → SmartBuzzAI/funnel/01-webinar-script/webinar-script.md`
 
 This lets the user track progress in real time and know exactly where to find
 each piece.
@@ -924,7 +919,7 @@ the entire asset map from top to bottom. Only pause if:
   information that's already in an existing file.
 - **After completing:** Save it to its numbered subfolder in the project folder
   (see Step 3c Saving Assets table for file paths). Include a save confirmation:
-  > `✓ Saved → [folder-name]-funnel/[subfolder]/[filename]`
+  > `✓ Saved → [BrandName]/funnel/[subfolder]/[filename]`
 - **Then immediately start the next asset.** No check-in. No "should I
   continue?" Just build.
 
@@ -1229,7 +1224,7 @@ directives, tech stack recommendations — condensed to 1 page.
 - Use `weasyprint` or `reportlab` via the `pdf` skill to render the brief
 - Style it cleanly: dark header bar with offer name, white body, table borders,
   section dividers. Professional but not over-designed.
-- Save as: `[offer-name-slug]-funnel-brief.pdf`
+- Save as: `[offer-name-slug]-brief.pdf` inside `[BrandName]/funnel/brief/`
 - After generating, tell the user: "Your client brief is ready — send this
   to your client for review before you start building pages."
 

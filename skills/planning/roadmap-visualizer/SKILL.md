@@ -52,7 +52,7 @@ This skill belongs to Stage S5: Planning
 Read the phased roadmap (from `feature-roadmap-architect` or the PRD). Each phase becomes a column. Each feature/task becomes a card. If status isn't given, ask the founder which items are done, in progress, or not started — don't guess.
 
 ### Step 2: Set Up the Project Folder
-Confirm the brand/business name if not already clear from context (see `shared/references/output-conventions.md` — never default to the project name alone). Create `[brand-slug]-[project-name-slug]-roadmap/` in the user's working directory if it doesn't already exist (on an update, reuse the existing one). Inside it:
+Confirm the brand/business name if not already clear from context (see `shared/references/output-conventions.md`). The root folder is the brand name alone (e.g. `SmartBuzzAI`), never the offer/project name — reuse it if it already exists for this business. Create `[BrandName]/roadmap/` if it doesn't already exist (on an update, reuse the existing one). Inside it:
 - `data/roadmap.json` — the structured source of truth: phases, cards, statuses
 - `roadmap.html` — the rendered board, regenerated from `roadmap.json` every time
 

@@ -1,7 +1,7 @@
 {
   "name": "saas-builder-skills",
   "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence.",
-  "version": "4.3.0",
+  "version": "4.4.0",
   "skill_count": 87,
   "skills": [
     {

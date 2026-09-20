@@ -23,19 +23,30 @@ Every visual/document output this pack produces (research reports, roadmap board
 
 ## Project folder naming convention
 
-`[brand-or-business-slug]-[idea-or-offer-slug]-[type]/` in the user's current working directory — **always lead with the brand/business name**, never just the offer name. A founder running multiple businesses (or an agency running multiple clients) needs to tell projects apart at a glance in a flat folder listing — `shadow-ai-review-research/` could belong to anyone; `smartbuzzai-shadow-ai-review-research/` can only belong to one thing.
+**The root folder is the brand/business name — nothing else.** Exactly as the user would write it (proper case, e.g. `SmartBuzzAI`, not lowercased or slugified). Never append the offer, service, or project name to the root folder — the same way a company isn't named "CrowdStrike-Falcon-EDR" on disk, one business is one root folder no matter how many offers, services, or projects it has.
 
-Examples:
-- `smartbuzzai-shadow-ai-review-research/` (research-report-builder)
-- `smartbuzzai-shadow-ai-review-funnel/` (funnel-builder-orchestrator)
-- `acmeapp-roadmap/` (roadmap-visualizer)
+The offer/service/project name is a **detail that lives inside** the brand folder — as a subfolder named for what the output actually is, not for the specific offer:
 
-**If the brand/business name isn't already known from context, ask for it before creating the folder** — don't default to the offer name alone and don't guess.
+```
+SmartBuzzAI/
+  research/          ← research-report-builder output
+    report.html
+    brief/research-report.md
+    data/
+  funnel/             ← funnel-builder-orchestrator output
+    ...
+  roadmap/            ← roadmap-visualizer output
+    ...
+```
 
-Standard subfolders:
+**If the brand/business name isn't already known from context, ask for it before creating anything** — don't default to the offer name and don't guess. Reuse the existing brand folder if one already exists for this business; never create a second root folder for the same brand.
+
+If a business runs the same *type* of project more than once (e.g. a second research pass after a pivot), reuse the same subfolder and update it (per the re-write convention above) rather than creating `research-2/` — the file's own content reflects what's current. Only create a dated or numbered variant if the user explicitly wants old and new kept side by side.
+
+Standard subfolders inside each `[type]/` folder:
 - `brief/` — the compiled report/brief as markdown, and any PDF export
 - `data/` — JSON files backing any page that needs regeneration from structured state
-- files at the root — the actual HTML page(s) the user opens
+- files at the `[type]/` root — the actual HTML page(s) the user opens
 
 ## Skills using this pattern
 
