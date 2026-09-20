@@ -2,10 +2,10 @@
 
 **Turn any AI into your app-building and growth team.**
 
-85 AI-powered skills across 10 stages with a closed-loop flywheel. Research the idea, plan it properly, build one feature at a time, actually verify it works, deploy it, run it, build the funnel that sells it, write the copy, grow it, and see the whole thing visually instead of buried in markdown — with Claude Code or any AI agent.
+98 AI-powered skills across 11 stages with a closed-loop flywheel. Research the idea, plan it properly, build one feature at a time, actually verify it works, deploy it, run it, build the funnel that sells it, write the copy, generate every finished asset the funnel needs, grow it, and see the whole thing visually instead of buried in markdown — with Claude Code or any AI agent.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-85-brightgreen)](skills/)
+[![Skills](https://img.shields.io/badge/skills-98-brightgreen)](skills/)
 
 Works with: **Claude Code** · **ChatGPT** · **Gemini CLI** · **Cursor** · **Windsurf** · **any AI that reads text**
 
@@ -21,10 +21,12 @@ Structurally adapted from three MIT-licensed source repos, fully rewritten and r
 
 ## Repo structure
 
-- `skills/{stage}/{skill-name}/SKILL.md` — the 83 skill definitions
+- `skills/{stage}/{skill-name}/SKILL.md` — the 98 skill definitions
 - `shared/references/` — glossary + flywheel connection map
 - `registry.json` — machine-readable skill catalog
 - `.claude-plugin/` — Claude Code plugin manifest
+
+Note: `skills/asset-generation/` (S11) is proprietary — owned outright, not third-party or MIT-adapted like the other stages. See its skills' `license: proprietary` frontmatter.
 
 ### Install (Claude Code)
 
@@ -89,6 +91,11 @@ application-funnel · challenge-funnel · ecommerce-funnel · evergreen-webinar-
 Direct-response copywriting frameworks, reframed for SaaS landing pages, onboarding, and pricing — not generic ad-agency copy.
 
 avatar-extraction · offer-extraction · headline-matrix · objection-crusher · schwartz-awareness-mapper · ad-angle-multiplier · full-funnel-campaign-orchestrator · generic-language-killer
+
+### S11 — Asset Generation (13 skills)
+**Proprietary — owned outright, not MIT-adapted.** Produces complete, ready-to-deploy copy and HTML in one pass (not outlines or placeholders): full pages, full email sequences, full scripts. `funnel-builder-orchestrator` runs the whole build end-to-end and is the entry point; every other skill here also works standalone.
+
+funnel-builder-orchestrator · lead-magnet-creator · landing-page-generator · email-sequence-generator · thank-you-page-generator · webinar-script-generator · vsl-script-generator · social-content-pack · headline-hook-generator · upsell-page-generator · quiz-flow-generator · challenge-content-generator · affiliate-promo-kit
 
 ## Try it now
 

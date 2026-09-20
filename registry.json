@@ -1,8 +1,8 @@
 {
   "name": "saas-builder-skills",
-  "description": "85 AI-powered skills across 10 stages for building, testing, deploying, growing, and visually tracking SaaS apps and their funnels.",
-  "version": "2.1.0",
-  "skill_count": 85,
+  "description": "98 AI-powered skills across 11 stages for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps.",
+  "version": "3.0.0",
+  "skill_count": 98,
   "skills": [
     {
       "slug": "competitor-teardown",
@@ -344,7 +344,7 @@
       "slug": "compliance-checker",
       "folder": "skills/meta/compliance-checker",
       "stage": "S8-Meta",
-      "description": "Audits a SaaS app against baseline legal and data-protection requirements before real users or paying customers sign up, covering privacy policy, terms of service, cookie consent, GDPR/CCPA data-subject basics, and a WISP-style data protection posture for apps handling sensitive personal or financial data."
+      "description": "Audits a SaaS app against baseline legal and data-protection requirements before real users or paying customers sign up, covering privacy policy, terms of service, cookie consent, GDPR/CCPA data-subject basics, and a WISP-style data protection posture for apps handling sensitive personal or financia"
     },
     {
       "slug": "create-skill",
@@ -513,6 +513,84 @@
       "folder": "skills/copywriting/schwartz-awareness-mapper",
       "stage": "S10-Copywriting",
       "description": "Applies Eugene Schwartz's five stages of market awareness (unaware, problem-aware, solution-aware, product-aware, most-aware) to determine what angle and message a specific SaaS audience segment actually needs, so copy doesn't sell to people who aren't ready for it yet."
+    },
+    {
+      "slug": "affiliate-promo-kit",
+      "folder": "skills/asset-generation/affiliate-promo-kit",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "challenge-content-generator",
+      "folder": "skills/asset-generation/challenge-content-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "email-sequence-generator",
+      "folder": "skills/asset-generation/email-sequence-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "funnel-builder-orchestrator",
+      "folder": "skills/asset-generation/funnel-builder-orchestrator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "headline-hook-generator",
+      "folder": "skills/asset-generation/headline-hook-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "landing-page-generator",
+      "folder": "skills/asset-generation/landing-page-generator",
+      "stage": "S11-Asset-Generation",
+      "description": "Use this skill whenever a user wants to build, write, or generate a marketing landing page, sales page, or promotional web page. Trigger on phrases like: \"build me a landing page for...\", \"write copy for my sales page\", \"I need a page that sells my...\", \"create a landing page\", \"help me write a page"
+    },
+    {
+      "slug": "lead-magnet-creator",
+      "folder": "skills/asset-generation/lead-magnet-creator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "quiz-flow-generator",
+      "folder": "skills/asset-generation/quiz-flow-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "social-content-pack",
+      "folder": "skills/asset-generation/social-content-pack",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "thank-you-page-generator",
+      "folder": "skills/asset-generation/thank-you-page-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "upsell-page-generator",
+      "folder": "skills/asset-generation/upsell-page-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "vsl-script-generator",
+      "folder": "skills/asset-generation/vsl-script-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
+    },
+    {
+      "slug": "webinar-script-generator",
+      "folder": "skills/asset-generation/webinar-script-generator",
+      "stage": "S11-Asset-Generation",
+      "description": ""
     }
   ]
 }

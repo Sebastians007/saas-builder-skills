@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "saas-builder-skills",
   "metadata": {
-    "description": "52 skills across 8 stages for researching, planning, building, testing, deploying, and growing web apps and SaaS products."
+    "description": "98 skills across 11 stages for researching, planning, building, testing, deploying, growing, marketing, and generating complete funnel assets for web apps and SaaS products."
   },
   "owner": {
     "name": "Sebastian"
@@ -10,8 +10,8 @@
   "plugins": [
     {
       "name": "saas-builder-skills",
-      "description": "85 AI-powered skills across 10 stages (Research, Planning, Building, Testing, Deployment, Operations, Growth, Meta, Funnels, Copywriting) for building, marketing, growing, and visually tracking web apps and SaaS products, Cloudflare-native.",
-      "version": "2.1.0",
+      "description": "98 skills across 11 stages (Research, Planning, Building, Testing, Deployment, Operations, Growth, Meta, Funnels, Copywriting, Asset Generation) for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS products, Cloudflare-native.",
+      "version": "3.0.0",
       "source": "./plugin",
       "category": "development",
       "tags": [
