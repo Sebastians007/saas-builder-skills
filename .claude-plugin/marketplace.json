@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "saas-builder-skills",
   "metadata": {
-    "description": "85 skills across 11 stages, ordered to match real usage sequence, for building, testing, deploying, growing, and marketing SaaS products."
+    "description": "90 specialist skills behind one v5 project orchestrator."
   },
   "owner": {
     "name": "Sebastian"
@@ -10,16 +10,19 @@
   "plugins": [
     {
       "name": "saas-builder-skills",
-      "description": "85 skills across 11 stages, ordered to match real usage sequence (Research, Audience & Positioning, Funnel Build, Copywriting, Planning, Building, Testing, Deployment, Operations, Growth, Meta) for building, testing, deploying, growing, and marketing SaaS products, Cloudflare-native.",
-      "version": "4.5.0",
+      "description": "90 specialist skills behind one project orchestrator. Handles apps, SaaS, websites, brands, services, features, launches and ongoing operations without a rigid stage maze.",
+      "version": "5.0.0",
       "source": "./plugin",
       "category": "development",
       "tags": [
-        "saas",
         "app-building",
         "cloudflare",
-        "skills",
-        "planning"
+        "orchestration",
+        "planning",
+        "project-management",
+        "saas",
+        "sdlc",
+        "skills"
       ]
     }
   ]

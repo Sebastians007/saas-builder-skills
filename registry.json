@@ -1,530 +1,639 @@
 {
   "name": "saas-builder-skills",
-  "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence.",
-  "version": "4.5.0",
-  "skill_count": 87,
+  "description": "Specialist skill library behind the v5 project orchestrator.",
+  "version": "5.0.0",
+  "architecture": "orchestrator-state-renderer-specialists",
+  "skill_count": 90,
   "skills": [
-    {
-      "slug": "competitor-teardown",
-      "folder": "skills/research/competitor-teardown",
-      "stage": "S1-Research",
-      "description": "Researches 3-5 real competitors for an app idea and reports their pricing, features, positioning, and weaknesses in one comparable table. Use this skill when the user asks about \"who else does this\", \"competitor research\", or says \"who are my competitors\", \"what does the competition charge\", \"tear d"
-    },
-    {
-      "slug": "feature-differentiator",
-      "folder": "skills/research/feature-differentiator",
-      "stage": "S1-Research",
-      "description": "Ranks a list of possible product features by whether they actually differentiate the product versus whether they're table-stakes that competitors already have. Use this skill when the user asks about \"which features matter\", \"what should I build first\", or says \"which of these features actually matt"
-    },
-    {
-      "slug": "launch-directory-submitter",
-      "folder": "skills/research/launch-directory-submitter",
-      "stage": "S1-Research",
-      "description": "Produces a submission checklist and ready-to-use copy templates for launching a finished app on Product Hunt, BetaList, Hacker News Show HN, and similar directories. Use this skill when the user asks about \"where should I launch this\", or says \"help me launch on Product Hunt\", \"write my Show HN post"
-    },
-    {
-      "slug": "market-sizing",
-      "folder": "skills/research/market-sizing",
-      "stage": "S1-Research",
-      "description": "Sizes the actual market for an app or service idea \u2014 TAM, SAM, SOM, and growth rate \u2014 with sourced numbers, not invented figures. Use this skill when the user asks about \"how big is this market\", \"is this worth pursuing\", or says \"what's the market size for this\", \"is this market growing or shrinkin"
-    },
-    {
-      "slug": "pricing-model-calculator",
-      "folder": "skills/research/pricing-model-calculator",
-      "stage": "S1-Research",
-      "description": "Works out SaaS pricing tiers and unit economics \u2014 what to charge, margin per customer, and how many paying users are needed to break even \u2014 for a described product. Use this skill when the user asks about \"what should I charge\", or says \"what should I charge for this\", \"help me price my app\", \"how m"
-    },
-    {
-      "slug": "research-report-builder",
-      "folder": "skills/research/research-report-builder",
-      "stage": "S1-Research",
-      "description": "Runs the full research phase and compiles it into ONE coherent report \u2014 market size and growth, competition, target audience, opportunity, and a go/pivot/kill recommendation \u2014 instead of leaving the founder to stitch together five separate skill outputs themselves. Use this skill when the user asks "
-    },
-    {
-      "slug": "saas-idea-validator",
-      "folder": "skills/research/saas-idea-validator",
-      "stage": "S1-Research",
-      "description": "Scores a raw app idea on demand signal, competition level, and feasibility before any code gets written, producing a go/pivot/kill recommendation. Use this skill when the user asks about \"should I build this\", \"is this idea worth it\", or says \"is this a good idea\", \"should I build this app\", \"valida"
-    },
-    {
-      "slug": "tech-stack-finder",
-      "folder": "skills/research/tech-stack-finder",
-      "stage": "S1-Research",
-      "description": "Recommends the right free-or-cheap tech stack (framework, hosting, database, auth) for a described app idea, weighing the founder's actual skill level and the tools they already use. Use this skill when the user asks about \"what stack should I use\", \"what should I build this in\", or says \"what shoul"
-    },
-    {
-      "slug": "trending-tech-scout",
-      "folder": "skills/research/trending-tech-scout",
-      "stage": "S1-Research",
-      "description": "Scouts trending frameworks, tools, and AI capabilities worth building with right now, so a tech stack choice doesn't get outdated fast. Use this skill when the user asks about \"what's new and worth using\", or says \"what's trending in web dev right now\", \"is there a better way to build this now\", \"wh"
-    },
-    {
-      "slug": "underserved-market-finder",
-      "folder": "skills/research/underserved-market-finder",
-      "stage": "S1-Research",
-      "description": "Finds niches within a broad market space that are underserved by existing SaaS tools, surfacing where demand outpaces the current options. Use this skill when the user asks about \"what niche should I go after\", \"underserved markets\", or says \"what's a good niche in [space]\", \"is there a gap in the m"
-    },
-    {
-      "slug": "unique-value-prop-audit",
-      "folder": "skills/research/unique-value-prop-audit",
-      "stage": "S1-Research",
-      "description": "Audits whether a product's stated value proposition is actually distinct or just generic category language \u2014 a \"purple cow\" test against real competitor messaging. Use this skill when the user asks about \"is my pitch generic\", \"value prop check\", or says \"does my value prop actually stand out\", \"is "
-    },
-    {
-      "slug": "user-acquisition-analyzer",
-      "folder": "skills/research/user-acquisition-analyzer",
-      "stage": "S1-Research",
-      "description": "Analyzes which user acquisition channels \u2014 SEO, cold outreach, communities, ads \u2014 actually fit a specific app and audience combination, and ranks them by realistic effort and return. Use this skill when the user asks about \"how do I get users\", \"which marketing channel should I use\", or says \"how do"
-    },
     {
       "slug": "avatar-extraction",
       "folder": "skills/audience-positioning/avatar-extraction",
-      "stage": "S2-Audience-Positioning",
-      "description": "Extracts one specific, real buyer for the SaaS product \u2014 not a demographic bucket \u2014 so every later headline, email, and pricing page is written to a single person instead of \"our users\" in general. Use this skill when the user asks about defining their target customer, ideal user, or buyer persona, "
+      "capability": "definition",
+      "legacy_stage": null,
+      "description": "Extracts one specific, real buyer for the SaaS product — not a demographic bucket — so every later headline, email, and pricing page is written to a single person instead of \"our users\" in general. Use this skill when the user asks about defining their target customer, ideal user, or buyer persona, or says \"who is this actually for\", \"define my target customer\", \"who's my ideal user\", \"build a customer avatar\", \"who am I writing this copy for\", \"I don't know who I'm selling to\", \"give me a real persona not a demographic\", \"who is my ICP\"."
     },
     {
       "slug": "copy-framework-selector",
       "folder": "skills/audience-positioning/copy-framework-selector",
-      "stage": "S2-Audience-Positioning",
-      "description": "Picks the right classic copywriting framework (AIDA, PAS, BAB, PASTOR, StoryBrand SB7, QUEST, 4 Ps) for a piece of copy based on the audience's awareness stage, instead of defaulting to one framework for everything. Use this skill when the user asks about \"what structure should this copy follow\", \"w"
+      "capability": "definition",
+      "legacy_stage": null,
+      "description": "Picks the right classic copywriting framework (AIDA, PAS, BAB, PASTOR, StoryBrand SB7, QUEST, 4 Ps) for a piece of copy based on the audience's awareness stage, instead of defaulting to one framework for everything. Use this skill when the user asks about \"what structure should this copy follow\", \"which framework fits this\", or says \"should this be AIDA or PAS\", \"what's the right structure for this page\", \"help me pick a copywriting framework\", \"this copy feels random, what structure should it have\", \"write this using StoryBrand\", \"what's the difference between these copy frameworks for my situation\"."
     },
     {
       "slug": "offer-extraction",
       "folder": "skills/audience-positioning/offer-extraction",
-      "stage": "S2-Audience-Positioning",
-      "description": "Clarifies and sharpens the actual offer \u2014 what's promised, to whom, for what price, with what guarantee \u2014 before any headline, page, or email gets written around it, so copy doesn't get built on a fuzzy premise. Use this skill when the user asks about clarifying their offer, value proposition, or pr"
+      "capability": "definition",
+      "legacy_stage": null,
+      "description": "Clarifies and sharpens the actual offer — what's promised, to whom, for what price, with what guarantee — before any headline, page, or email gets written around it, so copy doesn't get built on a fuzzy premise. Use this skill when the user asks about clarifying their offer, value proposition, or pricing page pitch, or says \"what's my actual offer\", \"why would someone buy this\", \"sharpen my value prop\", \"what am I actually promising\", \"help me define my offer\", \"my pricing page feels weak\", \"what's the pitch here\", \"turn this feature list into an offer\"."
     },
     {
       "slug": "schwartz-awareness-mapper",
       "folder": "skills/audience-positioning/schwartz-awareness-mapper",
-      "stage": "S2-Audience-Positioning",
-      "description": "Applies Eugene Schwartz's five stages of market awareness (unaware, problem-aware, solution-aware, product-aware, most-aware) to determine what angle and message a specific SaaS audience segment actually needs, so copy doesn't sell to people who aren't ready for it yet. Use this skill when the user "
+      "capability": "definition",
+      "legacy_stage": null,
+      "description": "Applies Eugene Schwartz's five stages of market awareness (unaware, problem-aware, solution-aware, product-aware, most-aware) to determine what angle and message a specific SaaS audience segment actually needs, so copy doesn't sell to people who aren't ready for it yet. Use this skill when the user asks about matching messaging to audience readiness or choosing the right angle for cold vs warm traffic, or says \"who am I actually writing this for\", \"cold traffic vs retargeting copy\", \"what awareness stage is my audience\", \"my ad copy isn't working for cold traffic\", \"message to market match\", \"why does this copy work for existing users but not new visitors\"."
+    },
+    {
+      "slug": "api-endpoint-builder",
+      "folder": "skills/building/api-endpoint-builder",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Design and scaffold a clean REST or API endpoint — routes, request/response shape, validation, and error cases — for one described feature. Use this skill when the user asks about building an API route, designing a backend endpoint, or says \"build me an endpoint for this\", \"what should this API route look like\", \"design the request and response for this feature\", \"add an API for creating X\", \"how should I validate this input\", \"what error codes should this return\", \"scaffold the backend for this feature\", \"set up the route for this\"."
+    },
+    {
+      "slug": "auth-flow-builder",
+      "folder": "skills/building/auth-flow-builder",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Plan and scaffold a secure, correctly-scoped auth flow (signup, login, session, password reset) for a SaaS app, calling out common security mistakes to avoid. Use this skill when the user asks about adding login/signup, setting up authentication, or says \"add login to my app\", \"set up user accounts\", \"how do I handle passwords securely\", \"build a signup flow\", \"add password reset\", \"how should sessions work\", \"is my auth setup secure\", \"help me add authentication without messing up security\"."
+    },
+    {
+      "slug": "data-model-diagrammer",
+      "folder": "skills/building/data-model-diagrammer",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Design a database schema or data model for a feature or app from a plain-language description, output as an ER diagram description plus table definitions. Use this skill when the user asks about designing a database, planning tables, or says \"what tables do I need for this\", \"design the schema for this feature\", \"how should I structure my database\", \"what fields does this table need\", \"help me plan my data model\", \"should this be one table or two\", \"what's the relationship between these\", \"set up my database structure\"."
+    },
+    {
+      "slug": "feature-task-breakdown",
+      "folder": "skills/building/feature-task-breakdown",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Break one feature or user story from a PRD into an ordered checklist of small, independently verifiable implementation tasks. Use this skill when the user asks about turning a PRD item into a build plan, splitting a feature into steps, or says \"break this feature down into tasks\", \"how do I build this without breaking everything\", \"turn this user story into a checklist\", \"what order should I build this in\", \"give me small steps for this feature\", \"help me scope this build session\", \"I don't know where to start on this feature\"."
+    },
+    {
+      "slug": "onboarding-flow-builder",
+      "folder": "skills/building/onboarding-flow-builder",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Design a first-run onboarding flow — empty states, setup wizard, and the first successful action — so new users reach real value fast. Use this skill when the user asks about improving first-time user experience, reducing signup drop-off, or says \"what should happen right after someone signs up\", \"design my onboarding flow\", \"users sign up but don't do anything after\", \"what should the empty state say\", \"help new users get to their first win faster\", \"design a setup wizard\", \"people churn right after signup\", \"what's the first thing a new user should see\"."
+    },
+    {
+      "slug": "technical-spike-brief",
+      "folder": "skills/building/technical-spike-brief",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Run a quick, time-boxed research spike on an uncertain technical piece (a new API, a tricky integration, an unfamiliar service) and write up findings and risks before any real code gets committed. Use this skill when the user asks about de-risking an unfamiliar integration, evaluating whether something is technically feasible, or says \"I'm not sure this API will do what I need\", \"spike this before we build it\", \"will Stripe/Twilio/whatever actually support this\", \"research this integration first\", \"what are the gotchas with this service\", \"is this even possible with our stack\", \"don't want to commit code until I know this works\"."
+    },
+    {
+      "slug": "ui-component-builder",
+      "folder": "skills/building/ui-component-builder",
+      "capability": "execution",
+      "legacy_stage": null,
+      "description": "Turn a plain-language UI description into a scoped component build task — props, states, and responsive behavior defined — without letting it creep into a full redesign. Use this skill when the user asks about building a specific UI piece, adding a component, or says \"build me a settings panel\", \"I need a pricing table component\", \"add a modal for this\", \"what props should this component take\", \"build this form\", \"make a card component for this\", \"add a dropdown for X\", \"I just need this one piece of UI, not a redesign\"."
+    },
+    {
+      "slug": "ad-angle-multiplier",
+      "folder": "skills/copywriting/ad-angle-multiplier",
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Takes one core SaaS offer and generates multiple genuinely distinct marketing angles and hooks from it, so testing covers real different ideas instead of five minor rewrites of the same ad. Use this skill when the user asks about generating more ad ideas, creative variation, or new angles for a campaign, or says \"give me more ad angles\", \"I need new hooks for this offer\", \"we're out of ad ideas\", \"these ads all feel the same\", \"generate different angles to test\", \"scale my ad testing\", \"our CTR is dropping, we need fresh creative\"."
+    },
+    {
+      "slug": "full-funnel-campaign-orchestrator",
+      "folder": "skills/copywriting/full-funnel-campaign-orchestrator",
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Coordinates which copy piece — ad, landing page, email, onboarding message — goes where across a full SaaS campaign, sequencing the other copywriting skills in order and checking messaging stays consistent from first touch to paid conversion. Use this skill when the user asks about building a full campaign, keeping messaging consistent across channels, or planning a launch sequence, or says \"build me a full campaign\", \"coordinate my ads, landing page, and emails\", \"plan my launch messaging\", \"make sure this all matches\", \"I have separate copy for everything and it feels disjointed\", \"run the full copywriting process\", \"what order do I write all this copy in\"."
+    },
+    {
+      "slug": "generic-language-killer",
+      "folder": "skills/copywriting/generic-language-killer",
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Strips vague, corporate, or AI-sounding language out of SaaS copy and replaces it with specific, human wording — a final QA pass that catches \"seamlessly empowers your workflow\" before it ships. Use this skill when the user asks about copy that sounds generic, fluffy, or AI-written, or says \"this sounds like every other SaaS site\", \"make this sound less corporate\", \"this reads like AI wrote it\", \"tighten this copy up\", \"cut the fluff from this page\", \"this sounds generic, fix it\", \"review this copy before it goes live\"."
+    },
+    {
+      "slug": "objection-crusher",
+      "folder": "skills/copywriting/objection-crusher",
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Identifies the real objections a SaaS prospect has before paying — price, trust, switching cost, \"will this actually work for me\" — and writes copy that answers each one directly instead of hoping it doesn't come up. Use this skill when the user asks about handling pricing pushback, trust issues, or reasons people don't convert, or says \"why isn't anyone buying\", \"handle objections on my pricing page\", \"people say we're too expensive\", \"what's stopping signups from converting to paid\", \"write an FAQ that actually helps\", \"address hesitation on my landing page\", \"people ghost after the trial\"."
+    },
+    {
+      "slug": "ci-cd-pipeline-builder",
+      "folder": "skills/deployment/ci-cd-pipeline-builder",
+      "capability": "launch",
+      "legacy_stage": null,
+      "description": "Sets up a right-sized GitHub Actions pipeline that deploys automatically to Cloudflare on push, without over-engineering it for a solo project. Use this skill when the user asks about automating deploys, setting up CI/CD, or says \"set up github actions for this\", \"automate my deploys\", \"I want deploys on push\", \"set up a CI/CD pipeline\", \"auto-deploy to cloudflare when I push\", \"stop me from making manual deploy mistakes\", \"add a build check before deploy\"."
+    },
+    {
+      "slug": "cloudflare-deployer",
+      "folder": "skills/deployment/cloudflare-deployer",
+      "capability": "launch",
+      "legacy_stage": null,
+      "description": "Deploys a tested app or feature to Cloudflare Workers or Pages correctly, running a pre-deploy checklist first so nothing broken or misconfigured ships. Use this skill when the user asks about deploying to Cloudflare, shipping a build, pushing to production, or says \"deploy this to cloudflare\", \"ship this feature\", \"push this live\", \"how do I deploy my worker\", \"deploy to production\", \"wrangler deploy this\", \"is this ready to go live\", \"publish my pages site\"."
+    },
+    {
+      "slug": "domain-dns-setup",
+      "folder": "skills/deployment/domain-dns-setup",
+      "capability": "launch",
+      "legacy_stage": null,
+      "description": "Connects a custom domain to a Cloudflare-hosted Worker or Pages app with correct DNS records and SSL, and flags the common gotchas before they cause downtime. Use this skill when the user asks about connecting a domain, fixing DNS, or says \"connect my domain to cloudflare\", \"point my domain at this app\", \"set up SSL for my domain\", \"my custom domain isn't working\", \"DNS isn't propagating\", \"add a subdomain for this\", \"why is my site showing not secure\"."
+    },
+    {
+      "slug": "env-secrets-manager",
+      "folder": "skills/deployment/env-secrets-manager",
+      "capability": "launch",
+      "legacy_stage": null,
+      "description": "Sets up and audits environment variables and secrets across dev, staging, and production for a Cloudflare Workers app using wrangler, so keys never get committed or leaked. Use this skill when the user asks about managing API keys, env vars, or secrets, or says \"how do I add a secret to my worker\", \"where do my API keys go\", \"set up my env vars for production\", \"did I accidentally commit a key\", \"my secret isn't showing up in production\", \"manage secrets across environments\", \"rotate this API key\"."
     },
     {
       "slug": "affiliate-promo-kit",
       "folder": "skills/funnel-build/affiliate-promo-kit",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to create an affiliate or JV (joint venture) promo kit for a product launch. Trigger when the user needs affiliate email swipes, partner promotional materials, JV page copy, affiliate onboarding materials, or any promotional assets designed for third-party partners to use when promoti"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to create an affiliate or JV (joint venture) promo kit for a product launch. Trigger when the user needs affiliate email swipes, partner promotional materials, JV page copy, affiliate onboarding materials, or any promotional assets designed for third-party partners to use when promoting an offer."
     },
     {
       "slug": "challenge-content-generator",
       "folder": "skills/funnel-build/challenge-content-generator",
-      "stage": "S3-Funnel-Build",
+      "capability": "marketing",
+      "legacy_stage": null,
       "description": "Use this skill to write a 5-day challenge funnel. Trigger when the user needs a challenge funnel, a 5-day challenge, a 7-day bootcamp, a daily email course, or any time-based sequence where participants complete one action per day building toward an outcome and an offer."
     },
     {
       "slug": "email-sequence-generator",
       "folder": "skills/funnel-build/email-sequence-generator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to write any multi-email sequence for a marketing funnel. This includes: nurture sequences, onboarding sequences, launch sequences, cart open and close sequences, reminder sequences, re-engagement sequences, win-back sequences, post-purchase sequences, webinar follow-up sequences, cha"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to write any multi-email sequence for a marketing funnel. This includes: nurture sequences, onboarding sequences, launch sequences, cart open and close sequences, reminder sequences, re-engagement sequences, win-back sequences, post-purchase sequences, webinar follow-up sequences, challenge daily emails, and flash sale sequences. Trigger whenever the user needs a series of emails for any marketing purpose."
     },
     {
       "slug": "funnel-builder-orchestrator",
       "folder": "skills/funnel-build/funnel-builder-orchestrator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill whenever a user wants to build a marketing funnel, sales funnel, launch funnel, opt-in funnel, webinar funnel, lead magnet funnel, product funnel, challenge funnel, quiz funnel, tripwire funnel, high-ticket funnel, SaaS funnel, free trial funnel, book funnel, flash sale campaign, re-e"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill whenever a user wants to build a marketing funnel, sales funnel, launch funnel, opt-in funnel, webinar funnel, lead magnet funnel, product funnel, challenge funnel, quiz funnel, tripwire funnel, high-ticket funnel, SaaS funnel, free trial funnel, book funnel, flash sale campaign, re-engagement campaign, or any sequence of marketing pages and emails. Also trigger when the user says \"build me a funnel\", \"I need a full funnel\", \"create a campaign from scratch\", \"I want to launch a product\", \"help me build out my offer\", or \"I need pages and emails for my launch\". This skill produces a complete, professional Funnel Package — every page, email sequence, script, and content asset ne"
     },
     {
       "slug": "funnel-map-visualizer",
       "folder": "skills/funnel-build/funnel-map-visualizer",
-      "stage": "S3-Funnel-Build",
-      "description": "Turns a planned or live funnel into one visual map showing every step, the page/copy at each step, and (once tracking exists) real conversion numbers per step \u2014 saved as a local HTML file in the project folder instead of scattered SKILL.md workflow output. Use this skill when the user asks about \"sh"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Turns a planned or live funnel into one visual map showing every step, the page/copy at each step, and (once tracking exists) real conversion numbers per step — saved as a local HTML file in the project folder instead of scattered SKILL.md workflow output. Use this skill when the user asks about \"show me the whole funnel\", \"I want to see this visually\", or says \"map out my funnel visually\", \"show me the funnel as a diagram\", \"I can't picture how these pages connect\", \"where are people dropping off in this funnel\", \"give me a visual overview of the funnel\", \"show conversion rate at each step\", \"I want to see the whole customer journey in one place\"."
     },
     {
       "slug": "funnel-select",
       "folder": "skills/funnel-build/funnel-select",
-      "stage": "S3-Funnel-Build",
-      "description": "Picks the right funnel type for a SaaS or app offer based on price point, business model, and goal (leads, trial signups, or a direct sale), then hands off to the matching funnel-building skill instead of guessing. Use this skill when the user asks about which funnel to build, how to sell their prod"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Picks the right funnel type for a SaaS or app offer based on price point, business model, and goal (leads, trial signups, or a direct sale), then hands off to the matching funnel-building skill instead of guessing. Use this skill when the user asks about which funnel to build, how to sell their product online, or says \"what kind of funnel do I need\", \"how do I sell this app\", \"should I do a webinar or just a landing page\", \"what's the best way to get signups for this\", \"help me pick a funnel\", \"I don't know where to start with marketing this\", \"what pages do I actually need\", \"is my product too cheap for a sales call funnel\"."
     },
     {
       "slug": "headline-hook-generator",
       "folder": "skills/funnel-build/headline-hook-generator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to generate headline and hook variations for any marketing asset \u2014 landing pages, ads, emails, social posts, VSLs, or webinars. Trigger when a user needs multiple headline options, wants to A/B test copy, needs hook ideas, or asks for attention-grabbing openers for any offer."
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to generate headline and hook variations for any marketing asset — landing pages, ads, emails, social posts, VSLs, or webinars. Trigger when a user needs multiple headline options, wants to A/B test copy, needs hook ideas, or asks for attention-grabbing openers for any offer."
     },
     {
       "slug": "landing-page-generator",
       "folder": "skills/funnel-build/landing-page-generator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill whenever a user wants to build, write, or generate a marketing landing page, sales page, or promotional web page. Trigger on phrases like: \"build me a landing page for...\", \"write copy for my sales page\", \"I need a page that sells my...\", \"create a landing page\", \"help me write a page"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill whenever a user wants to build, write, or generate a marketing landing page, sales page, or promotional web page. Trigger on phrases like: \"build me a landing page for...\", \"write copy for my sales page\", \"I need a page that sells my...\", \"create a landing page\", \"help me write a page for my course / product / service / offer\", \"generate a marketing page\", \"write a homepage for...\", \"I need to convert visitors to...\", or any situation where someone is building a website and needs persuasive, conversion-focused page copy. Also trigger when someone shares a product description, offer details, or target audience info and seems to be working on a web project — even if they don't s"
     },
     {
       "slug": "lead-magnet-creator",
       "folder": "skills/funnel-build/lead-magnet-creator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to create an actual lead magnet deliverable \u2014 the thing the user gives away to build their list. Trigger when the user needs any of the following created as a real file or interactive experience: checklist, cheat sheet, quiz, scorecard, assessment, interactive quiz, calculator, ROI to"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to create an actual lead magnet deliverable — the thing the user gives away to build their list. Trigger when the user needs any of the following created as a real file or interactive experience: checklist, cheat sheet, quiz, scorecard, assessment, interactive quiz, calculator, ROI tool, pricing tool, lead magnet PDF, mini eBook, short guide, swipe file, template pack, copy swipe file, infographic, one-pager, full-length eBook, journal prompts PDF, worksheet, workbook, exercises, email course, email mini-course, 5-day email series, or any free downloadable resource intended to attract subscribers. This skill produces the actual deliverable — not just the copy around it. Use al"
     },
     {
       "slug": "quiz-flow-generator",
       "folder": "skills/funnel-build/quiz-flow-generator",
-      "stage": "S3-Funnel-Build",
+      "capability": "marketing",
+      "legacy_stage": null,
       "description": "Use this skill to build a quiz funnel. Trigger when the user needs a quiz opt-in, interactive assessment, scorecard funnel, personality quiz, or any segmented lead generation experience where different results lead to different offers or email sequences."
     },
     {
       "slug": "social-content-pack",
       "folder": "skills/funnel-build/social-content-pack",
-      "stage": "S3-Funnel-Build",
+      "capability": "marketing",
+      "legacy_stage": null,
       "description": "Use this skill to generate a social media content pack to drive traffic into a marketing funnel. Trigger when a user needs social posts, Instagram captions, Facebook posts, LinkedIn posts, or short-form video scripts to promote their offer, funnel, or lead magnet across social media platforms."
     },
     {
       "slug": "thank-you-page-generator",
       "folder": "skills/funnel-build/thank-you-page-generator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to write a thank you page, confirmation page, order confirmation page, delivery page, \"what happens next\" page, or any post-conversion page in a marketing funnel. Trigger when a user needs copy for the page shown immediately after an opt-in, purchase, webinar registration, application"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to write a thank you page, confirmation page, order confirmation page, delivery page, \"what happens next\" page, or any post-conversion page in a marketing funnel. Trigger when a user needs copy for the page shown immediately after an opt-in, purchase, webinar registration, application submission, or free trial signup."
     },
     {
       "slug": "upsell-page-generator",
       "folder": "skills/funnel-build/upsell-page-generator",
-      "stage": "S3-Funnel-Build",
+      "capability": "marketing",
+      "legacy_stage": null,
       "description": "Use this skill to write an upsell page, one-time offer (OTO) page, order bump copy, downsell page, or any post-purchase offer page in a marketing funnel. Trigger when a user needs copy for an upgrade offer, a \"one-time offer\" shown after checkout, a cross-sell, or an add-on to an existing purchase."
     },
     {
       "slug": "vsl-script-generator",
       "folder": "skills/funnel-build/vsl-script-generator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to write a Video Sales Letter (VSL) script for a marketing funnel. Trigger when the user needs a video sales letter, a sales video script, a VSL for their landing page, a video pitch, or a talking-head sales video script. VSLs are typically 10\u201320 minutes long and follow a specific nar"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to write a Video Sales Letter (VSL) script for a marketing funnel. Trigger when the user needs a video sales letter, a sales video script, a VSL for their landing page, a video pitch, or a talking-head sales video script. VSLs are typically 10–20 minutes long and follow a specific narrative structure to build trust and drive conversions."
     },
     {
       "slug": "webinar-script-generator",
       "folder": "skills/funnel-build/webinar-script-generator",
-      "stage": "S3-Funnel-Build",
-      "description": "Use this skill to write a webinar script or outline. Trigger when the user needs a webinar script, webinar outline, live training script, online workshop script, masterclass outline, or automated webinar script. This skill produces a complete webinar structure with word-for-word scripts for the crit"
-    },
-    {
-      "slug": "ad-angle-multiplier",
-      "folder": "skills/copywriting/ad-angle-multiplier",
-      "stage": "S4-Copywriting",
-      "description": "Takes one core SaaS offer and generates multiple genuinely distinct marketing angles and hooks from it, so testing covers real different ideas instead of five minor rewrites of the same ad. Use this skill when the user asks about generating more ad ideas, creative variation, or new angles for a camp"
-    },
-    {
-      "slug": "full-funnel-campaign-orchestrator",
-      "folder": "skills/copywriting/full-funnel-campaign-orchestrator",
-      "stage": "S4-Copywriting",
-      "description": "Coordinates which copy piece \u2014 ad, landing page, email, onboarding message \u2014 goes where across a full SaaS campaign, sequencing the other copywriting skills in order and checking messaging stays consistent from first touch to paid conversion. Use this skill when the user asks about building a full c"
-    },
-    {
-      "slug": "generic-language-killer",
-      "folder": "skills/copywriting/generic-language-killer",
-      "stage": "S4-Copywriting",
-      "description": "Strips vague, corporate, or AI-sounding language out of SaaS copy and replaces it with specific, human wording \u2014 a final QA pass that catches \"seamlessly empowers your workflow\" before it ships. Use this skill when the user asks about copy that sounds generic, fluffy, or AI-written, or says \"this so"
-    },
-    {
-      "slug": "objection-crusher",
-      "folder": "skills/copywriting/objection-crusher",
-      "stage": "S4-Copywriting",
-      "description": "Identifies the real objections a SaaS prospect has before paying \u2014 price, trust, switching cost, \"will this actually work for me\" \u2014 and writes copy that answers each one directly instead of hoping it doesn't come up. Use this skill when the user asks about handling pricing pushback, trust issues, or"
-    },
-    {
-      "slug": "architecture-decision-writer",
-      "folder": "skills/planning/architecture-decision-writer",
-      "stage": "S5-Planning",
-      "description": "Compares 2-3 real technical approaches for a feature or the whole app with concrete tradeoffs and a clear recommendation, written as a lightweight Architecture Decision Record (ADR), so a non-technical founder doesn't end up locked into a stack by accident. Use this skill when the user asks about \"w"
-    },
-    {
-      "slug": "defensibility-calculator",
-      "folder": "skills/planning/defensibility-calculator",
-      "stage": "S5-Planning",
-      "description": "Assesses how hard a planned product actually would be for a competitor to copy, scores it across concrete defensibility factors, and recommends specific changes that would make it harder to clone \u2014 before the founder builds something anyone can replicate in a weekend with the same AI tools. Use this"
-    },
-    {
-      "slug": "feature-roadmap-architect",
-      "folder": "skills/planning/feature-roadmap-architect",
-      "stage": "S5-Planning",
-      "description": "Sequences a feature list into phases and milestones based on real dependency order and user value, instead of \"build everything at once,\" so a founder always knows what to build next and why. Use this skill when the user asks about \"what should I build first vs later\", \"help me sequence this roadmap"
-    },
-    {
-      "slug": "mvp-feature-slicer",
-      "folder": "skills/planning/mvp-feature-slicer",
-      "stage": "S5-Planning",
-      "description": "Cuts an overly ambitious feature list down to the smallest version that is still a real, testable product \u2014 directly targets the most common failure mode of non-technical founders scoping too big and never shipping anything. Use this skill when the user asks about \"what's actually in v1\", \"help me c"
-    },
-    {
-      "slug": "prd-writer",
-      "folder": "skills/planning/prd-writer",
-      "stage": "S5-Planning",
-      "description": "Turns a vague app idea into a real Product Requirements Doc that locks down the problem, the one target user, the core user flows, and a hard line between must-have and nice-to-have features before any code gets written. Use this skill when the user asks about \"what should I build first\", \"help me w"
-    },
-    {
-      "slug": "roadmap-visualizer",
-      "folder": "skills/planning/roadmap-visualizer",
-      "stage": "S5-Planning",
-      "description": "Turns a written roadmap or feature list into a real, visual, trackable board (phases as columns, features as cards with status) saved as a local HTML file in the project folder \u2014 instead of a markdown file nobody re-opens. Use this skill when the user asks about \"show me the roadmap\", \"I want to see"
-    },
-    {
-      "slug": "tech-debt-detector",
-      "folder": "skills/planning/tech-debt-detector",
-      "stage": "S5-Planning",
-      "description": "Reviews an existing codebase or a written plan for shortcuts, vague areas, and unresolved decisions that will cause problems later, and flags them before they get built on top of, not after. Use this skill when the user asks about \"is my codebase a mess\", \"what's going to break later\", or says \"revi"
-    },
-    {
-      "slug": "user-story-writer",
-      "folder": "skills/planning/user-story-writer",
-      "stage": "S5-Planning",
-      "description": "Converts PRD features and user flows into concrete user stories with specific, testable acceptance criteria that a developer or an AI coding agent can build against with no ambiguity left to fill in on its own. Use this skill when the user asks about \"turn this into stories\", \"what should I tell Cla"
-    },
-    {
-      "slug": "api-endpoint-builder",
-      "folder": "skills/building/api-endpoint-builder",
-      "stage": "S6-Building",
-      "description": "Design and scaffold a clean REST or API endpoint \u2014 routes, request/response shape, validation, and error cases \u2014 for one described feature. Use this skill when the user asks about building an API route, designing a backend endpoint, or says \"build me an endpoint for this\", \"what should this API rout"
-    },
-    {
-      "slug": "auth-flow-builder",
-      "folder": "skills/building/auth-flow-builder",
-      "stage": "S6-Building",
-      "description": "Plan and scaffold a secure, correctly-scoped auth flow (signup, login, session, password reset) for a SaaS app, calling out common security mistakes to avoid. Use this skill when the user asks about adding login/signup, setting up authentication, or says \"add login to my app\", \"set up user accounts\""
-    },
-    {
-      "slug": "data-model-diagrammer",
-      "folder": "skills/building/data-model-diagrammer",
-      "stage": "S6-Building",
-      "description": "Design a database schema or data model for a feature or app from a plain-language description, output as an ER diagram description plus table definitions. Use this skill when the user asks about designing a database, planning tables, or says \"what tables do I need for this\", \"design the schema for t"
-    },
-    {
-      "slug": "feature-task-breakdown",
-      "folder": "skills/building/feature-task-breakdown",
-      "stage": "S6-Building",
-      "description": "Break one feature or user story from a PRD into an ordered checklist of small, independently verifiable implementation tasks. Use this skill when the user asks about turning a PRD item into a build plan, splitting a feature into steps, or says \"break this feature down into tasks\", \"how do I build th"
-    },
-    {
-      "slug": "onboarding-flow-builder",
-      "folder": "skills/building/onboarding-flow-builder",
-      "stage": "S6-Building",
-      "description": "Design a first-run onboarding flow \u2014 empty states, setup wizard, and the first successful action \u2014 so new users reach real value fast. Use this skill when the user asks about improving first-time user experience, reducing signup drop-off, or says \"what should happen right after someone signs up\", \"d"
-    },
-    {
-      "slug": "technical-spike-brief",
-      "folder": "skills/building/technical-spike-brief",
-      "stage": "S6-Building",
-      "description": "Run a quick, time-boxed research spike on an uncertain technical piece (a new API, a tricky integration, an unfamiliar service) and write up findings and risks before any real code gets committed. Use this skill when the user asks about de-risking an unfamiliar integration, evaluating whether someth"
-    },
-    {
-      "slug": "ui-component-builder",
-      "folder": "skills/building/ui-component-builder",
-      "stage": "S6-Building",
-      "description": "Turn a plain-language UI description into a scoped component build task \u2014 props, states, and responsive behavior defined \u2014 without letting it creep into a full redesign. Use this skill when the user asks about building a specific UI piece, adding a component, or says \"build me a settings panel\", \"I "
-    },
-    {
-      "slug": "accessibility-auditor",
-      "folder": "skills/testing/accessibility-auditor",
-      "stage": "S7-Testing",
-      "description": "Checks a UI for basic accessibility problems \u2014 color contrast, keyboard navigation, missing alt text, and missing ARIA labels \u2014 before it ships. Use this skill when the user asks about \"is this accessible\", \"check contrast on this page\", \"can this be used with a keyboard only\", \"does this need alt t"
-    },
-    {
-      "slug": "browser-verifier",
-      "folder": "skills/testing/browser-verifier",
-      "stage": "S7-Testing",
-      "description": "Actually launches the running app in a real browser using the superpowers-chrome plugin (Chrome DevTools browser control) and clicks through the golden path plus edge cases before anyone is allowed to call a feature \"done\" \u2014 the antidote to claiming success without checking. Use this skill when the "
-    },
-    {
-      "slug": "edge-case-hunter",
-      "folder": "skills/testing/edge-case-hunter",
-      "stage": "S7-Testing",
-      "description": "Actively hunts for the edge cases a feature spec left out \u2014 empty states, concurrent users, bad input, network failure, auth expiry, and other ways real usage differs from the demo path. Use this skill when the user asks about \"what edge cases am I missing\", \"what could break this\", \"what did I not "
-    },
-    {
-      "slug": "load-test-builder",
-      "folder": "skills/testing/load-test-builder",
-      "stage": "S7-Testing",
-      "description": "Defines lightweight load and stress checks sized for a small SaaS app with real but modest traffic \u2014 not enterprise-scale over-engineering that wastes a solo founder's time. Use this skill when the user asks about \"will my app hold up under load\", \"how many users can this handle\", \"should I load tes"
-    },
-    {
-      "slug": "regression-test-builder",
-      "folder": "skills/testing/regression-test-builder",
-      "stage": "S7-Testing",
-      "description": "Turns a bug that was just fixed into a permanent test or checklist step so the exact same bug cannot silently come back in a future change. Use this skill when the user asks about \"write a test for this bug fix\", \"make sure this doesn't break again\", \"how do I stop this from regressing\", \"add a regr"
-    },
-    {
-      "slug": "security-review-lite",
-      "folder": "skills/testing/security-review-lite",
-      "stage": "S7-Testing",
-      "description": "Runs a lightweight, pre-ship security pass for a small SaaS app \u2014 auth issues, exposed secrets, injection risks, and missing input validation \u2014 a sane baseline check, not a full penetration test. Use this skill when the user asks about \"is this safe to ship\", \"check for security issues\", \"did I leak"
-    },
-    {
-      "slug": "test-case-generator",
-      "folder": "skills/testing/test-case-generator",
-      "stage": "S7-Testing",
-      "description": "Turns a feature description or user story into a concrete, numbered list of test cases covering the happy path and the obvious edge cases, before or right after the feature is built. Use this skill when the user asks about \"how do I test this feature\", \"what should I check before shipping this\", \"wr"
-    },
-    {
-      "slug": "user-acceptance-test-planner",
-      "folder": "skills/testing/user-acceptance-test-planner",
-      "stage": "S7-Testing",
-      "description": "Plans a short real-user (or founder-as-user) acceptance test pass before a feature or app gets called launch-ready \u2014 the final human-eyes check after automated and technical verification. Use this skill when the user asks about \"is this ready to launch\", \"get someone to try this before I ship\", \"pla"
-    },
-    {
-      "slug": "ci-cd-pipeline-builder",
-      "folder": "skills/deployment/ci-cd-pipeline-builder",
-      "stage": "S8-Deployment",
-      "description": "Sets up a right-sized GitHub Actions pipeline that deploys automatically to Cloudflare on push, without over-engineering it for a solo project. Use this skill when the user asks about automating deploys, setting up CI/CD, or says \"set up github actions for this\", \"automate my deploys\", \"I want deplo"
-    },
-    {
-      "slug": "cloudflare-deployer",
-      "folder": "skills/deployment/cloudflare-deployer",
-      "stage": "S8-Deployment",
-      "description": "Deploys a tested app or feature to Cloudflare Workers or Pages correctly, running a pre-deploy checklist first so nothing broken or misconfigured ships. Use this skill when the user asks about deploying to Cloudflare, shipping a build, pushing to production, or says \"deploy this to cloudflare\", \"shi"
-    },
-    {
-      "slug": "domain-dns-setup",
-      "folder": "skills/deployment/domain-dns-setup",
-      "stage": "S8-Deployment",
-      "description": "Connects a custom domain to a Cloudflare-hosted Worker or Pages app with correct DNS records and SSL, and flags the common gotchas before they cause downtime. Use this skill when the user asks about connecting a domain, fixing DNS, or says \"connect my domain to cloudflare\", \"point my domain at this "
-    },
-    {
-      "slug": "env-secrets-manager",
-      "folder": "skills/deployment/env-secrets-manager",
-      "stage": "S8-Deployment",
-      "description": "Sets up and audits environment variables and secrets across dev, staging, and production for a Cloudflare Workers app using wrangler, so keys never get committed or leaked. Use this skill when the user asks about managing API keys, env vars, or secrets, or says \"how do I add a secret to my worker\", "
-    },
-    {
-      "slug": "backup-recovery-builder",
-      "folder": "skills/operations/backup-recovery-builder",
-      "stage": "S9-Operations",
-      "description": "Builds a real, tested backup and recovery plan for a SaaS app's database and file storage, including an actual restore drill, not just a backup schedule nobody has verified works. Use this skill when the user asks about \"how do I back up my database\", \"what happens if I lose my data\", \"set up backup"
-    },
-    {
-      "slug": "incident-runbook-writer",
-      "folder": "skills/operations/incident-runbook-writer",
-      "stage": "S9-Operations",
-      "description": "Writes a short, practical runbook for what to do when production breaks, sized for a solo founder or a two-to-three-person team with no on-call rotation. Use this skill when the user asks about \"what do I do when my site goes down\", \"write me an incident runbook\", \"I panicked when the app broke and "
-    },
-    {
-      "slug": "monitoring-alerting-setup",
-      "folder": "skills/operations/monitoring-alerting-setup",
-      "stage": "S9-Operations",
-      "description": "Sets up lightweight uptime, error, and performance monitoring with alerts so the founder hears about outages before customers do. Use this skill when the user asks about \"how do I know if my app is down\", \"set up monitoring for my app\", \"I want alerts when something breaks\", \"how do I catch errors i"
-    },
-    {
-      "slug": "multi-tenant-manager",
-      "folder": "skills/operations/multi-tenant-manager",
-      "stage": "S9-Operations",
-      "description": "Plans and reviews data isolation and tenant-scoping for a multi-customer SaaS so one organization's data can never leak into another's. Use this skill when the user asks about \"how do I separate customer data\", \"multi-tenant architecture\", \"can one customer see another's data\", \"add organizations to"
-    },
-    {
-      "slug": "seed-data-generator",
-      "folder": "skills/operations/seed-data-generator",
-      "stage": "S9-Operations",
-      "description": "Generates realistic fake data for development, testing, and demos so an app can be built, tested, and shown off without touching real customer data. Use this skill when the user asks about \"I need test data for my app\", \"generate fake users for my database\", \"seed my dev database\", \"I want to demo m"
-    },
-    {
-      "slug": "twelve-factor-auditor",
-      "folder": "skills/operations/twelve-factor-auditor",
-      "stage": "S9-Operations",
-      "description": "Audits a SaaS app against the Twelve-Factor App methodology (2011, still the cloud-native standard) and reports exactly which of the 12 rules the app is breaking, in plain language, with a concrete fix for each. Use this skill when the user asks about \"is my app cloud-native\", \"am I doing this the r"
+      "capability": "marketing",
+      "legacy_stage": null,
+      "description": "Use this skill to write a webinar script or outline. Trigger when the user needs a webinar script, webinar outline, live training script, online workshop script, masterclass outline, or automated webinar script. This skill produces a complete webinar structure with word-for-word scripts for the critical sections."
     },
     {
       "slug": "ab-test-generator",
       "folder": "skills/growth/ab-test-generator",
-      "stage": "S10-Growth",
-      "description": "Designs a proper A/B test for a specific app element (pricing page, onboarding step, CTA button, email subject line) with a locked hypothesis, one success metric, and the minimum sample size needed before anyone is allowed to call a result significant. Use this skill when the user asks about testing"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Designs a proper A/B test for a specific app element (pricing page, onboarding step, CTA button, email subject line) with a locked hypothesis, one success metric, and the minimum sample size needed before anyone is allowed to call a result significant. Use this skill when the user asks about testing a pricing page, onboarding flow, or CTA change, or says \"should I A/B test this\", \"how many signups do I need before I know if this works\", \"I want to test two versions of my pricing page\", \"is this result actually significant\", \"help me set up an experiment on my landing page\", \"we changed the CTA, how do we know if it worked\", \"what sample size do I need\", \"design a test for this onboarding cha"
     },
     {
       "slug": "aha-moment-mapper",
       "folder": "skills/growth/aha-moment-mapper",
-      "stage": "S10-Growth",
-      "description": "Identifies the single action that correlates with a user actually getting value \u2014 the product's \"aha moment\" \u2014 by combining event data with user interviews, so onboarding can be designed around reaching it fast. Use this skill when the user asks about defining activation, finding the aha moment, or "
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Identifies the single action that correlates with a user actually getting value — the product's \"aha moment\" — by combining event data with user interviews, so onboarding can be designed around reaching it fast. Use this skill when the user asks about defining activation, finding the aha moment, or says \"what's our aha moment\", \"define activation for us\", \"which action predicts retention\", \"set up our North Star metric\", \"why don't new users stick around\", \"what should onboarding get people to do\"."
     },
     {
       "slug": "app-performance-report",
       "folder": "skills/growth/app-performance-report",
-      "stage": "S10-Growth",
-      "description": "Pulls raw uptime, load time, error rate, and active user metrics into a short plain-language report a non-technical founder can actually read and act on, instead of a wall of dashboard numbers. Use this skill when the user asks for a performance summary, health check, or status report on their live "
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Pulls raw uptime, load time, error rate, and active user metrics into a short plain-language report a non-technical founder can actually read and act on, instead of a wall of dashboard numbers. Use this skill when the user asks for a performance summary, health check, or status report on their live app, or says \"how is my app doing\", \"give me a performance report\", \"is my app healthy\", \"summarize my uptime and errors this month\", \"translate these metrics into plain english\", \"what should I worry about with my app's performance\", \"weekly app health check\"."
     },
     {
       "slug": "attribution-mapper",
       "folder": "skills/growth/attribution-mapper",
-      "stage": "S10-Growth",
-      "description": "Maps which acquisition channels and touchpoints actually drive signups and revenue by building multi-touch journeys from PostHog event data instead of trusting last-click numbers from each ad platform. Use this skill when the user asks about channel attribution, which marketing channel is working, o"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Maps which acquisition channels and touchpoints actually drive signups and revenue by building multi-touch journeys from PostHog event data instead of trusting last-click numbers from each ad platform. Use this skill when the user asks about channel attribution, which marketing channel is working, or says \"which channel actually drives signups\", \"why does each ad platform take credit for the same conversion\", \"is LinkedIn actually working or just getting last-click credit\", \"build an attribution model\", \"where should I put my next dollar of marketing spend\", \"our numbers don't add up across platforms\"."
     },
     {
       "slug": "checkout-funnel-auditor",
       "folder": "skills/growth/checkout-funnel-auditor",
-      "stage": "S10-Growth",
-      "description": "Audits a SaaS signup, checkout, or plan-upgrade flow step by step for drop-off points, friction, and missing trust signals, producing a ranked fix list instead of a vague \"checkout feels off\". Use this skill when the user asks about checkout drop-off, upgrade flow friction, or says \"why are people d"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Audits a SaaS signup, checkout, or plan-upgrade flow step by step for drop-off points, friction, and missing trust signals, producing a ranked fix list instead of a vague \"checkout feels off\". Use this skill when the user asks about checkout drop-off, upgrade flow friction, or says \"why are people dropping at payment\", \"audit our checkout flow\", \"reduce friction in signup\", \"people abandon before entering their card\", \"review our upgrade modal\", \"why isn't the free trial converting to a card add\"."
     },
     {
       "slug": "cohort-churn-analyzer",
       "folder": "skills/growth/cohort-churn-analyzer",
-      "stage": "S10-Growth",
-      "description": "Analyzes churn by signup cohort and segment using PostHog and subscription data to find which specific segment or onboarding path is failing, instead of reporting one blended churn number. Use this skill when the user asks about churn by cohort, retention curves, or says \"why are users churning\", \"r"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Analyzes churn by signup cohort and segment using PostHog and subscription data to find which specific segment or onboarding path is failing, instead of reporting one blended churn number. Use this skill when the user asks about churn by cohort, retention curves, or says \"why are users churning\", \"run a cohort analysis\", \"build our retention curve\", \"which segment churns the most\", \"find the churn drivers\", \"who's about to cancel\"."
     },
     {
       "slug": "growth-dashboard-builder",
       "folder": "skills/growth/growth-dashboard-builder",
-      "stage": "S10-Growth",
-      "description": "Builds one central dashboard that shows acquisition, activation, retention, revenue, and referral numbers in a single page, pulled from PostHog so the founder stops checking five tools to answer \"is the business growing\". Use this skill when the user asks about a growth dashboard, a single view of a"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Builds one central dashboard that shows acquisition, activation, retention, revenue, and referral numbers in a single page, pulled from PostHog so the founder stops checking five tools to answer \"is the business growing\". Use this skill when the user asks about a growth dashboard, a single view of all their metrics, or says \"build me a growth dashboard\", \"I need one place to see all my metrics\", \"how is the business doing this week\", \"track my whole funnel in one place\", \"set up a dashboard with PostHog\", \"I'm tired of checking five different tools\", \"what should I be measuring every week\"."
     },
     {
       "slug": "in-app-nav-optimizer",
       "folder": "skills/growth/in-app-nav-optimizer",
-      "stage": "S10-Growth",
-      "description": "Reviews a SaaS app's internal navigation and information architecture to find the confusing paths that make users get lost, give up, or churn, and produces a specific list of what to rename, merge, move, or remove. Use this skill when the user asks about confusing navigation, users getting lost, or "
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Reviews a SaaS app's internal navigation and information architecture to find the confusing paths that make users get lost, give up, or churn, and produces a specific list of what to rename, merge, move, or remove. Use this skill when the user asks about confusing navigation, users getting lost, or menu/IA problems, or says \"users can't find things in my app\", \"my nav feels cluttered\", \"people get lost after signup\", \"where should this feature live in the menu\", \"should I combine these two pages\", \"is my app's navigation confusing\", \"review my sidebar/menu structure\", \"users keep asking where X is\"."
     },
     {
       "slug": "marketing-site-seo-audit",
       "folder": "skills/growth/marketing-site-seo-audit",
-      "stage": "S10-Growth",
-      "description": "Audits a SaaS app's public marketing/landing site for the basic SEO issues that actually affect organic signups - meta tags, heading structure, page speed, and mobile-friendliness - and returns a prioritized fix list, not a 100-item generic checklist. Use this skill when the user asks about SEO prob"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Audits a SaaS app's public marketing/landing site for the basic SEO issues that actually affect organic signups - meta tags, heading structure, page speed, and mobile-friendliness - and returns a prioritized fix list, not a 100-item generic checklist. Use this skill when the user asks about SEO problems, organic traffic, or why their landing page isn't showing up in search, or says \"audit my landing page SEO\", \"why am I not showing up on google\", \"check my meta tags\", \"is my site mobile friendly\", \"my page speed seems slow\", \"review my SaaS site for SEO issues\", \"what's hurting my organic signups\", \"SEO checklist for my app's website\"."
     },
     {
       "slug": "pricing-page-optimizer",
       "folder": "skills/growth/pricing-page-optimizer",
-      "stage": "S10-Growth",
-      "description": "Reviews and rewrites a SaaS pricing page's plan structure, tier framing, and copy for conversion, using a fixed pricing-psychology checklist instead of a vague \"make it better\" pass. Use this skill when the user asks about pricing page conversion, plan structure, or says \"audit our pricing page\", \"r"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Reviews and rewrites a SaaS pricing page's plan structure, tier framing, and copy for conversion, using a fixed pricing-psychology checklist instead of a vague \"make it better\" pass. Use this skill when the user asks about pricing page conversion, plan structure, or says \"audit our pricing page\", \"rewrite our pricing\", \"are we priced right\", \"help me repackage our plans\", \"why do people bounce from the pricing page\", \"should we have 3 tiers or 4\", \"our pricing page isn't converting\"."
     },
     {
       "slug": "revenue-dashboard-builder",
       "folder": "skills/growth/revenue-dashboard-builder",
-      "stage": "S10-Growth",
-      "description": "Builds a revenue-specific dashboard covering MRR, churned revenue, LTV, and CAC payback in one place, complementing the broader growth-dashboard-builder with the numbers investors and the founder actually track week to week. Use this skill when the user asks about an MRR dashboard, revenue tracking,"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Builds a revenue-specific dashboard covering MRR, churned revenue, LTV, and CAC payback in one place, complementing the broader growth-dashboard-builder with the numbers investors and the founder actually track week to week. Use this skill when the user asks about an MRR dashboard, revenue tracking, or says \"build me a revenue dashboard\", \"track my MRR\", \"what's my churn in dollars\", \"how long until CAC pays back\", \"I need an LTV dashboard\", \"show me revenue over time\", \"what should I show investors about revenue\"."
     },
     {
       "slug": "signup-conversion-tracker",
       "folder": "skills/growth/signup-conversion-tracker",
-      "stage": "S10-Growth",
-      "description": "Sets up and interprets a signup and activation funnel (visit to signup to first key action to paid) to find the single biggest drop-off point to fix first, instead of guessing which step is broken. Use this skill when the user asks about funnel drop-off, activation rates, or why signups aren't conve"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Sets up and interprets a signup and activation funnel (visit to signup to first key action to paid) to find the single biggest drop-off point to fix first, instead of guessing which step is broken. Use this skill when the user asks about funnel drop-off, activation rates, or why signups aren't converting to paid, or says \"why aren't people signing up\", \"people sign up but never use the app\", \"where are we losing users\", \"what's my activation rate\", \"build me a signup funnel\", \"why is trial to paid so low\", \"track my conversion funnel\", \"which step should I fix first\"."
     },
     {
       "slug": "trial-to-paid-converter",
       "folder": "skills/growth/trial-to-paid-converter",
-      "stage": "S10-Growth",
-      "description": "Designs the trial-to-paid conversion sequence for a SaaS product \u2014 in-app prompts, emails, and timing \u2014 personalized to what each trial user has actually done, instead of one generic \"your trial is ending\" blast. Use this skill when the user asks about trial conversion, what to email trial users, or"
+      "capability": "growth",
+      "legacy_stage": null,
+      "description": "Designs the trial-to-paid conversion sequence for a SaaS product — in-app prompts, emails, and timing — personalized to what each trial user has actually done, instead of one generic \"your trial is ending\" blast. Use this skill when the user asks about trial conversion, what to email trial users, or says \"increase trial to paid conversion\", \"what should I send trialists\", \"redesign our trial flow\", \"trial conversion is low\", \"people sign up for the trial but never upgrade\", \"we're launching a free trial, help design it\"."
     },
     {
       "slug": "category-designer",
       "folder": "skills/meta/category-designer",
-      "stage": "S11-Meta",
-      "description": "Designs a new skill category (stage) for the pack when an existing task doesn't fit anywhere in the current 8 stages, defining its purpose, boundaries, and how it wires into the existing flywheel without causing overlap or sprawl. Use this skill when the user asks about \"where does this skill belong"
+      "capability": "meta",
+      "legacy_stage": null,
+      "description": "Designs a new skill category (stage) for the pack when an existing task doesn't fit anywhere in the current 8 stages, defining its purpose, boundaries, and how it wires into the existing flywheel without causing overlap or sprawl. Use this skill when the user asks about \"where does this skill belong\", \"we keep adding skills that don't fit S1-S8\", \"do we need a new stage\", \"add a category for X\", \"our pack is getting messy\", \"should this be its own stage or fit in S6\", \"reorganize the skill pack\", or \"we have 5 new skill ideas and no home for them\"."
     },
     {
       "slug": "compliance-checker",
       "folder": "skills/meta/compliance-checker",
-      "stage": "S11-Meta",
-      "description": "Audits a SaaS app against baseline legal and data-protection requirements before real users or paying customers sign up, covering privacy policy, terms of service, cookie consent, GDPR/CCPA data-subject basics, and a WISP-style data protection posture for apps handling sensitive personal or financia"
+      "capability": "meta",
+      "legacy_stage": null,
+      "description": "Audits a SaaS app against baseline legal and data-protection requirements before real users or paying customers sign up, covering privacy policy, terms of service, cookie consent, GDPR/CCPA data-subject basics, and a WISP-style data protection posture for apps handling sensitive personal or financial data. Use this skill when the user asks \"are we legally okay to launch\", \"do we need a privacy policy\", \"is this GDPR compliant\", \"check our compliance before launch\", \"do we need cookie consent\", \"what data protection do we need for [sensitive data type]\", \"am I going to get sued for this\", or \"compliance review before we open signups\"."
     },
     {
       "slug": "create-skill",
       "folder": "skills/meta/create-skill",
-      "stage": "S11-Meta",
-      "description": "Scaffolds a brand new SKILL.md file in the pack's exact format for a task the founder does repeatedly but isn't covered by any of the existing 52 skills, so the pack keeps growing in the same shape instead of drifting into inconsistent formats. Use this skill when the user asks \"make a skill for thi"
+      "capability": "meta",
+      "legacy_stage": null,
+      "description": "Scaffolds a brand new SKILL.md file in the pack's exact format for a task the founder does repeatedly but isn't covered by any of the existing 52 skills, so the pack keeps growing in the same shape instead of drifting into inconsistent formats. Use this skill when the user asks \"make a skill for this\", \"I keep doing this thing manually, turn it into a skill\", \"add a new skill to the pack\", \"we need a skill for X\", \"package this workflow as a skill\", \"clone the format for a new task\", or \"write a SKILL.md for [task]\"."
     },
     {
       "slug": "funnel-planner",
       "folder": "skills/meta/funnel-planner",
-      "stage": "S11-Meta",
-      "description": "Plans the end-to-end signup, activation, and retention funnel for a SaaS app and maps which specific pack skills should be used at each funnel stage, so growth work isn't scattered across ad-hoc tactics with no throughline. Use this skill when the user asks \"what's our signup funnel look like\", \"pla"
+      "capability": "meta",
+      "legacy_stage": null,
+      "description": "Plans the end-to-end signup, activation, and retention funnel for a SaaS app and maps which specific pack skills should be used at each funnel stage, so growth work isn't scattered across ad-hoc tactics with no throughline. Use this skill when the user asks \"what's our signup funnel look like\", \"plan our onboarding to retention path\", \"how do we get people from signup to paying\", \"map out our activation flow\", \"why are people signing up and not sticking around\", \"what skills do we need for growth\", or \"build the whole funnel, not just one piece\"."
     },
     {
       "slug": "self-improver",
       "folder": "skills/meta/self-improver",
-      "stage": "S11-Meta",
-      "description": "Reviews a completed project retrospectively \u2014 what broke, what took too long, what worked \u2014 and turns those lessons into concrete changes to how the skill pack gets used next time, so the same mistakes don't repeat across projects. Use this skill when the user asks \"what went wrong with this project"
+      "capability": "meta",
+      "legacy_stage": null,
+      "description": "Reviews a completed project retrospectively — what broke, what took too long, what worked — and turns those lessons into concrete changes to how the skill pack gets used next time, so the same mistakes don't repeat across projects. Use this skill when the user asks \"what went wrong with this project\", \"let's do a retro\", \"why did this take so long\", \"what should we do differently next time\", \"we hit the same problem again\", \"postmortem this launch\", \"what can we learn from [project]\", or \"I feel like we keep repeating the same mistakes\"."
     },
     {
       "slug": "skill-finder",
       "folder": "skills/meta/skill-finder",
-      "stage": "S11-Meta",
-      "description": "Recommends the 1-3 right skills from the 52-skill pack for whatever the founder is trying to do right now, described in plain language, so they don't have to memorize every skill name or guess which stage something belongs to. Use this skill when the user asks \"which skill do I need for this\", \"what"
+      "capability": "meta",
+      "legacy_stage": null,
+      "description": "Finds specialist skills for a scoped task by reading registry.json dynamically. It no longer embeds a hard-coded copy of the skill catalog or acts as the project-level orchestrator."
+    },
+    {
+      "slug": "backup-recovery-builder",
+      "folder": "skills/operations/backup-recovery-builder",
+      "capability": "operations",
+      "legacy_stage": null,
+      "description": "Builds a real, tested backup and recovery plan for a SaaS app's database and file storage, including an actual restore drill, not just a backup schedule nobody has verified works. Use this skill when the user asks about \"how do I back up my database\", \"what happens if I lose my data\", \"set up backups for my app\", \"I've never tested my backups\", \"disaster recovery plan\", \"what if Cloudflare D1 gets corrupted\", or \"I'm scared of losing customer data\"."
+    },
+    {
+      "slug": "incident-runbook-writer",
+      "folder": "skills/operations/incident-runbook-writer",
+      "capability": "operations",
+      "legacy_stage": null,
+      "description": "Writes a short, practical runbook for what to do when production breaks, sized for a solo founder or a two-to-three-person team with no on-call rotation. Use this skill when the user asks about \"what do I do when my site goes down\", \"write me an incident runbook\", \"I panicked when the app broke and didn't know what to do first\", \"how do I tell customers about an outage\", \"disaster response plan\", or \"what's my process if something breaks in production\"."
+    },
+    {
+      "slug": "monitoring-alerting-setup",
+      "folder": "skills/operations/monitoring-alerting-setup",
+      "capability": "operations",
+      "legacy_stage": null,
+      "description": "Sets up lightweight uptime, error, and performance monitoring with alerts so the founder hears about outages before customers do. Use this skill when the user asks about \"how do I know if my app is down\", \"set up monitoring for my app\", \"I want alerts when something breaks\", \"how do I catch errors in production\", \"add uptime monitoring\", \"what should I monitor for my SaaS\", or \"customers found a bug before I did\"."
+    },
+    {
+      "slug": "multi-tenant-manager",
+      "folder": "skills/operations/multi-tenant-manager",
+      "capability": "operations",
+      "legacy_stage": null,
+      "description": "Plans and reviews data isolation and tenant-scoping for a multi-customer SaaS so one organization's data can never leak into another's. Use this skill when the user asks about \"how do I separate customer data\", \"multi-tenant architecture\", \"can one customer see another's data\", \"add organizations to my app\", \"tenant isolation\", \"row-level security for customers\", or \"I'm worried about a data leak between accounts\"."
+    },
+    {
+      "slug": "seed-data-generator",
+      "folder": "skills/operations/seed-data-generator",
+      "capability": "operations",
+      "legacy_stage": null,
+      "description": "Generates realistic fake data for development, testing, and demos so an app can be built, tested, and shown off without touching real customer data. Use this skill when the user asks about \"I need test data for my app\", \"generate fake users for my database\", \"seed my dev database\", \"I want to demo my app but have no real data yet\", \"create sample customers and orders\", \"populate my database for testing\", or \"how do I test this without using real customer info\"."
+    },
+    {
+      "slug": "twelve-factor-auditor",
+      "folder": "skills/operations/twelve-factor-auditor",
+      "capability": "operations",
+      "legacy_stage": null,
+      "description": "Audits a SaaS app against the Twelve-Factor App methodology (2011, still the cloud-native standard) and reports exactly which of the 12 rules the app is breaking, in plain language, with a concrete fix for each. Use this skill when the user asks about \"is my app cloud-native\", \"am I doing this the right way\", or says \"check my app against best practices\", \"is my config setup okay\", \"am I doing anything that will bite me later\", \"review my app's architecture for cloud readiness\", \"why does dev work but prod breaks\", \"audit this against the twelve-factor app\", \"is this app portable/scalable the right way\"."
+    },
+    {
+      "slug": "hub-renderer",
+      "folder": "skills/orchestration/hub-renderer",
+      "capability": "orchestration",
+      "legacy_stage": null,
+      "description": "Renders the founder-facing hub.html from project.json. It is presentation-only: it never invents project facts or mutates project state. Sections appear conditionally based on project type and available data."
+    },
+    {
+      "slug": "project-orchestrator",
+      "folder": "skills/orchestration/project-orchestrator",
+      "capability": "orchestration",
+      "legacy_stage": null,
+      "description": "The single front door for the pack. Runs a project from idea, pivot, feature, redesign, service, website, or existing product change through the appropriate lifecycle without forcing the user to choose skills or stages. Reads project state, infers what it can, routes to specialist skills, asks only blocking questions, and keeps project.json + hub.html current."
+    },
+    {
+      "slug": "project-state-manager",
+      "folder": "skills/orchestration/project-state-manager",
+      "capability": "orchestration",
+      "legacy_stage": null,
+      "description": "Owns the durable project.json state for the v5 workflow. Initializes project state, applies structured patches from specialist skills, preserves decisions and assumptions, tracks provenance, and prevents planning documents from contradicting one another."
+    },
+    {
+      "slug": "architecture-decision-writer",
+      "folder": "skills/planning/architecture-decision-writer",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Compares 2-3 real technical approaches for a feature or the whole app with concrete tradeoffs and a clear recommendation, written as a lightweight Architecture Decision Record (ADR), so a non-technical founder doesn't end up locked into a stack by accident. Use this skill when the user asks about \"which stack should I use\", \"should I use Supabase or Firebase\", or says \"should I use Cloudflare or Vercel for this\", \"what database should this app use\", \"do I need a separate backend or can I do this serverless\", \"help me decide between X and Y\", \"why did the AI pick this framework\", \"what's the tradeoff here\", \"I don't want to get locked into something I can't undo\"."
+    },
+    {
+      "slug": "defensibility-calculator",
+      "folder": "skills/planning/defensibility-calculator",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Assesses how hard a planned product actually would be for a competitor to copy, scores it across concrete defensibility factors, and recommends specific changes that would make it harder to clone — before the founder builds something anyone can replicate in a weekend with the same AI tools. Use this skill when the user asks about \"is this idea defensible\", \"can someone just copy this\", or says \"won't someone just build this with AI too\", \"what's my moat here\", \"how do I make this harder to copy\", \"is this actually a business or just a feature\", \"everyone can build this now with Claude, what makes mine different\", \"score my idea's defensibility\"."
+    },
+    {
+      "slug": "feature-roadmap-architect",
+      "folder": "skills/planning/feature-roadmap-architect",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Sequences a feature list into phases and milestones based on real dependency order and user value, instead of \"build everything at once,\" so a founder always knows what to build next and why. Use this skill when the user asks about \"what should I build first vs later\", \"help me sequence this roadmap\", or says \"I have all these features, what order do I build them in\", \"what's phase 1 vs phase 2\", \"help me plan my next 3 months of building\", \"what depends on what here\", \"I'm building everything at once and it's chaos\", \"turn this feature list into a roadmap\"."
+    },
+    {
+      "slug": "mvp-feature-slicer",
+      "folder": "skills/planning/mvp-feature-slicer",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Cuts an overly ambitious feature list down to the smallest version that is still a real, testable product — directly targets the most common failure mode of non-technical founders scoping too big and never shipping anything. Use this skill when the user asks about \"what's actually in v1\", \"help me cut this down\", or says \"I keep adding features and never launching\", \"this feature list is way too big\", \"what's the smallest version of this I could actually ship\", \"help me cut scope\", \"I want to build everything before launch\", \"what can wait until after launch\", \"trim this down to an MVP\"."
+    },
+    {
+      "slug": "prd-writer",
+      "folder": "skills/planning/prd-writer",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Turns a vague app idea into a real Product Requirements Doc that locks down the problem, the one target user, the core user flows, and a hard line between must-have and nice-to-have features before any code gets written. Use this skill when the user asks about \"what should I build first\", \"help me write a PRD\", or says \"I have an idea for an app, can you help me plan it\", \"write me a PRD for this\", \"I keep telling Claude to build this and it's a mess\", \"what should this app actually do\", \"help me scope this feature before I build it\", \"I don't know what's in v1 vs later\", \"turn this idea into a spec\", \"my app idea is [X], where do I start\"."
+    },
+    {
+      "slug": "roadmap-visualizer",
+      "folder": "skills/planning/roadmap-visualizer",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Turns a written roadmap or feature list into a real, visual, trackable board (phases as columns, features as cards with status) saved as a local HTML file in the project folder — instead of a markdown file nobody re-opens. Use this skill when the user asks about \"show me the roadmap\", \"I want to see progress visually\", or says \"make this roadmap something I can actually look at\", \"I don't want another markdown file\", \"turn this into a board I can check off\", \"show me what's done vs. not\", \"I keep losing track of what's built\", \"visual version of my plan\", \"can I see this as a kanban board\", \"track my roadmap progress\"."
+    },
+    {
+      "slug": "tech-debt-detector",
+      "folder": "skills/planning/tech-debt-detector",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Reviews an existing codebase or a written plan for shortcuts, vague areas, and unresolved decisions that will cause problems later, and flags them before they get built on top of, not after. Use this skill when the user asks about \"is my codebase a mess\", \"what's going to break later\", or says \"review my codebase for problems\", \"the AI keeps making stuff up in this file\", \"I think there's tech debt here but I don't know where\", \"check this plan before I build it\", \"something feels off about how this was built\", \"audit what Claude built last week\", \"is this going to be a nightmare to extend later\"."
+    },
+    {
+      "slug": "user-story-writer",
+      "folder": "skills/planning/user-story-writer",
+      "capability": "planning",
+      "legacy_stage": null,
+      "description": "Converts PRD features and user flows into concrete user stories with specific, testable acceptance criteria that a developer or an AI coding agent can build against with no ambiguity left to fill in on its own. Use this skill when the user asks about \"turn this into stories\", \"what should I tell Claude to build exactly\", or says \"write user stories for this feature\", \"break this PRD into buildable pieces\", \"the AI built something different than what I meant\", \"give me acceptance criteria for this\", \"I need to hand this off to a developer\", \"make this specific enough to build without guessing\"."
+    },
+    {
+      "slug": "competitor-teardown",
+      "folder": "skills/research/competitor-teardown",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Researches 3-5 real competitors for an app idea and reports their pricing, features, positioning, and weaknesses in one comparable table. Use this skill when the user asks about \"who else does this\", \"competitor research\", or says \"who are my competitors\", \"what does the competition charge\", \"tear down my competitors\", \"is anyone already building this\", \"how do I compare to [competitor]\", \"find weaknesses in [competitor]\", \"what's already out there for [idea]\"."
+    },
+    {
+      "slug": "feature-differentiator",
+      "folder": "skills/research/feature-differentiator",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Ranks a list of possible product features by whether they actually differentiate the product versus whether they're table-stakes that competitors already have. Use this skill when the user asks about \"which features matter\", \"what should I build first\", or says \"which of these features actually matter\", \"am I wasting time on this feature\", \"what makes my app different\", \"rank my feature list\", \"what's table stakes vs. a differentiator\", \"should I build [feature] or is everyone doing that already\", \"help me cut my feature list down\"."
+    },
+    {
+      "slug": "launch-directory-submitter",
+      "folder": "skills/research/launch-directory-submitter",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Produces a submission checklist and ready-to-use copy templates for launching a finished app on Product Hunt, BetaList, Hacker News Show HN, and similar directories. Use this skill when the user asks about \"where should I launch this\", or says \"help me launch on Product Hunt\", \"write my Show HN post\", \"where do I submit my app\", \"launch checklist for my app\", \"what directories should I submit to\", \"how do I write a Product Hunt tagline\", \"get my app in front of early users\"."
+    },
+    {
+      "slug": "market-sizing",
+      "folder": "skills/research/market-sizing",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Sizes the actual market for an app or service idea — TAM, SAM, SOM, and growth rate — with sourced numbers, not invented figures. Use this skill when the user asks about \"how big is this market\", \"is this worth pursuing\", or says \"what's the market size for this\", \"is this market growing or shrinking\", \"how many potential customers are there\", \"is this a big enough opportunity\", \"what's my TAM\", \"give me the market numbers\", \"how fast is this space growing\", \"is this a real market or a niche\"."
+    },
+    {
+      "slug": "pricing-model-calculator",
+      "folder": "skills/research/pricing-model-calculator",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Works out SaaS pricing tiers and unit economics — what to charge, margin per customer, and how many paying users are needed to break even — for a described product. Use this skill when the user asks about \"what should I charge\", or says \"what should I charge for this\", \"help me price my app\", \"how many customers do I need to break even\", \"is $29/mo too cheap\", \"should I do a free tier\", \"what pricing tiers make sense\", \"how do I price against competitors\", \"what's my margin per user\"."
+    },
+    {
+      "slug": "research-report-builder",
+      "folder": "skills/research/research-report-builder",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Orchestrates evidence gathering for a new idea, pivot, market question, or strategic uncertainty. Produces sourced research patches for project.json and a coherent Research section in the project hub. It does not force a universal go/pivot/kill verdict and does not run irrelevant research for existing feature work."
+    },
+    {
+      "slug": "saas-idea-validator",
+      "folder": "skills/research/saas-idea-validator",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Scores a raw app idea on demand signal, competition level, and feasibility before any code gets written, producing a go/pivot/kill recommendation. Use this skill when the user asks about \"should I build this\", \"is this idea worth it\", or says \"is this a good idea\", \"should I build this app\", \"validate my idea before I start\", \"is there actually demand for this\", \"am I wasting my time building this\", \"score my SaaS idea\", \"should I pivot or keep going with this idea\"."
+    },
+    {
+      "slug": "tech-stack-finder",
+      "folder": "skills/research/tech-stack-finder",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Recommends the right free-or-cheap tech stack (framework, hosting, database, auth) for a described app idea, weighing the founder's actual skill level and the tools they already use. Use this skill when the user asks about \"what stack should I use\", \"what should I build this in\", or says \"what should I build this app with\", \"I'm not technical, what stack do I use\", \"should I use Cloudflare or Vercel\", \"what database should I pick\", \"help me choose a tech stack\", \"is this stack overkill for my idea\", \"what's the cheapest way to host this\"."
+    },
+    {
+      "slug": "trending-tech-scout",
+      "folder": "skills/research/trending-tech-scout",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Scouts trending frameworks, tools, and AI capabilities worth building with right now, so a tech stack choice doesn't get outdated fast. Use this skill when the user asks about \"what's new and worth using\", or says \"what's trending in web dev right now\", \"is there a better way to build this now\", \"what AI tools should I be using in my app\", \"am I about to build on something outdated\", \"what's the new hotness in [category]\", \"should I use the new version of [framework]\", \"what should I know about before I commit to a stack\"."
+    },
+    {
+      "slug": "underserved-market-finder",
+      "folder": "skills/research/underserved-market-finder",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Finds niches within a broad market space that are underserved by existing SaaS tools, surfacing where demand outpaces the current options. Use this skill when the user asks about \"what niche should I go after\", \"underserved markets\", or says \"what's a good niche in [space]\", \"is there a gap in the market for [category]\", \"who's underserved right now\", \"find me a niche nobody's building for\", \"what broad space should I narrow into\", \"where's the whitespace in [industry]\"."
+    },
+    {
+      "slug": "unique-value-prop-audit",
+      "folder": "skills/research/unique-value-prop-audit",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Audits whether a product's stated value proposition is actually distinct or just generic category language — a \"purple cow\" test against real competitor messaging. Use this skill when the user asks about \"is my pitch generic\", \"value prop check\", or says \"does my value prop actually stand out\", \"is my tagline generic\", \"audit my positioning\", \"why does my homepage headline sound like everyone else's\", \"purple cow test my product\", \"help me sharpen my value proposition\", \"what makes my pitch different from competitors\"."
+    },
+    {
+      "slug": "user-acquisition-analyzer",
+      "folder": "skills/research/user-acquisition-analyzer",
+      "capability": "discovery",
+      "legacy_stage": null,
+      "description": "Analyzes which user acquisition channels — SEO, cold outreach, communities, ads — actually fit a specific app and audience combination, and ranks them by realistic effort and return. Use this skill when the user asks about \"how do I get users\", \"which marketing channel should I use\", or says \"how do I get my first 100 users\", \"should I do ads or cold outreach\", \"what channel fits my app\", \"where does my target customer actually hang out\", \"SEO vs. cold email for my app\", \"I don't know how to get users for this\", \"help me pick a growth channel\"."
+    },
+    {
+      "slug": "accessibility-auditor",
+      "folder": "skills/testing/accessibility-auditor",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Checks a UI for basic accessibility problems — color contrast, keyboard navigation, missing alt text, and missing ARIA labels — before it ships. Use this skill when the user asks about \"is this accessible\", \"check contrast on this page\", \"can this be used with a keyboard only\", \"does this need alt text\", \"accessibility check before launch\", \"will this pass a basic a11y review\", or \"someone using a screen reader, will this work for them\"."
+    },
+    {
+      "slug": "browser-verifier",
+      "folder": "skills/testing/browser-verifier",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Actually launches the running app in a real browser using the superpowers-chrome plugin (Chrome DevTools browser control) and clicks through the golden path plus edge cases before anyone is allowed to call a feature \"done\" — the antidote to claiming success without checking. Use this skill when the user asks about \"is this actually working\", \"check this in the browser\", \"verify this feature works\", \"did that actually deploy correctly\", \"click through this and tell me if it works\", \"I think this is done, can you confirm\", \"test this live\", or \"don't just tell me it works, show me\"."
+    },
+    {
+      "slug": "edge-case-hunter",
+      "folder": "skills/testing/edge-case-hunter",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Actively hunts for the edge cases a feature spec left out — empty states, concurrent users, bad input, network failure, auth expiry, and other ways real usage differs from the demo path. Use this skill when the user asks about \"what edge cases am I missing\", \"what could break this\", \"what did I not think of\", \"stress this idea before I build it\", \"poke holes in this feature\", \"what happens if two people do this at once\", or \"what's the worst thing a user could do here\"."
+    },
+    {
+      "slug": "load-test-builder",
+      "folder": "skills/testing/load-test-builder",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Defines lightweight load and stress checks sized for a small SaaS app with real but modest traffic — not enterprise-scale over-engineering that wastes a solo founder's time. Use this skill when the user asks about \"will my app hold up under load\", \"how many users can this handle\", \"should I load test this\", \"what happens if this gets busy\", \"am I going to fall over at launch\", \"check if this scales\", or \"stress test my app before I post this on Reddit\"."
+    },
+    {
+      "slug": "regression-test-builder",
+      "folder": "skills/testing/regression-test-builder",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Turns a bug that was just fixed into a permanent test or checklist step so the exact same bug cannot silently come back in a future change. Use this skill when the user asks about \"write a test for this bug fix\", \"make sure this doesn't break again\", \"how do I stop this from regressing\", \"add a regression test\", \"this bug came back, again\", \"I fixed this once already\", or \"lock this fix in\"."
+    },
+    {
+      "slug": "security-review-lite",
+      "folder": "skills/testing/security-review-lite",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Runs a lightweight, pre-ship security pass for a small SaaS app — auth issues, exposed secrets, injection risks, and missing input validation — a sane baseline check, not a full penetration test. Use this skill when the user asks about \"is this safe to ship\", \"check for security issues\", \"did I leak an API key\", \"is this vulnerable to SQL injection\", \"can someone hack this before I launch\", \"security check before going live\", \"am I exposing anything I shouldn't\", or \"review this for security holes\"."
+    },
+    {
+      "slug": "test-case-generator",
+      "folder": "skills/testing/test-case-generator",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Turns a feature description or user story into a concrete, numbered list of test cases covering the happy path and the obvious edge cases, before or right after the feature is built. Use this skill when the user asks about \"how do I test this feature\", \"what should I check before shipping this\", \"write test cases for signup\", \"what could go wrong with this form\", \"give me a checklist for this feature\", \"what am I missing before I call this done\", or \"test plan for the checkout flow\"."
+    },
+    {
+      "slug": "user-acceptance-test-planner",
+      "folder": "skills/testing/user-acceptance-test-planner",
+      "capability": "verification",
+      "legacy_stage": null,
+      "description": "Plans a short real-user (or founder-as-user) acceptance test pass before a feature or app gets called launch-ready — the final human-eyes check after automated and technical verification. Use this skill when the user asks about \"is this ready to launch\", \"get someone to try this before I ship\", \"plan a final test before launch\", \"who should test this before real users see it\", \"acceptance test before going live\", \"final check before launch day\", or \"have I actually confirmed this works for a real person\"."
     }
   ]
 }
