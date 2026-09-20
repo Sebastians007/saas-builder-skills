@@ -927,6 +927,8 @@ the entire asset map from top to bottom. Only pause if:
 
 ### Pages (landing pages, thank you pages, upsell pages, application pages)
 
+**Before finalizing any page's HTML, load and apply the `impeccable` skill** (fall back to `taste-skill` if unavailable) — real design craft (typography, layout, visual hierarchy), not just the functional structure below. This applies to every page this skill produces, not just the primary landing page. See `shared/references/output-conventions.md`.
+
 Structure every page using this conversion framework — include only the sections
 relevant to the page type:
 

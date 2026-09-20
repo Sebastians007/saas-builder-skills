@@ -25,7 +25,7 @@ metadata:
 
 Takes the output of `funnel-select` and `funnel-builder-orchestrator` (whichever funnel type was built — Webinar, Tripwire, Free Trial/SaaS, etc.) and renders the whole funnel as one visual map — every step in order, what page/email/ad lives at each step, and once real traffic exists, the actual conversion rate between each step. This exists because a funnel described across several SKILL.md workflows is hard to hold in your head; a founder needs to see the whole path in one place to know where it's actually leaking.
 
-**Follows `shared/references/output-conventions.md`: local files only, never a published Artifact.**
+**Follows `shared/references/output-conventions.md`: writes into the brand's single consolidated `hub.html` (Funnel Map section) — never its own separate page — and passes through `impeccable` before being called done.**
 
 ## Stage
 This skill belongs to Stage S3: Funnel Build
@@ -51,40 +51,38 @@ This skill belongs to Stage S3: Funnel Build
 ### Step 1: Gather the Funnel Structure
 Pull the step sequence from `funnel-builder-orchestrator`'s output for the chosen type (e.g. Low-Ticket/Tripwire: landing page → order bump → one-time-offer → thank-you/upsell). Confirm the order and what lives at each step (page, email, ad) before building anything.
 
-### Step 2: Set Up the Project Folder
-Reuse the funnel's existing project folder if `funnel-builder-orchestrator` already created one (`[BrandName]/funnel/`); otherwise create it, confirming the brand/business name first if not already known — the root is the brand name alone, never the offer name (see `shared/references/output-conventions.md`). Inside it:
-- `data/funnel-map.json` — the structured source of truth: steps, types, copy summaries, live numbers if any
-- `funnel-map.html` — the rendered map, regenerated from `funnel-map.json` every time
+### Step 2: Set Up the Brand Folder and Find the Shared Hub
+Confirm the brand/business name first if not already known — the root is the brand name alone, never the offer name. **Check whether `[BrandName]/hub.html` and `hub-data.json` already exist** (likely, since `funnel-builder-orchestrator` or `research-report-builder` probably ran first) — read them and update the Funnel Map section rather than creating a competing page. If no hub exists yet, create it with all 7 sections, marking everything but Funnel Map as "not started yet."
 
 ### Step 3: Decide on Live Data
 If the founder has PostHog connected and real traffic, this map should show real numbers (visitors in, converted, drop-off %) at each step — pull that via the PostHog MCP tools referenced in `growth-dashboard-builder` and `checkout-funnel-auditor`. If no live data yet, show the planned structure only and label it clearly as "not yet live" rather than inventing numbers.
 
-### Step 4: Build the Map (static HTML, generated from the data file)
-Structure: a left-to-right (or top-to-bottom on mobile) flow of steps, each step as a card showing:
-- Step name and type (page/email/ad)
-- One-line copy summary (what this step says/sells)
+### Step 4: Write the Funnel Map Data and Regenerate the Hub
+Update the Funnel Map section of `hub-data.json`: steps, types, copy summaries, live numbers if any. Structure within the section:
+- A left-to-right (or top-to-bottom on mobile) flow of steps, each step as a card showing step name, type (page/email/ad), one-line copy summary
 - If live: visitor count in, % who moved to the next step, biggest visual weight given to the step with the worst drop-off (so the eye goes straight to the problem)
 
-Self-contained HTML: inline CSS, no external published dependencies, opens correctly straight from the filesystem.
+Regenerate the *entire* `hub.html` from `hub-data.json`, not just this section in isolation.
 
-### Step 5: Save and Tell the User
-Write `funnel-map.html` to the project folder and give the founder the exact path to open in their browser.
+### Step 5: Run `impeccable`, Save, and Tell the User
+Before saving, load and apply the `impeccable` skill (fall back to `taste-skill`) to `hub.html`. Then write it to the brand folder and give the founder the exact path — `[BrandName]/hub.html` — to open in their browser.
 
 ### Step 6: Highlight the Biggest Leak
-If live data exists, explicitly call out which single step has the worst drop-off — that's the one `checkout-funnel-auditor` or `ab-test-generator` should be pointed at next, not a vague "optimize everything" note.
+If live data exists, explicitly call out which single step has the worst drop-off — that's the one `checkout-funnel-auditor` or `ab-test-generator` should be pointed at next, not a vague "optimize everything" note. If this is a genuinely new finding, append it to the hub's Decisions Log.
 
 ### Step 7: Self-Validation
 - [ ] Every step from the chosen funnel type appears in order
 - [ ] Each step shows what actually lives there (page/email/ad), not just a generic label
 - [ ] Live data is only shown if real, never fabricated to look complete
 - [ ] The worst-performing step (if data exists) is visually obvious, not buried
-- [ ] The founder was given the exact local file path
+- [ ] `impeccable` (or `taste-skill`) was applied before saving
+- [ ] The founder was given the exact local hub path, not a link
 
 ## Output Schema
 ```
 {
-  html_path: string
-  data_path: string
+  brand_folder: string
+  hub_html_path: string
   funnel_type: string
   step_count: number
   has_live_data: boolean
@@ -94,11 +92,12 @@ If live data exists, explicitly call out which single step has the worst drop-of
 
 ## Output Format
 ```
-## Funnel Map Saved
+## Funnel Map Updated
 
-**[Funnel Type] Funnel Map** → [project-folder]/funnel-map.html
+**[Brand Name] — [Funnel Type] Funnel Map** — [BrandName]/hub.html (Funnel Map section)
 
-Open it in your browser (double-click the file, or drag it into a tab).
+Open the hub in your browser (double-click the file, or drag it into a tab)
+and jump to the Funnel Map section.
 
 Steps: [Step 1] → [Step 2] → [Step 3] → [Step 4]
 
@@ -114,15 +113,15 @@ tracking real visitors and I'll overlay actual conversion numbers.
 - **No funnel type chosen yet:** Point to `funnel-select` first — this skill visualizes a chosen funnel, it doesn't pick one.
 - **Live data requested but PostHog isn't connected:** Say so plainly and show the planned structure only; never fabricate conversion numbers to fill the gap.
 - **Funnel has steps not covered by the source funnel-type skill (custom steps added):** Include them as given, but flag if the sequence seems to skip a normally-required step (e.g. a checkout with no thank-you page).
-- **Updating an existing map with new live data:** Read the existing `data/funnel-map.json`, refresh only the data layer, regenerate `funnel-map.html` — don't recreate the project folder from scratch.
+- **Updating an existing map with new live data:** Read the existing `hub-data.json`, refresh only the Funnel Map section, regenerate the full `hub.html` — don't recreate the brand folder from scratch.
 
 ## Examples
 
 **Example 1:**
 User: "I picked the tripwire funnel, can you show me what it actually looks like end to end?"
 → Pull the 4-step structure from the Tripwire-type build's output
-→ Write `data/funnel-map.json` and generate `funnel-map.html`, labeled as planned (no live data yet)
-→ Give the founder the exact file path
+→ Find or create the brand folder and hub, write the Funnel Map section into `hub-data.json`, regenerate `hub.html` through `impeccable`, labeled as planned (no live data yet)
+→ Give the founder the exact hub path
 
 **Example 2:**
 User: "where is my funnel actually leaking?"

@@ -25,7 +25,7 @@ metadata:
 
 This is the orchestrator S1-Research was missing — the same role `funnel-builder-orchestrator` plays for S3-Funnel-Build. Run this once at the start of a real project and it sequences `market-sizing`, `competitor-teardown`, `underserved-market-finder`, and `avatar-extraction`, then compiles all four into a single, readable report — not four separate outputs the founder has to mentally assemble. This is the entry point for Stage S1; run this first, not the individual research skills piecemeal.
 
-**Follows `shared/references/output-conventions.md`: saved as a real local project folder and HTML page, never a published Artifact — and built progressively, so there's something to look at while research is still running, not just at the end.**
+**Follows `shared/references/output-conventions.md`: writes into the brand's single consolidated `hub.html` (Research section) — never its own separate page — built progressively so there's something to look at while research is still running, and every page passes through `impeccable` before being called done.**
 
 ## Stage
 This skill belongs to Stage S1: Research
@@ -58,26 +58,28 @@ Tell the user what will be built before building it:
 
 Don't wait for elaborate confirmation — a simple "yes"/"go"/"do it" is enough, same as the funnel orchestrator's approval gate.
 
-### Step 3: Set Up the Project Folder and Publish a Skeleton
-Before running any component skill, confirm the brand/business name if it isn't already clear from context — never default to the offer name (see `shared/references/output-conventions.md`). The root folder is the brand name alone, exactly as the user writes it (e.g. `SmartBuzzAI`, not slugified); reuse it if it already exists for this business rather than creating a new one. Create `[BrandName]/research/`:
-- `brief/research-report.md` — the compiled report as markdown (written last, Step 5)
-- `data/report-sections.json` — structured section data, updated as each component finishes
-- `report.html` — the rendered page, written immediately with every section marked "researching..." and regenerated after each component completes
+### Step 3: Set Up the Brand Folder and the Shared Hub Skeleton
+Confirm the brand/business name if it isn't already clear from context — never default to the offer name. The root folder is the brand name alone, exactly as the user writes it (e.g. `SmartBuzzAI`, not slugified). **Check whether `[BrandName]/hub.html` already exists first** — if it does (from a prior roadmap or funnel-map run), read `hub-data.json` and add to it rather than creating a new folder or a competing page.
 
-Tell the user the file path right away: "I've started your research report at `[BrandName]/research/report.html` — open it now and I'll fill it in as each piece finishes." This is the fix for the single biggest failure mode found in testing: don't make the founder wait through a silent multi-minute run and then dump a wall of text — give them something to watch fill in.
+If no hub exists yet, create `[BrandName]/` with:
+- `hub-data.json` — structured data for all 7 hub sections (Dashboard, Fundamentals, Research, Audience & Positioning, Roadmap, Funnel Map, Decisions Log) — this skill fills in Dashboard, Fundamentals, and Research; the other sections stay marked "not started yet" until `roadmap-visualizer`/`funnel-map-visualizer` run
+- `hub.html` — rendered immediately from `hub-data.json`, with the Research section marked "researching..." and everything not yet started clearly labeled as such
+- `brief.md` — written once research is compiled (Step 5)
 
-### Step 4: Run the Component Skills in Sequence, Updating the Page After Each One
+Tell the user the file path right away: "I've started `[BrandName]/hub.html` — open it now, I'll fill in Research as each piece finishes." This is the fix for the single biggest failure mode found in testing: don't make the founder wait through a silent multi-minute run and then dump a wall of text — give them something to watch fill in.
+
+### Step 4: Run the Component Skills in Sequence, Updating the Hub After Each One
 Run each in order, feeding each one's relevant output into the next where it helps (e.g. the target segment found in Step 4c narrows the market sizing in Step 4a if it wasn't already run):
 
-1. `market-sizing` — TAM/SAM/SOM and growth rate for the category → write this section into `data/report-sections.json`, regenerate `report.html`
-2. `competitor-teardown` — the real competitive field, pricing, positioning, weaknesses → same: update the data file, regenerate the page
+1. `market-sizing` — TAM/SAM/SOM and growth rate for the category → write into the Research section of `hub-data.json`, regenerate `hub.html`
+2. `competitor-teardown` — the real competitive field, pricing, positioning, weaknesses → same
 3. `underserved-market-finder` — whether there's a specific underserved niche within the category worth targeting → same
-4. `avatar-extraction` — pulled forward from S2, run here too so the report includes a real target buyer, not just a market description → same
+4. `avatar-extraction` — pulled forward from S2, run here too so the report includes a real target buyer, not just a market description → writes into the Audience & Positioning section, not Research
 
-Each regeneration is a full file re-write, not a partial patch — keep it simple. Do not present each skill's raw output separately in chat as you go — the page is where progress is visible; chat gets a brief one-line update per completed section ("✓ Market sizing done — see the page").
+Each regeneration is a full re-render of `hub.html` from `hub-data.json`, never a hand-patched fragment — this is what keeps the hub internally consistent. Do not present each skill's raw output separately in chat as you go — the page is where progress is visible; chat gets a brief one-line update per completed section ("✓ Market sizing done — see the page").
 
-### Step 5: Compile One Report
-Synthesize all four outputs into the final version of `report.html`, and also write `brief/research-report.md` as a portable copy of the same content. This is not a copy-paste of four sections — write actual connective analysis: does the market size support the pricing implied by the competitive teardown? Does the underserved niche match who the avatar actually is? Contradictions between the four inputs are the most valuable thing this step can surface — call them out explicitly, don't smooth them over.
+### Step 5: Compile One Report and Update the Dashboard
+Synthesize the four research outputs into the Research and Audience & Positioning sections of `hub-data.json`, regenerate `hub.html`, and write `brief.md` as a portable markdown copy of the Research section. This is not a copy-paste of four sections — write actual connective analysis: does the market size support the pricing implied by the competitive teardown? Does the underserved niche match who the avatar actually is? Contradictions between the four inputs are the most valuable thing this step can surface — call them out explicitly, don't smooth them over. Update the **Dashboard** section too: project stage is now "research complete," and append the go/pivot/kill call to the Decisions Log with a timestamp.
 
 ### Step 6: Give a Clear Recommendation
 End with an explicit go/pivot/kill call, not just "here's the data, you decide." Base it on:
@@ -85,20 +87,24 @@ End with an explicit go/pivot/kill call, not just "here's the data, you decide."
 - **Pivot:** Market or competition is fine, but the specific angle/segment needs to change
 - **Kill:** Market is too small/declining, or genuinely saturated with no real gap
 
-### Step 7: Self-Validation
-- [ ] The project folder and skeleton `report.html` were created and the path given to the user *before* the first component skill ran, not after
+### Step 7: Run `impeccable` Before Calling the Hub Done
+Before the final regeneration of `hub.html`, load and apply the `impeccable` skill (fall back to `taste-skill` if unavailable) to actually design the page — real typography, layout, and visual hierarchy, not just functional markup. This applies every time `hub.html` is regenerated, not only on first creation.
+
+### Step 8: Self-Validation
+- [ ] The brand folder and skeleton `hub.html` were created (or the existing hub reused) and the path given to the user *before* the first component skill ran, not after
 - [ ] All four component skills actually ran (not skipped or assumed)
-- [ ] `report.html` was regenerated after each component finished, not just once at the end
-- [ ] The report reads as ONE document with connective analysis, not four pasted sections
+- [ ] `hub.html` was regenerated after each component finished, not just once at the end
+- [ ] The Research section reads as ONE document with connective analysis, not four pasted sections
 - [ ] Contradictions between findings are named, not glossed over
-- [ ] A clear go/pivot/kill recommendation is given, not left open-ended
+- [ ] A clear go/pivot/kill recommendation is given, not left open-ended, and logged to the Decisions Log
+- [ ] `impeccable` (or `taste-skill`) was applied before the final save
 - [ ] Next steps point to the correct next pack stage (S2-Audience & Positioning is mostly already done via avatar-extraction; point to `offer-extraction` and `funnel-select` next)
 
 ## Output Schema
 ```
 {
-  project_folder: string
-  html_path: string
+  brand_folder: string
+  hub_html_path: string
   brief_path: string
   idea: string
   market: { tam, sam, som, growth_rate, verdict }
@@ -125,44 +131,39 @@ Final chat message once compiled:
 ```
 ## Research Report Ready
 
-**[Idea Name] Research** → [project-folder]/report.html
+**[Idea Name] Research** — added to [BrandName]/hub.html
 
-Open it in your browser (double-click the file, or drag it into a tab).
-A portable copy is also saved at [project-folder]/brief/research-report.md.
+Open the hub in your browser (double-click the file, or drag it into a tab)
+and jump to the Research section. A portable copy of just the research is
+also saved at [BrandName]/brief.md.
 
 Recommendation: **[GO / PIVOT / KILL]**
 ```
 
-`report.html` content structure:
+Research section content structure (written into `hub.html`'s Research section, not a separate document):
 ```markdown
-# Research Report: [Idea/Offer Name]
+## Research
 
-## Executive Summary
+### Executive Summary
 [3-4 sentences: what this is, the headline market finding, the headline competitive finding, and the bottom-line recommendation]
 
-## Market Overview
+### Market Overview
 [TAM/SAM/SOM and growth rate from market-sizing, with sources]
 
-## Competitive Landscape
+### Competitive Landscape
 [Condensed competitor-teardown table and whitespace finding]
 
-## Target Audience
-[The avatar from avatar-extraction — one real person, not a segment]
+### The Opportunity
+[Where underserved-market-finder's niche intersects with the avatar (see Audience & Positioning section) and the competitive whitespace — this is the synthesis, not a restatement]
 
-## The Opportunity
-[Where underserved-market-finder's niche intersects with the avatar and the competitive whitespace — this is the synthesis, not a restatement]
-
-## Contradictions & Open Questions
+### Contradictions & Open Questions
 [Anything the four research streams disagreed on or left unclear — named explicitly]
 
-## Recommendation: GO / PIVOT / KILL
+### Recommendation: GO / PIVOT / KILL
 [The call, with the reasoning tied directly back to the data above]
-
-## Next Steps
-1. `offer-extraction` — sharpen the offer now that market and audience are clear
-2. `funnel-select` — pick the funnel type once the offer is locked
-3. [any specific follow-up flagged during research]
 ```
+
+The avatar itself is written into the hub's separate **Audience & Positioning** section, not Research — keep them visually distinct even though both come from this same skill run.
 
 ## Error Handling
 - **User wants to skip a component (e.g. "I already know my competitors"):** Accept what they provide, still run the skill to fill gaps and verify, rather than skipping entirely — their knowledge may be outdated or incomplete.

@@ -24,7 +24,7 @@ metadata:
 
 Takes the output of `prd-writer`, `feature-roadmap-architect`, or `mvp-feature-slicer` and turns it into a real, visual roadmap board — phases as columns, features as cards, status tracked over time — saved as a local HTML file the founder opens directly in their browser. This exists because a markdown roadmap gets written once and never looked at again; a board the founder can actually glance at gets used.
 
-**Follows `shared/references/output-conventions.md`: local files only, never a published Artifact.**
+**Follows `shared/references/output-conventions.md`: writes into the brand's single consolidated `hub.html` (Roadmap section) — never its own separate page — and passes through `impeccable` before being called done.**
 
 ## Stage
 This skill belongs to Stage S5: Planning
@@ -51,42 +51,40 @@ This skill belongs to Stage S5: Planning
 ### Step 1: Gather the Roadmap Content
 Read the phased roadmap (from `feature-roadmap-architect` or the PRD). Each phase becomes a column. Each feature/task becomes a card. If status isn't given, ask the founder which items are done, in progress, or not started — don't guess.
 
-### Step 2: Set Up the Project Folder
-Confirm the brand/business name if not already clear from context (see `shared/references/output-conventions.md`). The root folder is the brand name alone (e.g. `SmartBuzzAI`), never the offer/project name — reuse it if it already exists for this business. Create `[BrandName]/roadmap/` if it doesn't already exist (on an update, reuse the existing one). Inside it:
-- `data/roadmap.json` — the structured source of truth: phases, cards, statuses
-- `roadmap.html` — the rendered board, regenerated from `roadmap.json` every time
+### Step 2: Set Up the Brand Folder and Find the Shared Hub
+Confirm the brand/business name if not already clear from context. The root folder is the brand name alone (e.g. `SmartBuzzAI`), never the offer/project name. **Check whether `[BrandName]/hub.html` and `hub-data.json` already exist** — if so, read them and add the Roadmap section's data rather than creating a new folder or a competing page. If no hub exists yet, create `[BrandName]/hub.html` and `hub-data.json` with all 7 sections, marking everything but Roadmap as "not started yet."
 
-### Step 3: Write the Data File
-Write `data/roadmap.json` with the phase/card/status structure. This file is what actually gets edited when status changes — the HTML is always a regeneration of it, never edited by hand.
+### Step 3: Write the Roadmap Data into the Shared Data File
+Update the Roadmap section of `hub-data.json` with the phase/card/status structure. This file is what actually gets edited when status changes — `hub.html` is always a full regeneration of it, never hand-edited.
 
-### Step 4: Build the Board (static HTML, generated from the data file)
-Structure:
+### Step 4: Regenerate the Hub's Roadmap Section
+Structure within the Roadmap section of `hub.html`:
 - One column per phase (Now / Next / Later, or the phase names from the roadmap)
 - One card per feature: title, one-line description, status badge
-- A progress bar or percentage at the top showing overall completion, computed from `roadmap.json`
+- A progress bar or percentage at the top showing overall completion, computed from `hub-data.json`
 - Cards for "done" visually distinct (dimmed/checked) so progress is obvious at a glance
-- Self-contained HTML: inline CSS, no external published dependencies, opens correctly straight from the filesystem (`file://`) with no server needed
 
-### Step 5: Save and Tell the User
-Write `roadmap.html` to the project folder. Tell the founder the exact path and that they can open it directly in their browser (double-click the file, or drag it into a browser tab). This is now the living source of truth for progress — not the markdown file.
+Regenerate the *entire* `hub.html` from `hub-data.json`, not just the Roadmap section in isolation — this keeps the whole hub internally consistent. Self-contained HTML: inline CSS, no external published dependencies, opens correctly straight from the filesystem (`file://`) with no server needed.
+
+### Step 5: Run `impeccable`, Save, and Tell the User
+Before saving, load and apply the `impeccable` skill (fall back to `taste-skill`) to `hub.html`. Then write it to the brand folder. Tell the founder the exact path — `[BrandName]/hub.html` — and that they can open it directly in their browser. Update the hub's **Dashboard** section to reflect the new roadmap completion percentage, and append a line to the **Decisions Log** if this run represents a real milestone (e.g. "Roadmap locked for v1").
 
 ### Step 6: Wire Updates
-Tell the founder: when a feature ships, tell Claude "mark X as done." The skill then edits `data/roadmap.json` and regenerates `roadmap.html` in place — the founder refreshes the already-open browser tab to see the change. No client-side write-back exists; Claude is what keeps the file current.
+Tell the founder: when a feature ships, tell Claude "mark X as done." The skill then edits the Roadmap section of `hub-data.json` and regenerates `hub.html` in place — the founder refreshes the already-open browser tab to see the change. No client-side write-back exists; Claude is what keeps the file current.
 
 ### Step 7: Self-Validation
 - [ ] Every phase from the roadmap has a column
 - [ ] Every feature has a card with correct status
-- [ ] `roadmap.json` is the source of truth; `roadmap.html` is always regenerated from it, never hand-edited
+- [ ] `hub-data.json` is the source of truth; `hub.html` is always regenerated from it in full, never hand-edited or patched in isolation
 - [ ] Progress is visible at a glance without reading every card
-- [ ] The founder was given the exact local file path, not a link
+- [ ] `impeccable` (or `taste-skill`) was applied before saving
+- [ ] The founder was given the exact local hub path, not a link
 
 ## Output Schema
 ```
 {
-  project_folder: string
-  html_path: string
-  data_path: string
-  project_name: string
+  brand_folder: string
+  hub_html_path: string
   phase_count: number
   feature_count: number
   completion_percent: number
@@ -95,24 +93,25 @@ Tell the founder: when a feature ships, tell Claude "mark X as done." The skill 
 
 ## Output Format
 ```
-## Roadmap Board Saved
+## Roadmap Board Updated
 
-**[Project Name] Roadmap** → [project-folder]/roadmap.html
+**[Brand Name] Roadmap** — [BrandName]/hub.html (Roadmap section)
 
-Open it in your browser (double-click the file, or drag it into a tab).
+Open the hub in your browser (double-click the file, or drag it into a tab)
+and jump to the Roadmap section.
 
 [X]% complete — [N] of [M] features done
 
 Phases: [Phase 1] · [Phase 2] · [Phase 3]
 
 This is now the source of truth for progress. Tell me "mark [feature] as done"
-and I'll update the file — refresh the tab to see it.
+and I'll update the hub — refresh the tab to see it.
 ```
 
 ## Error Handling
 - **No roadmap exists yet:** Point to `feature-roadmap-architect` first — this skill visualizes a roadmap, it doesn't create one from nothing.
 - **Status unknown for some items:** Ask the founder rather than defaulting everything to "not-started," which would be misleading if work has already happened.
-- **Updating an existing board:** Read the existing `data/roadmap.json` first, merge changes, regenerate `roadmap.html` — never create a duplicate project folder for the same project.
+- **Updating an existing board:** Read the existing `hub-data.json` first, merge changes into the Roadmap section only, regenerate the full `hub.html` — never create a duplicate brand folder.
 - **Roadmap has too many items for one screen:** Group into collapsible phases rather than cutting content.
 
 ## Examples
@@ -120,13 +119,13 @@ and I'll update the file — refresh the tab to see it.
 **Example 1:**
 User: "I have a roadmap for my app but I never look at it, can you make it visual?"
 → Read the existing roadmap doc, ask which items are actually done
-→ Create the project folder, write `data/roadmap.json`, generate `roadmap.html`
-→ Give the founder the exact file path to open
+→ Find or create the brand folder and hub, write the Roadmap section into `hub-data.json`, regenerate `hub.html` through `impeccable`
+→ Give the founder the exact hub path to open
 
 **Example 2:**
 User: "mark the auth flow as done"
-→ Read the existing `data/roadmap.json`
-→ Update that card's status, regenerate `roadmap.html`
+→ Read the existing `hub-data.json`
+→ Update that card's status in the Roadmap section, regenerate `hub.html`
 → Confirm the new completion percentage and remind them to refresh the open tab
 
 ## References
