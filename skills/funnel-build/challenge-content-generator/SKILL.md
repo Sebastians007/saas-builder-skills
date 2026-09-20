@@ -125,7 +125,7 @@ For those who didn't buy on Day 5:
 
 ## Flywheel Connections
 ### Feeds Into
-- `challenge-funnel` (S3-Funnel-Build) — the daily content is the core asset the challenge funnel's registration and delivery flow is built around
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — the daily content is the core asset a Challenge-type funnel build is built around
 - `email-sequence-generator` — daily challenge reminders and the post-challenge pitch sequence extend the content into email
 
 ### Fed By
@@ -141,6 +141,6 @@ chain_metadata:
   stage: "funnel-build"
   timestamp: string
   suggested_next:
-    - "challenge-funnel"
+    - "funnel-builder-orchestrator"
     - "email-sequence-generator"
 ```

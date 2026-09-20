@@ -166,7 +166,7 @@ Provide the **top 5 anticipated objections with scripted answers**.
 
 ## Flywheel Connections
 ### Feeds Into
-- `webinar-funnel` (S3-Funnel-Build) — the script is the core content asset the webinar funnel's registration and attendance flow is built around
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — the script is the core content asset a Webinar-type funnel's registration and attendance flow is built around
 - `email-sequence-generator` — the script's close/offer stack drives the post-webinar follow-up sequence
 
 ### Fed By
@@ -182,6 +182,6 @@ chain_metadata:
   stage: "funnel-build"
   timestamp: string
   suggested_next:
-    - "webinar-funnel"
+    - "funnel-builder-orchestrator"
     - "email-sequence-generator"
 ```

@@ -774,7 +774,7 @@ Always save the cover PNG with a clean slug filename: `[lead-magnet-title-slug]-
 
 ## Flywheel Connections
 ### Feeds Into
-- `optin-funnel` (S3-Funnel-Build) — the lead magnet is the core asset an opt-in funnel is built around
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — the lead magnet is the core asset a Lead Magnet / Opt-in funnel build is built around
 - `landing-page-generator` — delivers the lead magnet's value proposition and format details needed to write the opt-in page
 - `email-sequence-generator` — the lead magnet's promised outcome sets up the delivery and nurture sequence that follows
 
@@ -791,7 +791,7 @@ chain_metadata:
   stage: "funnel-build"
   timestamp: string
   suggested_next:
-    - "optin-funnel"
+    - "funnel-builder-orchestrator"
     - "landing-page-generator"
     - "email-sequence-generator"
 ```

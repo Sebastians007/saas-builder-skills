@@ -90,7 +90,7 @@ For each thank you page, provide:
 
 ### Fed By
 - `landing-page-generator` — supplies the original offer context the confirmation message needs to reference
-- `optin-funnel` (S3-Funnel-Build) — defines what was just converted (opt-in vs purchase) which determines the thank-you page's next-step CTA
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — defines what was just converted (opt-in vs purchase) which determines the thank-you page's next-step CTA
 
 ### Feedback Loop
 If the next-step CTA (upsell, calendar link, download) has a low click rate, check that the page correctly matches what was just promised on the previous page — a mismatch in expectation kills thank-you-page conversion faster than weak copy does.

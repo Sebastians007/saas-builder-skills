@@ -134,7 +134,7 @@ Provide the complete script with:
 
 ## Flywheel Connections
 ### Feeds Into
-- `vsl-funnel` (S3-Funnel-Build) — the script is the core asset the VSL funnel's landing page and video player are built around
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — the script is the core asset a VSL-type funnel's landing page and video player are built around
 - `landing-page-generator` — the VSL page wraps the script with a headline, video player, and CTA button
 
 ### Fed By
@@ -150,6 +150,6 @@ chain_metadata:
   stage: "funnel-build"
   timestamp: string
   suggested_next:
-    - "vsl-funnel"
+    - "funnel-builder-orchestrator"
     - "landing-page-generator"
 ```

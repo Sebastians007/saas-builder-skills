@@ -1516,7 +1516,6 @@ If no brand context is provided:
 - `funnel-select` — both determine funnel type; orchestrator can hand off to funnel-select for a single-funnel-type deep dive instead of a full package
 - `browser-verifier` (S7-Testing) — every generated HTML page in the funnel package should be rendered and checked before handoff to the client
 - `cloudflare-deployer` (S8-Deployment) — ships the finished funnel package live once assets are approved
-- `funnel-copy` (S3-Funnel-Build) — hands off page-level copywriting once the asset map and funnel type are locked
 
 ### Fed By
 - `funnel-planner` (S11-Meta) — supplies the initial funnel strategy and asset map before generation starts

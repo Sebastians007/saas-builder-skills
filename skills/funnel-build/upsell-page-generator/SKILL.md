@@ -108,7 +108,7 @@ For each upsell/order bump:
 ## Flywheel Connections
 ### Feeds Into
 - `checkout-funnel-auditor` (S10-Growth) — audits the completed checkout-to-upsell flow for drop-off points
-- `tripwire-funnel` (S3-Funnel-Build) — the upsell page is a standard step directly after a tripwire's low-ticket purchase
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — the upsell page is a standard step directly after a Tripwire-type funnel's low-ticket purchase
 
 ### Fed By
 - `thank-you-page-generator` — the purchase confirmation flow leads directly into the one-click upsell offer

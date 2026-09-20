@@ -22,7 +22,7 @@ metadata:
 
 # Funnel Map Visualizer
 
-Takes the output of `funnel-select` and the individual funnel-type skill (webinar-funnel, tripwire-funnel, saas-funnel, etc.) and renders the whole funnel as one visual map — every step in order, what page/email/ad lives at each step, and once real traffic exists, the actual conversion rate between each step. This exists because a funnel described across several SKILL.md workflows is hard to hold in your head; a founder needs to see the whole path in one place to know where it's actually leaking.
+Takes the output of `funnel-select` and `funnel-builder-orchestrator` (whichever funnel type was built — Webinar, Tripwire, Free Trial/SaaS, etc.) and renders the whole funnel as one visual map — every step in order, what page/email/ad lives at each step, and once real traffic exists, the actual conversion rate between each step. This exists because a funnel described across several SKILL.md workflows is hard to hold in your head; a founder needs to see the whole path in one place to know where it's actually leaking.
 
 ## Stage
 This skill belongs to Stage S3: Funnel Build
@@ -36,7 +36,7 @@ This skill belongs to Stage S3: Funnel Build
 ## Input Schema
 ```
 {
-  funnel_type: string          # from funnel-select, e.g. "tripwire-funnel", "webinar-funnel"
+  funnel_type: string          # from funnel-select, e.g. "Low-Ticket / Tripwire", "Webinar"
   steps: object[]              # ordered list: { name, type (page/email/ad/checkout), copy_summary }
   live_data: object            # (optional) per-step visitor/conversion counts, from PostHog or signup-conversion-tracker
   update_mode: string          # "create" | "update"
@@ -46,7 +46,7 @@ This skill belongs to Stage S3: Funnel Build
 ## Workflow
 
 ### Step 1: Gather the Funnel Structure
-Pull the step sequence from the chosen funnel-type skill's output (e.g. tripwire-funnel: landing page → order bump → one-time-offer → thank-you/upsell). Confirm the order and what lives at each step (page, email, ad) before building anything.
+Pull the step sequence from `funnel-builder-orchestrator`'s output for the chosen type (e.g. Low-Ticket/Tripwire: landing page → order bump → one-time-offer → thank-you/upsell). Confirm the order and what lives at each step (page, email, ad) before building anything.
 
 ### Step 2: Load the Artifact Design and Diagramming Skills
 Load `artifact-design` for page fundamentals, and `artifact-diagramming` since this is fundamentally a flow diagram — read it before drawing the funnel so the connections between steps are legible, not just a stack of boxes.
@@ -110,7 +110,7 @@ tracking real visitors and I'll overlay actual conversion numbers.
 
 **Example 1:**
 User: "I picked the tripwire funnel, can you show me what it actually looks like end to end?"
-→ Pull the 4-step structure from tripwire-funnel's output
+→ Pull the 4-step structure from the Tripwire-type build's output
 → Build the visual map with no live data yet, labeled as planned
 → Publish and hand over the link
 

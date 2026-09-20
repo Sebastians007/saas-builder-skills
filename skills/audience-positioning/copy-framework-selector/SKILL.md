@@ -31,7 +31,6 @@ This skill belongs to Stage S2: Audience & Positioning
 - After `schwartz-awareness-mapper` has identified the audience's awareness stage, before writing the actual copy
 - The founder has copy that "feels random" or unstructured
 - Choosing between multiple valid approaches for the same piece of copy
-- Briefing `funnel-copy`, `landing-page-generator`, or any other copy-writing skill on which structure to follow
 
 ## Input Schema
 ```
@@ -61,7 +60,6 @@ If not already known from `schwartz-awareness-mapper`, ask or infer it. This is 
 High-ticket offers ($2,000+) generally need longer, proof-heavy structures (PASTOR, StoryBrand, 4 Ps) regardless of stage, since the purchase decision needs more trust-building. Low-ticket/tripwire offers can use shorter structures (AIDA, PAS) even at earlier awareness stages, since the ask is small.
 
 ### Step 4: Hand Off with the Structure Named
-Output isn't the copy itself — it's the framework choice and why, so whichever copy-writing skill runs next (`funnel-copy`, `landing-page-generator`, `email-sequence-generator`) writes to that structure instead of improvising.
 
 ### Step 5: Self-Validation
 - [ ] Framework choice is justified by awareness stage, not picked arbitrarily
@@ -93,7 +91,6 @@ Output isn't the copy itself — it's the framework choice and why, so whichever
 3. [Step 3]
 ...
 
-Hand this to [funnel-copy / landing-page-generator / email-sequence-generator] to write the actual copy against this structure.
 ```
 
 ## Error Handling
@@ -119,7 +116,6 @@ User: "This is a long sales page for people already comparing SaaS tools like mi
 
 ## Flywheel Connections
 ### Feeds Into
-- funnel-copy (S3-Funnel-Build) — hands off the chosen structure for actual page copy
 - landing-page-generator (S3-Funnel-Build) — same, for full page generation
 - email-sequence-generator (S3-Funnel-Build) — same, for email sequences
 
@@ -136,6 +132,5 @@ chain_metadata:
   stage: "audience-positioning"
   timestamp: string
   suggested_next:
-    - "funnel-copy"
     - "landing-page-generator"
 ```

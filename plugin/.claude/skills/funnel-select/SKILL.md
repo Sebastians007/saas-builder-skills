@@ -22,18 +22,19 @@ metadata:
 
 # Funnel Select
 
-Routes a founder to the right funnel type instead of them guessing or copying whatever funnel a guru sold last. Asks a few pointed questions about price, business model, and goal, then recommends one primary funnel (and a fallback) plus the exact page list to build next.
+Routes a founder to the right funnel *type* instead of them guessing or copying whatever funnel a guru sold last — a quick answer for "what kind of funnel do I even need," without triggering a full build. Asks a few pointed questions about price, business model, and goal, then recommends one primary funnel type (and a fallback), and hands off to `funnel-builder-orchestrator` to actually build it when the user is ready.
 
 ## Stage
 This skill belongs to Stage S3: Funnel Build
 
 ## When to Use
-- The user has a working app or offer but no plan for how to sell it
+- The user just wants to know what kind of funnel fits, before committing to a full build
 - The user says "I need a landing page" without knowing if that's actually enough
-- Before running any of the 13 specific funnel-builder skills in this pack — this decides which one
 - The user is mixing funnel types (e.g., webinar copy on a tripwire page) and needs a reset
 - Re-evaluating funnel choice after `pricing-model-calculator` changes the price point
 - A `saas-idea-validator` or `prd-writer` pass just finished and it's time to plan distribution
+
+Note: `funnel-builder-orchestrator` also recommends a funnel type as part of its own intake — use this skill instead when the user wants just the type recommendation without starting a full build, or wants a second opinion before committing.
 
 ## Input Schema
 ```
@@ -51,26 +52,27 @@ audience_temperature: string    # "cold" | "warm" | "existing list"
 Ask for price point, whether it's a one-time sale or recurring, and whether it's a SaaS product, physical product, service, or community. If the user doesn't know their price yet, point them to `pricing-model-calculator` first — funnel choice depends on price.
 
 ### Step 2: Identify the primary goal
-Goals map differently than price. "Grow my list" always points to `optin-funnel` or `group-funnel` regardless of eventual price. "Get trial signups" points to `saas-funnel`. "Make sales" or "book calls" routes by price tier.
+Goals map differently than price. "Grow my list" always points to a **lead magnet / opt-in** funnel type regardless of eventual price. "Get trial signups" points to a **free trial / SaaS** funnel type. "Make sales" or "book calls" routes by price tier.
 
 ### Step 3: Run the decision tree
-Apply this logic in order:
-- Goal is list growth, no product yet → `optin-funnel` (or `group-funnel` if the destination is a community platform like Skool/Discord/Whop)
-- Recurring SaaS product → `saas-funnel`
-- Recurring content/community subscription → `membership-funnel`
-- Physical or digital product under $500, one-time → `ecommerce-funnel`
-- Price under $50 and the goal is building a buyer list fast → `tripwire-funnel`
-- Price $200–$2,000 and audience needs education first → `webinar-funnel` (live) or `evergreen-webinar-funnel` (automated/scalable)
-- Price $200–$2,000, community/cohort based → `challenge-funnel`
-- Price $2,000+ and needs qualification before a call → `application-funnel` or `high-ticket-funnel`
-- Complex offer that needs a persuasive long-form pitch with no live call → `vsl-funnel`
-- Multi-week anticipation build for a big launch (course, new product line) → `product-launch-funnel`
+Apply this logic in order, naming a funnel *type* (not a removed standalone skill — all of these are built via `funnel-builder-orchestrator`, which takes the type as input):
+- Goal is list growth, no product yet → **Lead Magnet / Opt-in** (or a community-destination variant if the goal is a Skool/Discord/Whop group)
+- Recurring SaaS product → **Free Trial / SaaS**
+- Recurring content/community subscription → **Membership**
+- Physical or digital product under $500, one-time → **Free + Shipping / Book** or standard e-commerce checkout
+- Price under $50 and the goal is building a buyer list fast → **Low-Ticket / Tripwire**
+- Price $200–$2,000 and audience needs education first → **Webinar** (live or evergreen)
+- Price $200–$2,000, community/cohort based → **5-Day Challenge**
+- Price $2,000+ and needs qualification before a call → **High-Ticket / Application**
+- Complex offer that needs a persuasive long-form pitch with no live call → **VSL** (video sales letter)
+- Multi-week anticipation build for a big launch (course, new product line) → **Product / Course Launch**
+- Segmented lead gen where different answers lead to different offers → **Quiz**
 
 ### Step 4: Give a primary and a fallback
-Never present only one option. Give the top recommendation with the reasoning tied to price/goal/audience, and a second option for if the first doesn't fit their comfort level (e.g., they don't want to do live calls, so swap `application-funnel` for `vsl-funnel`).
+Never present only one option. Give the top recommendation with the reasoning tied to price/goal/audience, and a second option for if the first doesn't fit their comfort level (e.g., they don't want to do live calls, so swap High-Ticket/Application for VSL).
 
-### Step 5: List the exact pages to build
-Pull the page list straight from the recommended skill's Output Schema so the user knows what's coming before they commit.
+### Step 5: Hand Off
+Tell the user the recommended type, then hand off to `funnel-builder-orchestrator` (pass the funnel type directly so it skips re-asking) to actually build the pages, emails, and every other asset the type needs.
 
 ### Step 6: Self-Validation
 - [ ] Recommendation is based on stated price + goal, not just guessed
@@ -81,11 +83,10 @@ Pull the page list straight from the recommended skill's Output Schema so the us
 ## Output Schema
 ```
 {
-  "primary_recommendation": string,     # funnel skill slug
+  "primary_recommendation": string,     # funnel type name, e.g. "Webinar", "High-Ticket / Application"
   "primary_reasoning": string,
   "fallback_recommendation": string,
   "fallback_reasoning": string,
-  "page_list": string[],
   "estimated_build_effort": string      # "low" | "medium" | "high"
 }
 ```
@@ -94,30 +95,29 @@ Pull the page list straight from the recommended skill's Output Schema so the us
 ```markdown
 # Funnel Recommendation
 
-## Primary: <funnel-slug>
+## Primary: <funnel type>
 **Why:** <reasoning tied to price/goal/audience>
-**Pages to build:** <list>
 **Effort:** <low/medium/high>
 
-## Fallback: <funnel-slug>
+## Fallback: <funnel type>
 **Why:** <reasoning — when to pick this instead>
 
 ## Next Step
-Run `<funnel-slug>` to generate the actual page copy and structure.
+Run `funnel-builder-orchestrator` with this funnel type to generate the actual pages, emails, and every other asset it needs.
 ```
 
 ## Error Handling
-- If price and goal point to conflicting funnels (e.g., "$5,000 product, goal is just list growth"), ask which matters more right now — the sale or the list — rather than picking silently.
+- If price and goal point to conflicting funnel types (e.g., "$5,000 product, goal is just list growth"), ask which matters more right now — the sale or the list — rather than picking silently.
 - If the user has no price set yet, stop and recommend `pricing-model-calculator` before proceeding.
-- If the offer doesn't cleanly fit any category (e.g., a free tool with a paid API), default to `saas-funnel` and flag the ambiguity.
-- If the user insists on a funnel type that doesn't match their price point (e.g., application funnel for a $19 product), warn them plainly and ask for confirmation before proceeding.
+- If the offer doesn't cleanly fit any category (e.g., a free tool with a paid API), default to **Free Trial / SaaS** and flag the ambiguity.
+- If the user insists on a funnel type that doesn't match their price point (e.g., an application funnel for a $19 product), warn them plainly and ask for confirmation before proceeding.
 
 ## Examples
-**Example 1:** A solo founder has a $19/month SaaS tool for freelancers, no email list yet. Recommendation: primary `saas-funnel` (trial-first, matches recurring low-ticket SaaS), fallback `optin-funnel` if they want to build a list before opening trial signups.
+**Example 1:** A solo founder has a $19/month SaaS tool for freelancers, no email list yet. Recommendation: primary **Free Trial / SaaS** (trial-first, matches recurring low-ticket SaaS), fallback **Lead Magnet / Opt-in** if they want to build a list before opening trial signups.
 
-**Example 2:** A consultant is launching a $4,500 done-for-you service and wants qualified leads only. Recommendation: primary `application-funnel`, fallback `high-ticket-funnel` if they'd rather skip the application form and go straight to a long-form sales page with a booking CTA.
+**Example 2:** A consultant is launching a $4,500 done-for-you service and wants qualified leads only. Recommendation: primary **High-Ticket / Application**, fallback **VSL** if they'd rather skip the application form and go straight to a long-form sales page with a booking CTA.
 
-**Example 3:** A course creator has a $297 course and an engaged Instagram audience (warm). Recommendation: primary `challenge-funnel` (uses existing engagement, builds momentum), fallback `webinar-funnel` if a single big pitch event fits their timeline better.
+**Example 3:** A course creator has a $297 course and an engaged Instagram audience (warm). Recommendation: primary **5-Day Challenge** (uses existing engagement, builds momentum), fallback **Webinar** if a single big pitch event fits their timeline better.
 
 ## References
 - `shared/references/saas-glossary.md`
@@ -125,11 +125,10 @@ Run `<funnel-slug>` to generate the actual page copy and structure.
 
 ## Flywheel Connections
 ### Feeds Into
-- `optin-funnel`, `saas-funnel`, `webinar-funnel`, `application-funnel`, `tripwire-funnel` (and the other 8 funnel-type skills, depending on recommendation)
-- `funnel-copy` — once a funnel type is chosen, this writes the actual page copy
+- `funnel-builder-orchestrator` (S3-Funnel-Build) — the chosen type is passed straight in so it skips re-asking during intake
 
 ### Fed By
-- `pricing-model-calculator` (S5-Planning) — price point must exist before a funnel can be chosen
+- `pricing-model-calculator` (S1-Research) — price point must exist before a funnel type can be chosen
 - `prd-writer` (S5-Planning) — defines the offer this funnel will sell
 
 ### Feedback Loop
@@ -141,7 +140,5 @@ chain_metadata:
   stage: "funnel-build"
   timestamp: string
   suggested_next:
-    - "funnel-copy"
-    - "saas-funnel"
-    - "webinar-funnel"
+    - "funnel-builder-orchestrator"
 ```

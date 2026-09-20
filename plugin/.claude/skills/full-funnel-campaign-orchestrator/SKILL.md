@@ -31,7 +31,7 @@ This skill belongs to Stage S4: Copywriting
 ## When to Use
 - Launching a new campaign (ads, landing page, email sequence) that needs one consistent story end to end
 - Existing copy pieces were written at different times and now contradict each other in tone or promise
-- Planning which S9-Funnels template (optin, tripwire, saas-funnel, etc.) pairs with which copy piece
+- Planning which S3-Funnel-Build type (opt-in, tripwire, SaaS trial, etc.) pairs with which copy piece
 - A new pricing tier or feature launch needs a full messaging pass across every touchpoint
 - The user wants a repeatable process instead of writing each piece from scratch every time
 - The user says "I have all these copy skills, what order do I actually run them in"
@@ -41,7 +41,7 @@ This skill belongs to Stage S4: Copywriting
 campaign_goal: string              # e.g. "launch new pricing tier", "cold outbound to new segment"
 product_or_service: string
 channels_involved: string[]        # e.g. ["ads", "landing page", "email sequence", "onboarding"]
-funnel_type: string?               # from S9-Funnels, if already chosen (e.g. "saas-funnel", "optin-funnel")
+funnel_type: string?               # from funnel-select/funnel-builder-orchestrator (S3-Funnel-Build), if already chosen (e.g. "Free Trial / SaaS", "Lead Magnet / Opt-in")
 existing_avatar_or_offer: object?  # outputs from avatar-extraction / offer-extraction, if already run
 ```
 
