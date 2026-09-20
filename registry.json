@@ -1,8 +1,8 @@
 {
   "name": "saas-builder-skills",
-  "description": "85 AI-powered skills across 11 stages, ordered to match real usage sequence, for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps.",
-  "version": "4.0.0",
-  "skill_count": 85,
+  "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence, for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps.",
+  "version": "4.1.0",
+  "skill_count": 87,
   "skills": [
     {
       "slug": "competitor-teardown",
@@ -23,10 +23,22 @@
       "description": "Produces a submission checklist and ready-to-use copy templates for launching a finished app on Product Hunt, BetaList, Hacker News Show HN, and similar directories. Use this skill when the user asks about \"where should I launch this\", or says \"help me launch on Product Hunt\", \"write my Show HN post"
     },
     {
+      "slug": "market-sizing",
+      "folder": "skills/research/market-sizing",
+      "stage": "S1-Research",
+      "description": "Sizes the actual market for an app or service idea \u2014 TAM, SAM, SOM, and growth rate \u2014 with sourced numbers, not invented figures. Use this skill when the user asks about \"how big is this market\", \"is this worth pursuing\", or says \"what's the market size for this\", \"is this market growing or shrinkin"
+    },
+    {
       "slug": "pricing-model-calculator",
       "folder": "skills/research/pricing-model-calculator",
       "stage": "S1-Research",
       "description": "Works out SaaS pricing tiers and unit economics \u2014 what to charge, margin per customer, and how many paying users are needed to break even \u2014 for a described product. Use this skill when the user asks about \"what should I charge\", or says \"what should I charge for this\", \"help me price my app\", \"how m"
+    },
+    {
+      "slug": "research-report-builder",
+      "folder": "skills/research/research-report-builder",
+      "stage": "S1-Research",
+      "description": "Runs the full research phase and compiles it into ONE coherent report \u2014 market size and growth, competition, target audience, opportunity, and a go/pivot/kill recommendation \u2014 instead of leaving the founder to stitch together five separate skill outputs themselves. Use this skill when the user asks "
     },
     {
       "slug": "saas-idea-validator",

@@ -2,10 +2,10 @@
 
 **Turn any AI into your app-building and growth team.**
 
-85 AI-powered skills across 11 stages, **ordered to match how you actually build** — not filed alphabetically by category. Research the idea, define the real person you're building for, build the actual funnel so you have something to look at, then plan, build, test, deploy, and grow it — with Claude Code or any AI agent.
+87 AI-powered skills across 11 stages, **ordered to match how you actually build** — not filed alphabetically by category. Research the idea as one coherent report (market size, competition, audience — not five disconnected outputs), define the real person you're building for, build the actual funnel so you have something to look at, then plan, build, test, deploy, and grow it — with Claude Code or any AI agent.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-85-brightgreen)](skills/)
+[![Skills](https://img.shields.io/badge/skills-87-brightgreen)](skills/)
 
 Works with: **Claude Code** · **ChatGPT** · **Gemini CLI** · **Cursor** · **Windsurf** · **any AI that reads text**
 
@@ -23,7 +23,7 @@ Structurally adapted from four MIT-licensed source repos, fully rewritten and re
 
 ## Repo structure
 
-- `skills/{stage}/{skill-name}/SKILL.md` — the 85 skill definitions
+- `skills/{stage}/{skill-name}/SKILL.md` — the 87 skill definitions
 - `shared/references/` — glossary + flywheel connection map
 - `registry.json` — machine-readable skill catalog
 - `.claude-plugin/` — Claude Code plugin manifest
@@ -48,8 +48,10 @@ S1 Research → S2 Audience & Positioning → S3 Funnel Build → S4 Copywriting
 S11 Meta ← S10 Growth ← S9 Operations ← S8 Deployment ← S7 Testing ← S6 Building ◄──┘
 ```
 
-### S1 — Research (10 skills)
-tech-stack-finder · pricing-model-calculator · competitor-teardown · feature-differentiator · underserved-market-finder · saas-idea-validator · unique-value-prop-audit · launch-directory-submitter · user-acquisition-analyzer · trending-tech-scout
+### S1 — Research (12 skills)
+**`research-report-builder` is the entry point — start here for any new idea or pivot.** It orchestrates `market-sizing` (new — real TAM/SAM/SOM and growth rate, sourced, not invented), `competitor-teardown`, `underserved-market-finder`, and `avatar-extraction` into one compiled report instead of leaving you to stitch together separate skill outputs yourself.
+
+research-report-builder · market-sizing · tech-stack-finder · pricing-model-calculator · competitor-teardown · feature-differentiator · underserved-market-finder · saas-idea-validator · unique-value-prop-audit · launch-directory-submitter · user-acquisition-analyzer · trending-tech-scout
 
 ### S2 — Audience & Positioning (4 skills)
 **Moved here from the old "Copywriting" stage.** You need to know who you're building for right after research, not eight stages later. `avatar-extraction` builds one real buyer, not a demographic; `copy-framework-selector` picks the right classic framework (AIDA/PAS/BAB/PASTOR/StoryBrand/QUEST) based on their awareness stage.

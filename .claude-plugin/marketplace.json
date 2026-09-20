@@ -11,7 +11,7 @@
     {
       "name": "saas-builder-skills",
       "description": "85 skills across 11 stages, ordered to match real usage sequence (Research, Audience & Positioning, Funnel Build, Copywriting, Planning, Building, Testing, Deployment, Operations, Growth, Meta) for building, testing, deploying, growing, and marketing SaaS products, Cloudflare-native.",
-      "version": "4.0.1",
+      "version": "4.1.0",
       "source": "./plugin",
       "category": "development",
       "tags": [
