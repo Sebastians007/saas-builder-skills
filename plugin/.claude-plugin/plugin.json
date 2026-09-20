@@ -1,0 +1,9 @@
+{
+  "name": "saas-builder-skills",
+  "description": "83 skills across 10 stages (Research, Planning, Building, Testing, Deployment, Operations, Growth, Meta, Funnels, Copywriting) for building, testing, deploying, growing, and marketing web apps and SaaS products, Cloudflare-native.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Sebastian"
+  },
+  "skills": "./.claude/skills/"
+}

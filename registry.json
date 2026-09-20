@@ -1,0 +1,506 @@
+{
+  "name": "saas-builder-skills",
+  "description": "83 AI-powered skills across 10 stages for building, testing, deploying, growing, and running full sales/marketing funnels for web apps and SaaS products.",
+  "version": "2.0.0",
+  "skill_count": 83,
+  "skills": [
+    {
+      "slug": "competitor-teardown",
+      "folder": "skills/research/competitor-teardown",
+      "stage": "S1-Research",
+      "description": "Researches 3-5 real competitors for an app idea and reports their pricing, features, positioning, and weaknesses in one comparable table."
+    },
+    {
+      "slug": "feature-differentiator",
+      "folder": "skills/research/feature-differentiator",
+      "stage": "S1-Research",
+      "description": "Ranks a list of possible product features by whether they actually differentiate the product versus whether they're table-stakes that competitors already have."
+    },
+    {
+      "slug": "launch-directory-submitter",
+      "folder": "skills/research/launch-directory-submitter",
+      "stage": "S1-Research",
+      "description": "Produces a submission checklist and ready-to-use copy templates for launching a finished app on Product Hunt, BetaList, Hacker News Show HN, and similar directories."
+    },
+    {
+      "slug": "pricing-model-calculator",
+      "folder": "skills/research/pricing-model-calculator",
+      "stage": "S1-Research",
+      "description": "Works out SaaS pricing tiers and unit economics \u2014 what to charge, margin per customer, and how many paying users are needed to break even \u2014 for a described product."
+    },
+    {
+      "slug": "saas-idea-validator",
+      "folder": "skills/research/saas-idea-validator",
+      "stage": "S1-Research",
+      "description": "Scores a raw app idea on demand signal, competition level, and feasibility before any code gets written, producing a go/pivot/kill recommendation."
+    },
+    {
+      "slug": "tech-stack-finder",
+      "folder": "skills/research/tech-stack-finder",
+      "stage": "S1-Research",
+      "description": "Recommends the right free-or-cheap tech stack (framework, hosting, database, auth) for a described app idea, weighing the founder's actual skill level and the tools they already use."
+    },
+    {
+      "slug": "trending-tech-scout",
+      "folder": "skills/research/trending-tech-scout",
+      "stage": "S1-Research",
+      "description": "Scouts trending frameworks, tools, and AI capabilities worth building with right now, so a tech stack choice doesn't get outdated fast."
+    },
+    {
+      "slug": "underserved-market-finder",
+      "folder": "skills/research/underserved-market-finder",
+      "stage": "S1-Research",
+      "description": "Finds niches within a broad market space that are underserved by existing SaaS tools, surfacing where demand outpaces the current options."
+    },
+    {
+      "slug": "unique-value-prop-audit",
+      "folder": "skills/research/unique-value-prop-audit",
+      "stage": "S1-Research",
+      "description": "Audits whether a product's stated value proposition is actually distinct or just generic category language \u2014 a \"purple cow\" test against real competitor messaging."
+    },
+    {
+      "slug": "user-acquisition-analyzer",
+      "folder": "skills/research/user-acquisition-analyzer",
+      "stage": "S1-Research",
+      "description": "Analyzes which user acquisition channels \u2014 SEO, cold outreach, communities, ads \u2014 actually fit a specific app and audience combination, and ranks them by realistic effort and return."
+    },
+    {
+      "slug": "architecture-decision-writer",
+      "folder": "skills/planning/architecture-decision-writer",
+      "stage": "S2-Planning",
+      "description": "Compares 2-3 real technical approaches for a feature or the whole app with concrete tradeoffs and a clear recommendation, written as a lightweight Architecture Decision Record (ADR), so a non-technical founder doesn't end up locked into a stack by accident."
+    },
+    {
+      "slug": "defensibility-calculator",
+      "folder": "skills/planning/defensibility-calculator",
+      "stage": "S2-Planning",
+      "description": "Assesses how hard a planned product actually would be for a competitor to copy, scores it across concrete defensibility factors, and recommends specific changes that would make it harder to clone \u2014 before the founder builds something anyone can replicate in a weekend with the same AI tools."
+    },
+    {
+      "slug": "feature-roadmap-architect",
+      "folder": "skills/planning/feature-roadmap-architect",
+      "stage": "S2-Planning",
+      "description": "Sequences a feature list into phases and milestones based on real dependency order and user value, instead of \"build everything at once,\" so a founder always knows what to build next and why."
+    },
+    {
+      "slug": "mvp-feature-slicer",
+      "folder": "skills/planning/mvp-feature-slicer",
+      "stage": "S2-Planning",
+      "description": "Cuts an overly ambitious feature list down to the smallest version that is still a real, testable product \u2014 directly targets the most common failure mode of non-technical founders scoping too big and never shipping anything."
+    },
+    {
+      "slug": "prd-writer",
+      "folder": "skills/planning/prd-writer",
+      "stage": "S2-Planning",
+      "description": "Turns a vague app idea into a real Product Requirements Doc that locks down the problem, the one target user, the core user flows, and a hard line between must-have and nice-to-have features before any code gets written."
+    },
+    {
+      "slug": "tech-debt-detector",
+      "folder": "skills/planning/tech-debt-detector",
+      "stage": "S2-Planning",
+      "description": "Reviews an existing codebase or a written plan for shortcuts, vague areas, and unresolved decisions that will cause problems later, and flags them before they get built on top of, not after."
+    },
+    {
+      "slug": "user-story-writer",
+      "folder": "skills/planning/user-story-writer",
+      "stage": "S2-Planning",
+      "description": "Converts PRD features and user flows into concrete user stories with specific, testable acceptance criteria that a developer or an AI coding agent can build against with no ambiguity left to fill in on its own."
+    },
+    {
+      "slug": "api-endpoint-builder",
+      "folder": "skills/building/api-endpoint-builder",
+      "stage": "S3-Building",
+      "description": "Design and scaffold a clean REST or API endpoint \u2014 routes, request/response shape, validation, and error cases \u2014 for one described feature."
+    },
+    {
+      "slug": "auth-flow-builder",
+      "folder": "skills/building/auth-flow-builder",
+      "stage": "S3-Building",
+      "description": "Plan and scaffold a secure, correctly-scoped auth flow (signup, login, session, password reset) for a SaaS app, calling out common security mistakes to avoid."
+    },
+    {
+      "slug": "data-model-diagrammer",
+      "folder": "skills/building/data-model-diagrammer",
+      "stage": "S3-Building",
+      "description": "Design a database schema or data model for a feature or app from a plain-language description, output as an ER diagram description plus table definitions."
+    },
+    {
+      "slug": "feature-task-breakdown",
+      "folder": "skills/building/feature-task-breakdown",
+      "stage": "S3-Building",
+      "description": "Break one feature or user story from a PRD into an ordered checklist of small, independently verifiable implementation tasks."
+    },
+    {
+      "slug": "onboarding-flow-builder",
+      "folder": "skills/building/onboarding-flow-builder",
+      "stage": "S3-Building",
+      "description": "Design a first-run onboarding flow \u2014 empty states, setup wizard, and the first successful action \u2014 so new users reach real value fast."
+    },
+    {
+      "slug": "technical-spike-brief",
+      "folder": "skills/building/technical-spike-brief",
+      "stage": "S3-Building",
+      "description": "Run a quick, time-boxed research spike on an uncertain technical piece (a new API, a tricky integration, an unfamiliar service) and write up findings and risks before any real code gets committed."
+    },
+    {
+      "slug": "ui-component-builder",
+      "folder": "skills/building/ui-component-builder",
+      "stage": "S3-Building",
+      "description": "Turn a plain-language UI description into a scoped component build task \u2014 props, states, and responsive behavior defined \u2014 without letting it creep into a full redesign."
+    },
+    {
+      "slug": "accessibility-auditor",
+      "folder": "skills/testing/accessibility-auditor",
+      "stage": "S4-Testing",
+      "description": "Checks a UI for basic accessibility problems \u2014 color contrast, keyboard navigation, missing alt text, and missing ARIA labels \u2014 before it ships."
+    },
+    {
+      "slug": "browser-verifier",
+      "folder": "skills/testing/browser-verifier",
+      "stage": "S4-Testing",
+      "description": "Actually launches the running app in a real browser using the superpowers-chrome plugin (Chrome DevTools browser control) and clicks through the golden path plus edge cases before anyone is allowed to call a feature \"done\" \u2014 the antidote to claiming success without checking."
+    },
+    {
+      "slug": "edge-case-hunter",
+      "folder": "skills/testing/edge-case-hunter",
+      "stage": "S4-Testing",
+      "description": "Actively hunts for the edge cases a feature spec left out \u2014 empty states, concurrent users, bad input, network failure, auth expiry, and other ways real usage differs from the demo path."
+    },
+    {
+      "slug": "load-test-builder",
+      "folder": "skills/testing/load-test-builder",
+      "stage": "S4-Testing",
+      "description": "Defines lightweight load and stress checks sized for a small SaaS app with real but modest traffic \u2014 not enterprise-scale over-engineering that wastes a solo founder's time."
+    },
+    {
+      "slug": "regression-test-builder",
+      "folder": "skills/testing/regression-test-builder",
+      "stage": "S4-Testing",
+      "description": "Turns a bug that was just fixed into a permanent test or checklist step so the exact same bug cannot silently come back in a future change."
+    },
+    {
+      "slug": "security-review-lite",
+      "folder": "skills/testing/security-review-lite",
+      "stage": "S4-Testing",
+      "description": "Runs a lightweight, pre-ship security pass for a small SaaS app \u2014 auth issues, exposed secrets, injection risks, and missing input validation \u2014 a sane baseline check, not a full penetration test."
+    },
+    {
+      "slug": "test-case-generator",
+      "folder": "skills/testing/test-case-generator",
+      "stage": "S4-Testing",
+      "description": "Turns a feature description or user story into a concrete, numbered list of test cases covering the happy path and the obvious edge cases, before or right after the feature is built."
+    },
+    {
+      "slug": "user-acceptance-test-planner",
+      "folder": "skills/testing/user-acceptance-test-planner",
+      "stage": "S4-Testing",
+      "description": "Plans a short real-user (or founder-as-user) acceptance test pass before a feature or app gets called launch-ready \u2014 the final human-eyes check after automated and technical verification."
+    },
+    {
+      "slug": "ci-cd-pipeline-builder",
+      "folder": "skills/deployment/ci-cd-pipeline-builder",
+      "stage": "S5-Deployment",
+      "description": "Sets up a right-sized GitHub Actions pipeline that deploys automatically to Cloudflare on push, without over-engineering it for a solo project."
+    },
+    {
+      "slug": "cloudflare-deployer",
+      "folder": "skills/deployment/cloudflare-deployer",
+      "stage": "S5-Deployment",
+      "description": "Deploys a tested app or feature to Cloudflare Workers or Pages correctly, running a pre-deploy checklist first so nothing broken or misconfigured ships."
+    },
+    {
+      "slug": "domain-dns-setup",
+      "folder": "skills/deployment/domain-dns-setup",
+      "stage": "S5-Deployment",
+      "description": "Connects a custom domain to a Cloudflare-hosted Worker or Pages app with correct DNS records and SSL, and flags the common gotchas before they cause downtime."
+    },
+    {
+      "slug": "env-secrets-manager",
+      "folder": "skills/deployment/env-secrets-manager",
+      "stage": "S5-Deployment",
+      "description": "Sets up and audits environment variables and secrets across dev, staging, and production for a Cloudflare Workers app using wrangler, so keys never get committed or leaked."
+    },
+    {
+      "slug": "backup-recovery-builder",
+      "folder": "skills/operations/backup-recovery-builder",
+      "stage": "S6-Operations",
+      "description": "Builds a real, tested backup and recovery plan for a SaaS app's database and file storage, including an actual restore drill, not just a backup schedule nobody has verified works."
+    },
+    {
+      "slug": "incident-runbook-writer",
+      "folder": "skills/operations/incident-runbook-writer",
+      "stage": "S6-Operations",
+      "description": "Writes a short, practical runbook for what to do when production breaks, sized for a solo founder or a two-to-three-person team with no on-call rotation."
+    },
+    {
+      "slug": "monitoring-alerting-setup",
+      "folder": "skills/operations/monitoring-alerting-setup",
+      "stage": "S6-Operations",
+      "description": "Sets up lightweight uptime, error, and performance monitoring with alerts so the founder hears about outages before customers do."
+    },
+    {
+      "slug": "multi-tenant-manager",
+      "folder": "skills/operations/multi-tenant-manager",
+      "stage": "S6-Operations",
+      "description": "Plans and reviews data isolation and tenant-scoping for a multi-customer SaaS so one organization's data can never leak into another's."
+    },
+    {
+      "slug": "seed-data-generator",
+      "folder": "skills/operations/seed-data-generator",
+      "stage": "S6-Operations",
+      "description": "Generates realistic fake data for development, testing, and demos so an app can be built, tested, and shown off without touching real customer data."
+    },
+    {
+      "slug": "ab-test-generator",
+      "folder": "skills/growth/ab-test-generator",
+      "stage": "S7-Growth",
+      "description": "Designs a proper A/B test for a specific app element (pricing page, onboarding step, CTA button, email subject line) with a locked hypothesis, one success metric, and the minimum sample size needed before anyone is allowed to call a result significant."
+    },
+    {
+      "slug": "aha-moment-mapper",
+      "folder": "skills/growth/aha-moment-mapper",
+      "stage": "S7-Growth",
+      "description": "Identifies the single action that correlates with a user actually getting value \u2014 the product's \"aha moment\" \u2014 by combining event data with user interviews, so onboarding can be designed around reaching it fast."
+    },
+    {
+      "slug": "app-performance-report",
+      "folder": "skills/growth/app-performance-report",
+      "stage": "S7-Growth",
+      "description": "Pulls raw uptime, load time, error rate, and active user metrics into a short plain-language report a non-technical founder can actually read and act on, instead of a wall of dashboard numbers."
+    },
+    {
+      "slug": "attribution-mapper",
+      "folder": "skills/growth/attribution-mapper",
+      "stage": "S7-Growth",
+      "description": "Maps which acquisition channels and touchpoints actually drive signups and revenue by building multi-touch journeys from PostHog event data instead of trusting last-click numbers from each ad platform."
+    },
+    {
+      "slug": "checkout-funnel-auditor",
+      "folder": "skills/growth/checkout-funnel-auditor",
+      "stage": "S7-Growth",
+      "description": "Audits a SaaS signup, checkout, or plan-upgrade flow step by step for drop-off points, friction, and missing trust signals, producing a ranked fix list instead of a vague \"checkout feels off\"."
+    },
+    {
+      "slug": "cohort-churn-analyzer",
+      "folder": "skills/growth/cohort-churn-analyzer",
+      "stage": "S7-Growth",
+      "description": "Analyzes churn by signup cohort and segment using PostHog and subscription data to find which specific segment or onboarding path is failing, instead of reporting one blended churn number."
+    },
+    {
+      "slug": "growth-dashboard-builder",
+      "folder": "skills/growth/growth-dashboard-builder",
+      "stage": "S7-Growth",
+      "description": "Builds one central dashboard that shows acquisition, activation, retention, revenue, and referral numbers in a single page, pulled from PostHog so the founder stops checking five tools to answer \"is the business growing\"."
+    },
+    {
+      "slug": "in-app-nav-optimizer",
+      "folder": "skills/growth/in-app-nav-optimizer",
+      "stage": "S7-Growth",
+      "description": "Reviews a SaaS app's internal navigation and information architecture to find the confusing paths that make users get lost, give up, or churn, and produces a specific list of what to rename, merge, move, or remove."
+    },
+    {
+      "slug": "marketing-site-seo-audit",
+      "folder": "skills/growth/marketing-site-seo-audit",
+      "stage": "S7-Growth",
+      "description": "Audits a SaaS app's public marketing/landing site for the basic SEO issues that actually affect organic signups - meta tags, heading structure, page speed, and mobile-friendliness - and returns a prioritized fix list, not a 100-item generic checklist."
+    },
+    {
+      "slug": "pricing-page-optimizer",
+      "folder": "skills/growth/pricing-page-optimizer",
+      "stage": "S7-Growth",
+      "description": "Reviews and rewrites a SaaS pricing page's plan structure, tier framing, and copy for conversion, using a fixed pricing-psychology checklist instead of a vague \"make it better\" pass."
+    },
+    {
+      "slug": "revenue-dashboard-builder",
+      "folder": "skills/growth/revenue-dashboard-builder",
+      "stage": "S7-Growth",
+      "description": "Builds a revenue-specific dashboard covering MRR, churned revenue, LTV, and CAC payback in one place, complementing the broader growth-dashboard-builder with the numbers investors and the founder actually track week to week."
+    },
+    {
+      "slug": "signup-conversion-tracker",
+      "folder": "skills/growth/signup-conversion-tracker",
+      "stage": "S7-Growth",
+      "description": "Sets up and interprets a signup and activation funnel (visit to signup to first key action to paid) to find the single biggest drop-off point to fix first, instead of guessing which step is broken."
+    },
+    {
+      "slug": "trial-to-paid-converter",
+      "folder": "skills/growth/trial-to-paid-converter",
+      "stage": "S7-Growth",
+      "description": "Designs the trial-to-paid conversion sequence for a SaaS product \u2014 in-app prompts, emails, and timing \u2014 personalized to what each trial user has actually done, instead of one generic \"your trial is ending\" blast."
+    },
+    {
+      "slug": "category-designer",
+      "folder": "skills/meta/category-designer",
+      "stage": "S8-Meta",
+      "description": "Designs a new skill category (stage) for the pack when an existing task doesn't fit anywhere in the current 8 stages, defining its purpose, boundaries, and how it wires into the existing flywheel without causing overlap or sprawl."
+    },
+    {
+      "slug": "compliance-checker",
+      "folder": "skills/meta/compliance-checker",
+      "stage": "S8-Meta",
+      "description": "Audits a SaaS app against baseline legal and data-protection requirements before real users or paying customers sign up, covering privacy policy, terms of service, cookie consent, GDPR/CCPA data-subject basics, and a WISP-style data protection posture for apps handling sensitive personal or financial data."
+    },
+    {
+      "slug": "create-skill",
+      "folder": "skills/meta/create-skill",
+      "stage": "S8-Meta",
+      "description": "Scaffolds a brand new SKILL.md file in the pack's exact format for a task the founder does repeatedly but isn't covered by any of the existing 52 skills, so the pack keeps growing in the same shape instead of drifting into inconsistent formats."
+    },
+    {
+      "slug": "funnel-planner",
+      "folder": "skills/meta/funnel-planner",
+      "stage": "S8-Meta",
+      "description": "Plans the end-to-end signup, activation, and retention funnel for a SaaS app and maps which specific pack skills should be used at each funnel stage, so growth work isn't scattered across ad-hoc tactics with no throughline."
+    },
+    {
+      "slug": "self-improver",
+      "folder": "skills/meta/self-improver",
+      "stage": "S8-Meta",
+      "description": "Reviews a completed project retrospectively \u2014 what broke, what took too long, what worked \u2014 and turns those lessons into concrete changes to how the skill pack gets used next time, so the same mistakes don't repeat across projects."
+    },
+    {
+      "slug": "skill-finder",
+      "folder": "skills/meta/skill-finder",
+      "stage": "S8-Meta",
+      "description": "Recommends the 1-3 right skills from the 52-skill pack for whatever the founder is trying to do right now, described in plain language, so they don't have to memorize every skill name or guess which stage something belongs to."
+    },
+    {
+      "slug": "application-funnel",
+      "folder": "skills/funnels/application-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds an application/qualification funnel for high-ticket offers ($2,000+) that filters leads through a qualifying application before they can book a sales call, for coaching, consulting, agencies, and premium programs."
+    },
+    {
+      "slug": "challenge-funnel",
+      "folder": "skills/funnels/challenge-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a 3-7 day challenge funnel that engages participants with daily micro-wins and community momentum, then presents a paid offer when engagement peaks, for mid-ticket offers ($197-$997)."
+    },
+    {
+      "slug": "ecommerce-funnel",
+      "folder": "skills/funnels/ecommerce-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a product-page-to-checkout funnel for physical or digital products, covering the product page, cart optimization, order bumps, post-purchase upsells, and cart-abandonment email recovery."
+    },
+    {
+      "slug": "evergreen-webinar-funnel",
+      "folder": "skills/funnels/evergreen-webinar-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds an automated \"just-in-time\" webinar funnel that simulates a live session on-demand so leads can register and watch at a scheduled slot without the founder presenting live every time."
+    },
+    {
+      "slug": "funnel-copy",
+      "folder": "skills/funnels/funnel-copy",
+      "stage": "S9-Funnels",
+      "description": "Writes the actual headline, CTA, benefit stack, objection-handling, and email copy for any funnel page using proven direct-response formulas (AIDA, PAS, benefit stacking) instead of generic marketing-speak."
+    },
+    {
+      "slug": "funnel-select",
+      "folder": "skills/funnels/funnel-select",
+      "stage": "S9-Funnels",
+      "description": "Picks the right funnel type for a SaaS or app offer based on price point, business model, and goal (leads, trial signups, or a direct sale), then hands off to the matching funnel-building skill instead of guessing."
+    },
+    {
+      "slug": "group-funnel",
+      "folder": "skills/funnels/group-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a 2-page funnel that drives free signups into a community group on Skool, Whop, Discord, Facebook Groups, or Circle, using a lead magnet as the hook and a dedicated community-focused thank-you page."
+    },
+    {
+      "slug": "high-ticket-funnel",
+      "folder": "skills/funnels/high-ticket-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a long-form authority-and-proof sales funnel for offers $3,000+, combining content that warms cold traffic, a detailed sales page, and a booked-call CTA, for coaching programs, masterminds, and enterprise deals."
+    },
+    {
+      "slug": "membership-funnel",
+      "folder": "skills/funnels/membership-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a recurring membership or subscription funnel \u2014 landing page, low-friction signup, retention-focused onboarding, and a churn-reduction email sequence \u2014 for communities, content libraries, and recurring SaaS."
+    },
+    {
+      "slug": "optin-funnel",
+      "folder": "skills/funnels/optin-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a simple 2-page email list funnel \u2014 a squeeze page that trades a lead magnet for an email address, and a thank-you page that delivers it and points to the next step."
+    },
+    {
+      "slug": "product-launch-funnel",
+      "folder": "skills/funnels/product-launch-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a Jeff Walker-style Product Launch Formula funnel using a sequence of 3 pre-launch content videos to build anticipation before opening cart for a limited window, for offers $297-$2,000+."
+    },
+    {
+      "slug": "saas-funnel",
+      "folder": "skills/funnels/saas-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds the 4-page funnel that converts visitors into free trial or freemium signups and nurtures them to paid \u2014 landing page, signup page, in-app onboarding, and upgrade/pricing page."
+    },
+    {
+      "slug": "tripwire-funnel",
+      "folder": "skills/funnels/tripwire-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a low-ticket ($7-$47) tripwire offer funnel that turns cold leads into buyers fast, with an order bump and one upsell to lift average order value and offset ad spend."
+    },
+    {
+      "slug": "vsl-funnel",
+      "folder": "skills/funnels/vsl-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a Video Sales Letter funnel that replaces long-form sales copy with a persuasive video and a delayed CTA, followed by a streamlined order page, for offers in the $97-$2,000 range."
+    },
+    {
+      "slug": "webinar-funnel",
+      "folder": "skills/funnels/webinar-funnel",
+      "stage": "S9-Funnels",
+      "description": "Builds a 4-page live webinar funnel \u2014 registration, confirmation, webinar room, and offer page \u2014 for mid-to-high-ticket offers that need education before the sale."
+    },
+    {
+      "slug": "ad-angle-multiplier",
+      "folder": "skills/copywriting/ad-angle-multiplier",
+      "stage": "S10-Copywriting",
+      "description": "Takes one core SaaS offer and generates multiple genuinely distinct marketing angles and hooks from it, so testing covers real different ideas instead of five minor rewrites of the same ad."
+    },
+    {
+      "slug": "avatar-extraction",
+      "folder": "skills/copywriting/avatar-extraction",
+      "stage": "S10-Copywriting",
+      "description": "Extracts one specific, real buyer for the SaaS product \u2014 not a demographic bucket \u2014 so every later headline, email, and pricing page is written to a single person instead of \"our users\" in general."
+    },
+    {
+      "slug": "full-funnel-campaign-orchestrator",
+      "folder": "skills/copywriting/full-funnel-campaign-orchestrator",
+      "stage": "S10-Copywriting",
+      "description": "Coordinates which copy piece \u2014 ad, landing page, email, onboarding message \u2014 goes where across a full SaaS campaign, sequencing the other copywriting skills in order and checking messaging stays consistent from first touch to paid conversion."
+    },
+    {
+      "slug": "generic-language-killer",
+      "folder": "skills/copywriting/generic-language-killer",
+      "stage": "S10-Copywriting",
+      "description": "Strips vague, corporate, or AI-sounding language out of SaaS copy and replaces it with specific, human wording \u2014 a final QA pass that catches \"seamlessly empowers your workflow\" before it ships."
+    },
+    {
+      "slug": "headline-matrix",
+      "folder": "skills/copywriting/headline-matrix",
+      "stage": "S10-Copywriting",
+      "description": "Generates a structured matrix of headline variations for a SaaS landing page, pricing page, ad, or email subject line using proven direct-response headline formulas, grouped by type so testing covers real angle variation instead of minor word swaps."
+    },
+    {
+      "slug": "objection-crusher",
+      "folder": "skills/copywriting/objection-crusher",
+      "stage": "S10-Copywriting",
+      "description": "Identifies the real objections a SaaS prospect has before paying \u2014 price, trust, switching cost, \"will this actually work for me\" \u2014 and writes copy that answers each one directly instead of hoping it doesn't come up."
+    },
+    {
+      "slug": "offer-extraction",
+      "folder": "skills/copywriting/offer-extraction",
+      "stage": "S10-Copywriting",
+      "description": "Clarifies and sharpens the actual offer \u2014 what's promised, to whom, for what price, with what guarantee \u2014 before any headline, page, or email gets written around it, so copy doesn't get built on a fuzzy premise."
+    },
+    {
+      "slug": "schwartz-awareness-mapper",
+      "folder": "skills/copywriting/schwartz-awareness-mapper",
+      "stage": "S10-Copywriting",
+      "description": "Applies Eugene Schwartz's five stages of market awareness (unaware, problem-aware, solution-aware, product-aware, most-aware) to determine what angle and message a specific SaaS audience segment actually needs, so copy doesn't sell to people who aren't ready for it yet."
+    }
+  ]
+}
