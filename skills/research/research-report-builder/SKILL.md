@@ -13,17 +13,19 @@ description: >
   before I build anything", "I don't want to run five different skills myself".
 license: MIT
 version: "1.0.0"
-tags: ["saas", "research", "orchestrator", "report", "market"]
+tags: ["saas", "research", "orchestrator", "report", "market", "local-file"]
 compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent"
 metadata:
   author: saas-builder-skills
-  version: "1.0"
+  version: "1.1"
   stage: S1-Research
 ---
 
 # Research Report Builder
 
 This is the orchestrator S1-Research was missing — the same role `funnel-builder-orchestrator` plays for S3-Funnel-Build. Run this once at the start of a real project and it sequences `market-sizing`, `competitor-teardown`, `underserved-market-finder`, and `avatar-extraction`, then compiles all four into a single, readable report — not four separate outputs the founder has to mentally assemble. This is the entry point for Stage S1; run this first, not the individual research skills piecemeal.
+
+**Follows `shared/references/output-conventions.md`: saved as a real local project folder and HTML page, never a published Artifact — and built progressively, so there's something to look at while research is still running, not just at the end.**
 
 ## Stage
 This skill belongs to Stage S1: Research
@@ -55,27 +57,37 @@ Tell the user what will be built before building it:
 
 Don't wait for elaborate confirmation — a simple "yes"/"go"/"do it" is enough, same as the funnel orchestrator's approval gate.
 
-### Step 3: Run the Component Skills in Sequence
-Run each in order, feeding each one's relevant output into the next where it helps (e.g. the target segment found in Step 3c narrows the market sizing in Step 3a if it wasn't already run):
+### Step 3: Set Up the Project Folder and Publish a Skeleton
+Before running any component skill, create `[idea-slug]-research/` in the user's working directory:
+- `brief/research-report.md` — the compiled report as markdown (written last, Step 5)
+- `data/report-sections.json` — structured section data, updated as each component finishes
+- `report.html` — the rendered page, written immediately with every section marked "researching..." and regenerated after each component completes
 
-1. `market-sizing` — TAM/SAM/SOM and growth rate for the category
-2. `competitor-teardown` — the real competitive field, pricing, positioning, weaknesses
-3. `underserved-market-finder` — whether there's a specific underserved niche within the category worth targeting
-4. `avatar-extraction` — pulled forward from S2, run here too so the report includes a real target buyer, not just a market description
+Tell the user the file path right away: "I've started your research report at `[folder]/report.html` — open it now and I'll fill it in as each piece finishes." This is the fix for the single biggest failure mode found in testing: don't make the founder wait through a silent multi-minute run and then dump a wall of text — give them something to watch fill in.
 
-Do not present each skill's raw output separately as you go — run them, hold the results, and compile in Step 4. If a step would take real back-and-forth (e.g. avatar-extraction needs to push back on a vague answer), have that conversation, then continue.
+### Step 4: Run the Component Skills in Sequence, Updating the Page After Each One
+Run each in order, feeding each one's relevant output into the next where it helps (e.g. the target segment found in Step 4c narrows the market sizing in Step 4a if it wasn't already run):
 
-### Step 4: Compile One Report
-Synthesize all four outputs into the single Output Format below. This is not a copy-paste of four sections — write actual connective analysis: does the market size support the pricing implied by the competitive teardown? Does the underserved niche match who the avatar actually is? Contradictions between the four inputs are the most valuable thing this step can surface — call them out explicitly, don't smooth them over.
+1. `market-sizing` — TAM/SAM/SOM and growth rate for the category → write this section into `data/report-sections.json`, regenerate `report.html`
+2. `competitor-teardown` — the real competitive field, pricing, positioning, weaknesses → same: update the data file, regenerate the page
+3. `underserved-market-finder` — whether there's a specific underserved niche within the category worth targeting → same
+4. `avatar-extraction` — pulled forward from S2, run here too so the report includes a real target buyer, not just a market description → same
 
-### Step 5: Give a Clear Recommendation
+Each regeneration is a full file re-write, not a partial patch — keep it simple. Do not present each skill's raw output separately in chat as you go — the page is where progress is visible; chat gets a brief one-line update per completed section ("✓ Market sizing done — see the page").
+
+### Step 5: Compile One Report
+Synthesize all four outputs into the final version of `report.html`, and also write `brief/research-report.md` as a portable copy of the same content. This is not a copy-paste of four sections — write actual connective analysis: does the market size support the pricing implied by the competitive teardown? Does the underserved niche match who the avatar actually is? Contradictions between the four inputs are the most valuable thing this step can surface — call them out explicitly, don't smooth them over.
+
+### Step 6: Give a Clear Recommendation
 End with an explicit go/pivot/kill call, not just "here's the data, you decide." Base it on:
 - **Go:** Market is real and growing, a genuine gap exists, a specific buyer is identifiable
 - **Pivot:** Market or competition is fine, but the specific angle/segment needs to change
 - **Kill:** Market is too small/declining, or genuinely saturated with no real gap
 
-### Step 6: Self-Validation
+### Step 7: Self-Validation
+- [ ] The project folder and skeleton `report.html` were created and the path given to the user *before* the first component skill ran, not after
 - [ ] All four component skills actually ran (not skipped or assumed)
+- [ ] `report.html` was regenerated after each component finished, not just once at the end
 - [ ] The report reads as ONE document with connective analysis, not four pasted sections
 - [ ] Contradictions between findings are named, not glossed over
 - [ ] A clear go/pivot/kill recommendation is given, not left open-ended
@@ -84,6 +96,9 @@ End with an explicit go/pivot/kill call, not just "here's the data, you decide."
 ## Output Schema
 ```
 {
+  project_folder: string
+  html_path: string
+  brief_path: string
   idea: string
   market: { tam, sam, som, growth_rate, verdict }
   competition: { field, table_stakes, whitespace }
@@ -96,6 +111,28 @@ End with an explicit go/pivot/kill call, not just "here's the data, you decide."
 ```
 
 ## Output Format
+
+Chat progress updates (one line per completed section, while `report.html` fills in):
+```
+✓ Market sizing done — see the page
+✓ Competitor teardown done — see the page
+✓ Underserved niche check done — see the page
+✓ Avatar built — see the page
+```
+
+Final chat message once compiled:
+```
+## Research Report Ready
+
+**[Idea Name] Research** → [project-folder]/report.html
+
+Open it in your browser (double-click the file, or drag it into a tab).
+A portable copy is also saved at [project-folder]/brief/research-report.md.
+
+Recommendation: **[GO / PIVOT / KILL]**
+```
+
+`report.html` content structure:
 ```markdown
 # Research Report: [Idea/Offer Name]
 
@@ -149,6 +186,7 @@ User: "I want the full research on [idea] but I already talked to 10 potential c
 ## References
 - `shared/references/saas-glossary.md`
 - `shared/references/flywheel-connections.md`
+- `shared/references/output-conventions.md`
 
 ## Flywheel Connections
 ### Feeds Into

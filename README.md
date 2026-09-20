@@ -4,6 +4,8 @@
 
 87 AI-powered skills across 11 stages, **ordered to match how you actually build** — not filed alphabetically by category. Research the idea as one coherent report (market size, competition, audience — not five disconnected outputs), define the real person you're building for, build the actual funnel so you have something to look at, then plan, build, test, deploy, and grow it — with Claude Code or any AI agent.
 
+**Every visual output is a real local file, never a published Artifact.** Research reports, roadmap boards, and funnel maps are saved as self-contained HTML files inside a project folder on your own machine — open them directly in a browser, no hosted link, no account, nothing that depends on staying online. See `shared/references/output-conventions.md`.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Skills](https://img.shields.io/badge/skills-87-brightgreen)](skills/)
 

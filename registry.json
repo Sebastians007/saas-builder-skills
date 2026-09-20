@@ -1,7 +1,7 @@
 {
   "name": "saas-builder-skills",
-  "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence, for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps.",
-  "version": "4.1.0",
+  "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence, for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps \u2014 all output saved as local files, never published Artifacts.",
+  "version": "4.2.0",
   "skill_count": 87,
   "skills": [
     {
@@ -128,7 +128,7 @@
       "slug": "funnel-map-visualizer",
       "folder": "skills/funnel-build/funnel-map-visualizer",
       "stage": "S3-Funnel-Build",
-      "description": "Turns a planned or live funnel into one visual map showing every step, the page/copy at each step, and (once tracking exists) real conversion numbers per step \u2014 published as an Artifact instead of scattered SKILL.md workflow output. Use this skill when the user asks about \"show me the whole funnel\","
+      "description": "Turns a planned or live funnel into one visual map showing every step, the page/copy at each step, and (once tracking exists) real conversion numbers per step \u2014 saved as a local HTML file in the project folder instead of scattered SKILL.md workflow output. Use this skill when the user asks about \"sh"
     },
     {
       "slug": "funnel-select",
@@ -248,7 +248,7 @@
       "slug": "roadmap-visualizer",
       "folder": "skills/planning/roadmap-visualizer",
       "stage": "S5-Planning",
-      "description": "Turns a written roadmap or feature list into a live, visual, trackable board (phases as columns, features as cards with status) published as an Artifact \u2014 instead of a markdown file nobody re-opens. Use this skill when the user asks about \"show me the roadmap\", \"I want to see progress visually\", or "
+      "description": "Turns a written roadmap or feature list into a real, visual, trackable board (phases as columns, features as cards with status) saved as a local HTML file in the project folder \u2014 instead of a markdown file nobody re-opens. Use this skill when the user asks about \"show me the roadmap\", \"I want to see"
     },
     {
       "slug": "tech-debt-detector",
