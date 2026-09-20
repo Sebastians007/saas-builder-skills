@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S6-Operations
+  stage: S9-Operations
 ---
 
 # Multi-Tenant Manager
@@ -23,7 +23,7 @@ metadata:
 Plans and audits how a SaaS with multiple customer organizations (tenants) keeps each tenant's data strictly separated. This is the skill that catches the single most damaging bug class in B2B SaaS — one customer seeing another customer's data — before it ships, or finds it if it's already live.
 
 ## Stage
-This skill belongs to Stage S6: Operations
+This skill belongs to Stage S9: Operations
 
 ## When to Use
 - Adding "organizations" or "teams" to an app that started single-user
@@ -134,13 +134,13 @@ Produce concrete test scenarios: "User A in Org 1 requests resource X owned by O
 
 ## Flywheel Connections
 ### Feeds Into
-- security-review-lite (S4-Testing)
-- edge-case-hunter (S4-Testing)
-- compliance-checker (S8-Meta)
+- security-review-lite (S7-Testing)
+- edge-case-hunter (S7-Testing)
+- compliance-checker (S11-Meta)
 
 ### Fed By
-- data-model-diagrammer (S3-Building)
-- auth-flow-builder (S3-Building)
+- data-model-diagrammer (S6-Building)
+- auth-flow-builder (S6-Building)
 
 ### Feedback Loop
 Any cross-tenant bug found in testing or production should be fed back as a new test case and a re-audit of the specific enforcement layer that missed it.

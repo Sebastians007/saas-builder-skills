@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Accessibility Auditor
@@ -23,7 +23,7 @@ metadata:
 Runs a practical, non-legalistic accessibility pass on a page or component: can it be read, can it be used with a keyboard, can it be understood by a screen reader. This is not a full WCAG audit — it's the baseline that keeps a small SaaS from locking out real users and from being an easy target for accessibility complaints.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Before shipping any new page, form, or component with visible UI
@@ -120,13 +120,13 @@ X P0, X P1, X P2 found.
 
 ## Flywheel Connections
 ### Feeds Into
-- browser-verifier (S4-Testing)
-- ui-component-builder (S3-Building)
-- in-app-nav-optimizer (S7-Growth)
+- browser-verifier (S7-Testing)
+- ui-component-builder (S6-Building)
+- in-app-nav-optimizer (S10-Growth)
 
 ### Fed By
-- ui-component-builder (S3-Building)
-- onboarding-flow-builder (S3-Building)
+- ui-component-builder (S6-Building)
+- onboarding-flow-builder (S6-Building)
 
 ### Feedback Loop
 Recurring findings (e.g. every form missing labels) should get fed back into ui-component-builder's default patterns so new components are built accessible from the start.

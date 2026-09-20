@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -25,7 +25,7 @@ metadata:
 This skill builds a multi-touch attribution model from PostHog event data so the founder knows which channels actually drive signups and revenue, instead of trusting whichever ad platform's dashboard claims the most credit (they all over-claim). It replaces "Google Ads says it drove this, but so does LinkedIn" with one reconciled answer plus the honest caveats.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user runs paid or organic channels on more than one platform and each platform's dashboard claims outsized credit

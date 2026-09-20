@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # User Acceptance Test Planner
@@ -24,7 +24,7 @@ metadata:
 Plans the last checkpoint before calling something launch-ready: a short, structured pass where a real person (a tester, a friendly prospect, or the founder deliberately acting like a first-time user) uses the actual feature to accomplish an actual goal, with no hand-holding. This catches what browser-verifier's scripted clicks and test-case-generator's checklists can miss — confusion, friction, and "technically works but nobody would actually do this."
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Before calling any feature or app "launch-ready," as the final step after test-case-generator, browser-verifier, and security-review-lite have already run
@@ -130,14 +130,14 @@ Prerequisites confirmed: [list, or "none yet — run these first"]
 
 ## Flywheel Connections
 ### Feeds Into
-- onboarding-flow-builder (S3-Building)
-- cloudflare-deployer (S5-Deployment)
-- signup-conversion-tracker (S7-Growth)
+- onboarding-flow-builder (S6-Building)
+- cloudflare-deployer (S8-Deployment)
+- signup-conversion-tracker (S10-Growth)
 
 ### Fed By
-- browser-verifier (S4-Testing)
-- security-review-lite (S4-Testing)
-- accessibility-auditor (S4-Testing)
+- browser-verifier (S7-Testing)
+- security-review-lite (S7-Testing)
+- accessibility-auditor (S7-Testing)
 
 ### Feedback Loop
 Friction points marked "fix after launch" should be tracked and revisited against real signup-conversion-tracker data to confirm whether they actually mattered.

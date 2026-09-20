@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S5-Deployment
+  stage: S8-Deployment
 ---
 
 # CI/CD Pipeline Builder
@@ -23,7 +23,7 @@ metadata:
 Builds a GitHub Actions workflow that deploys a Cloudflare Workers or Pages app automatically when code is pushed, sized correctly for a solo founder or a two-person team — one workflow file, one or two environments, no unnecessary approval gates or multi-stage pipelines that only make sense at a company with a real ops team.
 
 ## Stage
-This skill belongs to Stage S5: Deployment
+This skill belongs to Stage S8: Deployment
 
 ## When to Use
 - Manual `wrangler deploy` is getting error-prone or forgotten
@@ -156,12 +156,12 @@ Skill checks whether tests exist; if not, tells the user to run `test-case-gener
 
 ## Flywheel Connections
 ### Feeds Into
-- cloudflare-deployer (S5-Deployment)
-- monitoring-alerting-setup (S6-Operations)
+- cloudflare-deployer (S8-Deployment)
+- monitoring-alerting-setup (S9-Operations)
 
 ### Fed By
-- regression-test-builder (S4-Testing)
-- cloudflare-deployer (S5-Deployment)
+- regression-test-builder (S7-Testing)
+- cloudflare-deployer (S8-Deployment)
 
 ### Feedback Loop
 - If a deploy breaks something the pipeline's checks didn't catch, add that specific check (build error, missing env var, failed test) to the pipeline so the same class of failure is caught automatically next time.

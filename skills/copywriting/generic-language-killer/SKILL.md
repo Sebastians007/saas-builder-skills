@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S10-Copywriting
+  stage: S4-Copywriting
   adapted_from: "realkimbarrett/advertising-skills (MIT)"
 ---
 
@@ -25,7 +25,7 @@ metadata:
 This skill is the last pass before copy ships: it hunts down vague corporate filler, buzzword soup, and AI-sounding phrasing, and replaces each instance with something specific and human. It runs after the other copywriting skills, not instead of them — it's a QA layer, not a copy generator.
 
 ## Stage
-This skill belongs to Stage S10: Copywriting
+This skill belongs to Stage S4: Copywriting
 
 ## When to Use
 - Right before any landing page, email, or ad copy ships, as a final check
@@ -103,7 +103,6 @@ Check whether each line sounds like something a real founder would say to a frie
 - No specific fact available to replace a vague claim → flag it openly rather than fabricating a stat; recommend the user supply the real number or drop the claim
 - User's brand voice is intentionally more formal/corporate (e.g. enterprise/compliance-heavy SaaS) → respect that tone, apply the specificity fix without forcing a casual register that doesn't fit the buyer
 - Copy is already specific and clean → say so plainly rather than manufacturing flags to justify the pass
-- Entire page is generic top to bottom → don't just patch phrases, recommend rerunning `offer-extraction` and `headline-matrix` since the underlying message may be too vague to fix at the sentence level
 
 ## Examples
 **Example 1**
@@ -120,13 +119,12 @@ Skill: Identifies the AI-tell pattern (triplet lists, restated closing sentence,
 
 ## Flywheel Connections
 ### Feeds Into
-- marketing-site-seo-audit (S7-Growth)
+- marketing-site-seo-audit (S10-Growth)
 - onboarding-flow-builder (S4-Building)
 
 ### Fed By
-- headline-matrix (S10-Copywriting)
-- objection-crusher (S10-Copywriting)
-- full-funnel-campaign-orchestrator (S10-Copywriting)
+- objection-crusher (S4-Copywriting)
+- full-funnel-campaign-orchestrator (S4-Copywriting)
 
 ### Feedback Loop
 Copy that still underperforms after a generic-language pass points to an offer or avatar problem, not a wording problem — route back to `offer-extraction` or `avatar-extraction` rather than running another editing pass on the same weak premise.

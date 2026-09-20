@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # Technical Spike Brief
@@ -25,7 +25,7 @@ metadata:
 Produces a short, focused writeup that answers "can we actually build this, and what will bite us" before real implementation code is written. A spike is throwaway exploration — a test script, a docs read, a sandbox call — not production code, and this skill keeps it that way so the founder doesn't accidentally build half a feature on an unverified assumption.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - Before integrating a new third-party API or service the team hasn't used before
@@ -132,13 +132,13 @@ Outcome: clears the path to build the real feature with confidence.
 
 ## Flywheel Connections
 ### Feeds Into
-- architecture-decision-writer (S2-Planning)
-- api-endpoint-builder (S3-Building)
-- feature-task-breakdown (S3-Building)
+- architecture-decision-writer (S5-Planning)
+- api-endpoint-builder (S6-Building)
+- feature-task-breakdown (S6-Building)
 
 ### Fed By
 - tech-stack-finder (S1-Research)
-- feature-task-breakdown (S3-Building)
+- feature-task-breakdown (S6-Building)
 
 ### Feedback Loop
 When a spike's recommendation turns out wrong during actual building, feed that back into future spikes on similar integrations to raise or lower default confidence.

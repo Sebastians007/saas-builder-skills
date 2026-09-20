@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Load Test Builder
@@ -24,7 +24,7 @@ metadata:
 Defines a right-sized load check for a small SaaS app — enough to catch "this falls over the moment 20 people show up at once," without pretending you need to simulate a million concurrent users. Most early-stage apps never get killed by scale; they get killed by one slow query or one unbounded loop that only shows up under a small burst of real traffic. This skill finds that.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Before a launch day, Product Hunt post, cold email blast, or anything that could send a burst of traffic at once
@@ -119,13 +119,13 @@ Threshold: [numbers]
 
 ## Flywheel Connections
 ### Feeds Into
-- monitoring-alerting-setup (S6-Operations)
-- app-performance-report (S7-Growth)
-- incident-runbook-writer (S6-Operations)
+- monitoring-alerting-setup (S9-Operations)
+- app-performance-report (S10-Growth)
+- incident-runbook-writer (S9-Operations)
 
 ### Fed By
-- cloudflare-deployer (S5-Deployment)
-- architecture-decision-writer (S2-Planning)
+- cloudflare-deployer (S8-Deployment)
+- architecture-decision-writer (S5-Planning)
 
 ### Feedback Loop
 When a real launch reveals a bottleneck this check missed, feed the actual failure point back so future load checks for similar apps test that endpoint by default.

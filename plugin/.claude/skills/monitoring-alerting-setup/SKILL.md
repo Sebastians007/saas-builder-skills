@@ -14,7 +14,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S6-Operations
+  stage: S9-Operations
 ---
 
 # Monitoring & Alerting Setup
@@ -22,7 +22,7 @@ metadata:
 Designs a small, free-or-cheap monitoring stack that tells a solo founder the moment their app goes down, starts erroring, or slows to a crawl — before a customer emails them about it. Produces a concrete setup checklist, not a monitoring philosophy essay.
 
 ## Stage
-This skill belongs to Stage S6: Operations
+This skill belongs to Stage S9: Operations
 
 ## When to Use
 - The app just went live and there is currently zero visibility into uptime or errors
@@ -136,13 +136,13 @@ Produce literal account-creation and config steps (tool name, plan tier, what UR
 
 ## Flywheel Connections
 ### Feeds Into
-- incident-runbook-writer (S6-Operations)
-- app-performance-report (S7-Growth)
-- security-review-lite (S4-Testing)
+- incident-runbook-writer (S9-Operations)
+- app-performance-report (S10-Growth)
+- security-review-lite (S7-Testing)
 
 ### Fed By
-- cloudflare-deployer (S5-Deployment)
-- ci-cd-pipeline-builder (S5-Deployment)
+- cloudflare-deployer (S8-Deployment)
+- ci-cd-pipeline-builder (S8-Deployment)
 
 ### Feedback Loop
 Alert frequency and false-positive rate over time should tighten or loosen thresholds — noisy alerts get widened, missed incidents get new monitors.

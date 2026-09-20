@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Browser Verifier
@@ -25,7 +25,7 @@ metadata:
 This is the single most important skill in this pack. It exists because "the code compiles" and "it works" are different claims, and only one of them matters to a paying user. This skill opens the actual running app in a real Chrome browser, using the **superpowers-chrome** plugin (Claude Code's Chrome DevTools browser control), and clicks through it exactly like a human would — golden path first, then the edge cases from test-case-generator or edge-case-hunter. Nothing gets marked "done" on the strength of reading the code. It gets marked done because it was watched working.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Before saying any feature, bug fix, or deploy is "done" — no exceptions
@@ -135,14 +135,14 @@ Evidence: [what was actually seen]
 
 ## Flywheel Connections
 ### Feeds Into
-- regression-test-builder (S4-Testing)
-- user-acceptance-test-planner (S4-Testing)
-- incident-runbook-writer (S6-Operations)
+- regression-test-builder (S7-Testing)
+- user-acceptance-test-planner (S7-Testing)
+- incident-runbook-writer (S9-Operations)
 
 ### Fed By
-- test-case-generator (S4-Testing)
-- edge-case-hunter (S4-Testing)
-- cloudflare-deployer (S5-Deployment)
+- test-case-generator (S7-Testing)
+- edge-case-hunter (S7-Testing)
+- cloudflare-deployer (S8-Deployment)
 
 ### Feedback Loop
 Every FAIL found here should generate a regression-test-builder entry so the same failure has a permanent check, and every category of bug found repeatedly should get added as a default case in test-case-generator.

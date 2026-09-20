@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -25,7 +25,7 @@ metadata:
 This skill builds a single page that tracks MRR, churn in dollars, LTV, and CAC payback — the four numbers that answer "is this a healthy business" better than signup counts do. It complements growth-dashboard-builder (which covers the whole funnel at a glance) by going deep on money specifically. Build growth-dashboard-builder first if it doesn't exist yet; this skill's output gets linked into it as one tile.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user has paying customers and needs to track revenue health, not just signups

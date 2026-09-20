@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S10-Copywriting
+  stage: S4-Copywriting
   adapted_from: "realkimbarrett/advertising-skills (MIT)"
 ---
 
@@ -26,7 +26,7 @@ metadata:
 This skill sequences the other copywriting skills into one coherent campaign, so the ad, the landing page, the trial emails, and the pricing page all trace back to the same avatar, offer, and awareness stage instead of being written separately and sounding like five different products.
 
 ## Stage
-This skill belongs to Stage S10: Copywriting
+This skill belongs to Stage S4: Copywriting
 
 ## When to Use
 - Launching a new campaign (ads, landing page, email sequence) that needs one consistent story end to end
@@ -55,7 +55,6 @@ Before any channel-specific copy is written, confirm these exist (run them if mi
 Do not proceed to channel copy until these three are locked. This is the step most campaigns skip, and it's why the ad and the landing page end up telling different stories.
 
 ### Step 2: Generate the Angle and Headline Layer
-Run `ad-angle-multiplier` for top-of-funnel channels (ads, cold outbound) and `headline-matrix` for the landing page and email subject lines, using the same locked avatar/offer so every piece pulls from the same well of ideas rather than each channel inventing its own pitch.
 
 ### Step 3: Build the Objection-Handling Layer
 Run `objection-crusher` once and distribute its output across the funnel — trust objections near the top of the landing page, price objections in the pricing FAQ, complexity objections in onboarding emails. One objection map, reused everywhere it's needed, not five separate ad-hoc FAQ sections.
@@ -128,7 +127,6 @@ Read every piece back to back and confirm:
 ## Examples
 **Example 1**
 User: "We're launching a new Pro tier. I need ads, a landing page, and 3 onboarding emails."
-Skill: Confirms avatar and offer are locked (runs `offer-extraction` for the new tier specifically), runs `ad-angle-multiplier` for the ad and `headline-matrix` for the landing page and email subjects, runs `objection-crusher` once and distributes trust objections to the landing page and complexity objections to onboarding email 2, then checks all five pieces tell the same story about the Pro tier's core promise.
 
 **Example 2**
 User: "Our landing page and our cold email don't feel like they're selling the same thing."
@@ -141,16 +139,15 @@ Skill: Reads both, finds the landing page pitches a most-aware "start your trial
 ## Flywheel Connections
 ### Feeds Into
 - funnel-planner (S1-Research)
-- ab-test-generator (S7-Growth)
-- signup-conversion-tracker (S7-Growth)
+- ab-test-generator (S10-Growth)
+- signup-conversion-tracker (S10-Growth)
 
 ### Fed By
-- avatar-extraction (S10-Copywriting)
-- offer-extraction (S10-Copywriting)
-- schwartz-awareness-mapper (S10-Copywriting)
-- ad-angle-multiplier (S10-Copywriting)
-- headline-matrix (S10-Copywriting)
-- objection-crusher (S10-Copywriting)
+- avatar-extraction (S2-Audience-Positioning)
+- offer-extraction (S2-Audience-Positioning)
+- schwartz-awareness-mapper (S2-Audience-Positioning)
+- ad-angle-multiplier (S4-Copywriting)
+- objection-crusher (S4-Copywriting)
 
 ### Feedback Loop
 Conversion data at each funnel stage from `signup-conversion-tracker` should be mapped back to the specific touchpoint and angle that produced it, so the next campaign run starts from what's already proven to work for this avatar instead of a blank page.

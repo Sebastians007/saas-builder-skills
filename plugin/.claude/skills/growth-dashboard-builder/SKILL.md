@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -26,7 +26,7 @@ metadata:
 This skill builds a single-page dashboard that shows the full AARRR funnel — Acquisition, Activation, Retention, Revenue, Referral — in one place, pulled live from PostHog and hosted for free on Cloudflare Pages. It replaces "let me check four tools and guess" with one page the founder opens every Monday. This is the direct answer to "I have data everywhere but no central view of it."
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user has PostHog (or another analytics tool) collecting events but no single view of the numbers

@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Test Case Generator
@@ -24,7 +24,7 @@ metadata:
 Produces a specific, numbered list of test cases for one feature: what a normal user does, what a confused user does, and what breaks it. The output is a checklist someone can actually run by hand or hand to browser-verifier to execute — not a vague "test it thoroughly" note.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Right after writing a user story or PRD section for a feature, before code is written
@@ -131,14 +131,14 @@ Expected: ...
 
 ## Flywheel Connections
 ### Feeds Into
-- browser-verifier (S4-Testing)
-- edge-case-hunter (S4-Testing)
-- user-acceptance-test-planner (S4-Testing)
-- regression-test-builder (S4-Testing)
+- browser-verifier (S7-Testing)
+- edge-case-hunter (S7-Testing)
+- user-acceptance-test-planner (S7-Testing)
+- regression-test-builder (S7-Testing)
 
 ### Fed By
-- user-story-writer (S2-Planning)
-- feature-task-breakdown (S3-Building)
+- user-story-writer (S5-Planning)
+- feature-task-breakdown (S6-Building)
 
 ### Feedback Loop
 When browser-verifier finds a bug a generated test case missed, feed that gap back so future test-case-generator runs on similar features include that category by default.

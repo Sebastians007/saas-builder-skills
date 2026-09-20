@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S6-Operations
+  stage: S9-Operations
 ---
 
 # Twelve-Factor Auditor
@@ -25,7 +25,7 @@ metadata:
 Checks a SaaS app's actual codebase and config against the 12 rules from the Twelve-Factor App methodology — the standard, decades-tested set of practices for cloud-native apps that survive restarts, scale correctly, and don't break moving from dev to production. Reports which rules are broken, why it matters concretely (not just "best practice"), and the specific fix.
 
 ## Stage
-This skill belongs to Stage S6: Operations
+This skill belongs to Stage S9: Operations
 
 ## When to Use
 - Before a first production deploy, as a sanity check
@@ -135,11 +135,11 @@ User: "my app works locally but breaks in production"
 
 ## Flywheel Connections
 ### Feeds Into
-- env-secrets-manager (S5-Deployment) — factor 3 (config) findings feed directly into fixing secret handling
-- tech-debt-detector (S2-Planning) — non-urgent findings become tracked tech debt
+- env-secrets-manager (S8-Deployment) — factor 3 (config) findings feed directly into fixing secret handling
+- tech-debt-detector (S5-Planning) — non-urgent findings become tracked tech debt
 
 ### Fed By
-- cloudflare-deployer (S5-Deployment) — a deploy that behaves differently than dev is the usual trigger to run this audit
+- cloudflare-deployer (S8-Deployment) — a deploy that behaves differently than dev is the usual trigger to run this audit
 
 ### Feedback Loop
 - Findings that recur across multiple app audits (e.g. always failing factor 3) should become a standing check in `create-skill`'s template or a written directive so future builds don't repeat it.

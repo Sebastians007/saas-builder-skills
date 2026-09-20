@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Edge Case Hunter
@@ -23,7 +23,7 @@ metadata:
 Reads a feature spec or built feature the way a mischievous user or an unlucky server would — actively looking for the gaps between "what the demo shows" and "what actually happens." This is adversarial by design: its job is to find problems, not to confirm the feature is fine.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Before building, to pressure-test a spec while it's still cheap to change
@@ -120,13 +120,13 @@ For each edge case, rate likelihood (common / occasional / rare) and damage if i
 
 ## Flywheel Connections
 ### Feeds Into
-- test-case-generator (S4-Testing)
-- browser-verifier (S4-Testing)
-- security-review-lite (S4-Testing)
+- test-case-generator (S7-Testing)
+- browser-verifier (S7-Testing)
+- security-review-lite (S7-Testing)
 
 ### Fed By
-- user-story-writer (S2-Planning)
-- data-model-diagrammer (S3-Building)
+- user-story-writer (S5-Planning)
+- data-model-diagrammer (S6-Building)
 
 ### Feedback Loop
 When a shipped feature breaks in production from a case this skill missed, log the pattern so future hunts for similar features check it by default.

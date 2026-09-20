@@ -121,10 +121,10 @@ User: "Idea: a to-do list app but for introverts."
 
 ## Flywheel Connections
 ### Feeds Into
-- `prd-writer` (S2-Planning) — Go-scored ideas move directly into a product spec
+- `prd-writer` (S5-Planning) — Go-scored ideas move directly into a product spec
 - `tech-stack-finder` (S1-Research) — feasibility findings inform stack selection
 - `underserved-market-finder` (S1-Research) — Pivot calls route back here for a new niche
-- `mvp-feature-slicer` (S2-Planning) — Weak Go calls with a scoped-down recommendation feed the MVP slice directly
+- `mvp-feature-slicer` (S5-Planning) — Weak Go calls with a scoped-down recommendation feed the MVP slice directly
 
 ### Fed By
 - `underserved-market-finder` (S1-Research) — supplies candidate niches to validate

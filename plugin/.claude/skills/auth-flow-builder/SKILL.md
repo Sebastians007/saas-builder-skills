@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # Auth Flow Builder
@@ -23,7 +23,7 @@ metadata:
 Plans and scaffolds a SaaS app's authentication flow — signup, login, session handling, password reset, and logout — scoped to exactly what the app needs right now, with the common security mistakes non-technical builders make called out explicitly before code is written. Auth is the one place where "just wing it with AI" causes real damage, so this skill front-loads the security checklist instead of bolting it on after.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - Starting a new SaaS app that needs user accounts
@@ -150,13 +150,13 @@ Outcome: two concrete, scoped fixes instead of a full auth rebuild.
 
 ## Flywheel Connections
 ### Feeds Into
-- api-endpoint-builder (S3-Building)
-- onboarding-flow-builder (S3-Building)
-- security-review-lite (S4-Testing)
+- api-endpoint-builder (S6-Building)
+- onboarding-flow-builder (S6-Building)
+- security-review-lite (S7-Testing)
 
 ### Fed By
-- data-model-diagrammer (S3-Building)
-- architecture-decision-writer (S2-Planning)
+- data-model-diagrammer (S6-Building)
+- architecture-decision-writer (S5-Planning)
 
 ### Feedback Loop
 When security-review-lite finds an auth gap post-build, feed it back into this skill's mistake checklist so future auth flows catch it up front.

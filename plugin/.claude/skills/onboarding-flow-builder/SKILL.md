@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # Onboarding Flow Builder
@@ -24,7 +24,7 @@ metadata:
 Designs the sequence of screens and actions a brand-new user goes through from signup to their first real win inside the product — what empty states say, what the setup wizard asks for, and exactly what "success" looks like on day one. Most SaaS churn happens in the first session; this skill builds the path to value on purpose instead of leaving new users to figure it out.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - Right after auth-flow-builder, before the app has any post-signup experience defined
@@ -144,13 +144,13 @@ Outcome: feature-specific onboarding instead of reusing app-wide onboarding awkw
 
 ## Flywheel Connections
 ### Feeds Into
-- ui-component-builder (S3-Building)
-- signup-conversion-tracker (S7-Growth)
-- user-acceptance-test-planner (S4-Testing)
+- ui-component-builder (S6-Building)
+- signup-conversion-tracker (S10-Growth)
+- user-acceptance-test-planner (S7-Testing)
 
 ### Fed By
-- auth-flow-builder (S3-Building)
-- mvp-feature-slicer (S2-Planning)
+- auth-flow-builder (S6-Building)
+- mvp-feature-slicer (S5-Planning)
 
 ### Feedback Loop
 When signup-conversion-tracker shows where users actually drop off, feed that data back into this skill to re-cut the path and rewrite empty states at the real friction point.

@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # PRD Writer
@@ -25,7 +25,7 @@ metadata:
 Produces a short, concrete Product Requirements Document (PRD) that says exactly what the app is, who it's for, what it does, and what it deliberately does NOT do yet. This is the anchor document of the whole build — every other planning and building skill in this pack reads from it or writes back into it. Without this document, "just build the app" prompts drift into rework because nobody, including the AI, agreed on what "done" means.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - The user has an app idea but has never written it down in one place
@@ -144,10 +144,10 @@ Before presenting, silently check:
 
 ## Flywheel Connections
 ### Feeds Into
-- `mvp-feature-slicer` (S2-Planning) — trims the Must-Have list down further if it's still too big
-- `user-story-writer` (S2-Planning) — expands each core user flow into buildable stories
-- `architecture-decision-writer` (S2-Planning) — technical approach must satisfy the PRD's must-haves
-- `feature-roadmap-architect` (S2-Planning) — sequences must-have + nice-to-have into phases
+- `mvp-feature-slicer` (S5-Planning) — trims the Must-Have list down further if it's still too big
+- `user-story-writer` (S5-Planning) — expands each core user flow into buildable stories
+- `architecture-decision-writer` (S5-Planning) — technical approach must satisfy the PRD's must-haves
+- `feature-roadmap-architect` (S5-Planning) — sequences must-have + nice-to-have into phases
 
 ### Fed By
 - `saas-idea-validator` (S1-Research) — confirms the idea is worth writing a PRD for

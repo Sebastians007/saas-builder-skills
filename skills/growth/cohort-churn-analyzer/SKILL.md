@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -24,7 +24,7 @@ metadata:
 This skill builds cohort retention curves segmented by plan, acquisition source, and activation status, using PostHog event data plus subscription records, to find exactly which segment or onboarding path is churning worst — and produces a ranked at-risk list, not just a churn percentage.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user has a blended churn number but no idea which segment is driving it

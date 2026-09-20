@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S8-Meta
+  stage: S11-Meta
 ---
 
 # Funnel Planner
@@ -23,7 +23,7 @@ metadata:
 Maps the full signup-to-retained-customer funnel for a SaaS app and assigns the right pack skill to each stage, so growth and onboarding work happens in the right order instead of jumping straight to ads or a redesign without knowing where users are actually dropping off. This is the skill that turns "we need more users" into a stage-by-stage plan with owners.
 
 ## Stage
-This skill belongs to Stage S8: Meta
+This skill belongs to Stage S11: Meta
 
 ## When to Use
 - Before launch, to design the funnel intentionally instead of bolting pieces together after the fact
@@ -139,13 +139,13 @@ Outcome: founder has a stage-by-stage roadmap tied to specific skills before wri
 
 ## Flywheel Connections
 ### Feeds Into
-- `onboarding-flow-builder` (S3-Building) — primary skill for the activation-stage fix
-- `signup-conversion-tracker` (S7-Growth) — instrumentation needed to validate the plan
-- `ab-test-generator` (S7-Growth) — used to test funnel-stage fixes once identified
-- `in-app-nav-optimizer` (S7-Growth) — habit-stage fixes route here
+- `onboarding-flow-builder` (S6-Building) — primary skill for the activation-stage fix
+- `signup-conversion-tracker` (S10-Growth) — instrumentation needed to validate the plan
+- `ab-test-generator` (S10-Growth) — used to test funnel-stage fixes once identified
+- `in-app-nav-optimizer` (S10-Growth) — habit-stage fixes route here
 
 ### Fed By
-- `mvp-feature-slicer` (S2-Planning) — defines what "first value" even is, pre-launch
+- `mvp-feature-slicer` (S5-Planning) — defines what "first value" even is, pre-launch
 - `unique-value-prop-audit` (S1-Research) — informs what should be promised at the top of the funnel
 
 ### Feedback Loop

@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
 ---
 
 # In-App Navigation Optimizer
@@ -24,7 +24,7 @@ metadata:
 This skill audits a live app's menu, sidebar, and page structure the way a new user experiences it, flags every place someone could get lost or take the wrong path, and gives a short list of renames/moves/merges ranked by how many users hit that path. It exists because founders who built the app know where everything is and can't see the maze they built.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - Support tickets or user questions repeatedly ask "where do I find X"
@@ -134,13 +134,13 @@ Skill: Checks whether reporting supports one of the core jobs or is a secondary/
 
 ## Flywheel Connections
 ### Feeds Into
-- signup-conversion-tracker (S7-Growth)
-- ab-test-generator (S7-Growth)
-- accessibility-auditor (S4-Testing)
+- signup-conversion-tracker (S10-Growth)
+- ab-test-generator (S10-Growth)
+- accessibility-auditor (S7-Testing)
 
 ### Fed By
-- signup-conversion-tracker (S7-Growth)
-- onboarding-flow-builder (S3-Building)
+- signup-conversion-tracker (S10-Growth)
+- onboarding-flow-builder (S6-Building)
 
 ### Feedback Loop
 After shipping nav fixes, re-run signup-conversion-tracker on the same activation stage to confirm the click-path fix actually raised the conversion rate rather than just feeling cleaner.

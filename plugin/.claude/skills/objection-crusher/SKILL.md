@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S10-Copywriting
+  stage: S4-Copywriting
   adapted_from: "realkimbarrett/advertising-skills (MIT)"
 ---
 
@@ -25,7 +25,7 @@ metadata:
 This skill surfaces the specific, real reasons a prospect hesitates before paying, then writes copy that answers each one head-on — on the pricing page, in the FAQ, in trial-expiring emails — instead of leaving the objection unaddressed and hoping the prospect talks themselves into buying anyway.
 
 ## Stage
-This skill belongs to Stage S10: Copywriting
+This skill belongs to Stage S4: Copywriting
 
 ## When to Use
 - Trial signups aren't converting to paid and the reason isn't obvious from the funnel data alone
@@ -130,12 +130,12 @@ Skill: Generates the standard objection set (complexity, trust, past tool failur
 ## Flywheel Connections
 ### Feeds Into
 - onboarding-flow-builder (S4-Building)
-- pricing-page-optimizer (S7-Growth)
-- full-funnel-campaign-orchestrator (S10-Copywriting)
+- pricing-page-optimizer (S10-Growth)
+- full-funnel-campaign-orchestrator (S4-Copywriting)
 
 ### Fed By
-- offer-extraction (S10-Copywriting)
-- avatar-extraction (S10-Copywriting)
+- offer-extraction (S2-Audience-Positioning)
+- avatar-extraction (S2-Audience-Positioning)
 
 ### Feedback Loop
 Trial-to-paid conversion changes tracked by `trial-to-paid-converter` after objection-handling copy ships should confirm which objections were actually the blockers — objections that don't move the needle get deprioritized, confirmed blockers get expanded into their own dedicated page section.

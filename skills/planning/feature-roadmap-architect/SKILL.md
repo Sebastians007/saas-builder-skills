@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # Feature Roadmap Architect
@@ -24,7 +24,7 @@ metadata:
 Takes a feature list (must-haves, nice-to-haves, and known tech debt) and sequences it into ordered phases based on actual dependency order and user value delivered — not a random or "everything in parallel" order that's how most non-technical founders end up mid-build with three half-finished features and nothing shippable. Each phase in the output should be independently shippable and independently valuable.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - A PRD or feature list exists and it's time to decide build order
@@ -127,13 +127,13 @@ Before presenting, silently check:
 
 ## Flywheel Connections
 ### Feeds Into
-- `feature-task-breakdown` (S3-Building) — each phase's features become concrete tasks in order
-- `ci-cd-pipeline-builder` (S5-Deployment) — phase boundaries often map to release/deploy checkpoints
+- `feature-task-breakdown` (S6-Building) — each phase's features become concrete tasks in order
+- `ci-cd-pipeline-builder` (S8-Deployment) — phase boundaries often map to release/deploy checkpoints
 
 ### Fed By
-- `prd-writer` (S2-Planning) — supplies the feature list and target outcome
-- `mvp-feature-slicer` (S2-Planning) — defines what Phase 1 must contain
-- `tech-debt-detector` (S2-Planning) — supplies debt items that must be slotted into the sequence
+- `prd-writer` (S5-Planning) — supplies the feature list and target outcome
+- `mvp-feature-slicer` (S5-Planning) — defines what Phase 1 must contain
+- `tech-debt-detector` (S5-Planning) — supplies debt items that must be slotted into the sequence
 
 ### Feedback Loop
 When a phase ships and `app-performance-report` or `signup-conversion-tracker` shows the assumed value didn't materialize, re-score the remaining phases' value ratings before continuing — don't keep building the original sequence on outdated assumptions.

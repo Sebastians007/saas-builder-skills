@@ -149,9 +149,9 @@ User: "My cofounder set us up with a Kubernetes cluster on GCP for our MVP that 
 
 ## Flywheel Connections
 ### Feeds Into
-- `prd-writer` (S2-Planning) — stack choice becomes a constraint in the product spec
-- `architecture-decision-writer` (S2-Planning) — formalizes the tradeoffs into an ADR
-- `cloudflare-deployer` (S5-Deployment) — if Cloudflare is chosen, hands off directly to deployment setup
+- `prd-writer` (S5-Planning) — stack choice becomes a constraint in the product spec
+- `architecture-decision-writer` (S5-Planning) — formalizes the tradeoffs into an ADR
+- `cloudflare-deployer` (S8-Deployment) — if Cloudflare is chosen, hands off directly to deployment setup
 - `trending-tech-scout` (S1-Research) — cross-check the recommendation against what's currently trending/well-supported
 
 ### Fed By

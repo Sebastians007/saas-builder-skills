@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
 ---
 
 # Marketing Site SEO Audit
@@ -25,7 +25,7 @@ metadata:
 This skill checks a SaaS app's public-facing marketing site against the specific SEO fundamentals that move organic signups (not domain authority tricks or link-building schemes) and returns a short prioritized list. It exists because most SEO checklists are 100 items long and a founder needs to know which 3 actually matter this week.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The marketing site hasn't been checked for basic SEO since launch
@@ -135,13 +135,13 @@ Skill: Checks for a responsive viewport tag (present), then flags an uncompresse
 
 ## Flywheel Connections
 ### Feeds Into
-- signup-conversion-tracker (S7-Growth)
+- signup-conversion-tracker (S10-Growth)
 - unique-value-prop-audit (S1-Research)
 - user-acquisition-analyzer (S1-Research)
 
 ### Fed By
-- cloudflare-deployer (S5-Deployment)
-- domain-dns-setup (S5-Deployment)
+- cloudflare-deployer (S8-Deployment)
+- domain-dns-setup (S8-Deployment)
 
 ### Feedback Loop
 Once fixes ship, re-check indexability and re-run signup-conversion-tracker's Visit→Signup stage after a few weeks to see whether organic traffic quality (not just volume) actually improved.

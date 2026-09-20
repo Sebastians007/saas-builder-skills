@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # API Endpoint Builder
@@ -24,7 +24,7 @@ metadata:
 Designs and scaffolds one clean API endpoint for a described feature: the route, method, request shape, response shape, validation rules, auth requirement, and every realistic error case. Keeps the endpoint scoped to exactly one operation so it can be built and verified in isolation instead of sprawling into a half-finished mini-framework.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - A feature task from feature-task-breakdown calls for a new backend endpoint
@@ -140,14 +140,14 @@ Outcome: catches a security consideration (email enumeration) the user hadn't th
 
 ## Flywheel Connections
 ### Feeds Into
-- ui-component-builder (S3-Building)
-- test-case-generator (S4-Testing)
-- security-review-lite (S4-Testing)
+- ui-component-builder (S6-Building)
+- test-case-generator (S7-Testing)
+- security-review-lite (S7-Testing)
 
 ### Fed By
-- data-model-diagrammer (S3-Building)
-- feature-task-breakdown (S3-Building)
-- auth-flow-builder (S3-Building)
+- data-model-diagrammer (S6-Building)
+- feature-task-breakdown (S6-Building)
+- auth-flow-builder (S6-Building)
 
 ### Feedback Loop
 When security-review-lite or test-case-generator finds gaps (missing validation, unhandled error case), feed those back so future endpoint scaffolds include that case by default.

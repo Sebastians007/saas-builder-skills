@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # Defensibility Calculator
@@ -25,7 +25,7 @@ metadata:
 Scores a planned product on how hard it would actually be for a competitor — especially one using the same AI coding tools — to copy, and gives specific, buildable recommendations to raise that score. AI coding tools have collapsed the cost of building software; a clean UI and a CRUD app is no longer a moat, it's a weekend project for anyone with the same tools. This skill forces the honest question before the build starts: what happens on day one when a competitor points an AI agent at your live app and says "build me this"?
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - Right after a PRD is drafted, before committing engineering time to build it
@@ -130,12 +130,12 @@ Before presenting, silently check:
 
 ## Flywheel Connections
 ### Feeds Into
-- `feature-roadmap-architect` (S2-Planning) — defensibility-building features get prioritized explicitly in the sequence
+- `feature-roadmap-architect` (S5-Planning) — defensibility-building features get prioritized explicitly in the sequence
 - `unique-value-prop-audit` (S1-Research) — informs how the positioning should lean on the real moat, not a fake one
-- `mvp-feature-slicer` (S2-Planning) — ensures the trimmed-down MVP still contains the one defensible piece, not just the easy-to-copy shell
+- `mvp-feature-slicer` (S5-Planning) — ensures the trimmed-down MVP still contains the one defensible piece, not just the easy-to-copy shell
 
 ### Fed By
-- `prd-writer` (S2-Planning) — provides the scoped product to assess
+- `prd-writer` (S5-Planning) — provides the scoped product to assess
 - `competitor-teardown` (S1-Research) — gives real competitor context to score switching cost and distribution against
 
 ### Feedback Loop

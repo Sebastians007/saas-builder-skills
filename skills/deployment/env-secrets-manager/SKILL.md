@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S5-Deployment
+  stage: S8-Deployment
 ---
 
 # Environment & Secrets Manager
@@ -24,7 +24,7 @@ metadata:
 Sets up environment variables and secrets correctly across dev, staging, and production for a Cloudflare Workers app, and audits an existing project for leaked keys or missing secrets before a deploy. The core rule this skill enforces: secrets live in `wrangler secret` (or the dashboard), never in `wrangler.toml`, never in a committed `.env` file.
 
 ## Stage
-This skill belongs to Stage S5: Deployment
+This skill belongs to Stage S8: Deployment
 
 ## When to Use
 - Setting up a new project's env vars/secrets for the first time
@@ -145,12 +145,12 @@ Skill scans the repo and git history for key-shaped strings, finds one in an old
 
 ## Flywheel Connections
 ### Feeds Into
-- cloudflare-deployer (S5-Deployment)
-- security-review-lite (S4-Testing)
+- cloudflare-deployer (S8-Deployment)
+- security-review-lite (S7-Testing)
 
 ### Fed By
-- security-review-lite (S4-Testing)
-- ci-cd-pipeline-builder (S5-Deployment)
+- security-review-lite (S7-Testing)
+- ci-cd-pipeline-builder (S8-Deployment)
 
 ### Feedback Loop
 - Every leak or missing-secret incident found should be added to the pre-deploy checklist in `cloudflare-deployer` so the same category of mistake is caught automatically before the next deploy.

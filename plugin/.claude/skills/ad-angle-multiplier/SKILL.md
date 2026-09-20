@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S10-Copywriting
+  stage: S4-Copywriting
   adapted_from: "realkimbarrett/advertising-skills (MIT)"
 ---
 
@@ -25,7 +25,7 @@ metadata:
 This skill takes one locked offer and multiplies it into distinct marketing angles — different core ideas, not different adjectives on the same idea. It exists for the moment testing plateaus because every new ad is really the same ad wearing a different headline.
 
 ## Stage
-This skill belongs to Stage S10: Copywriting
+This skill belongs to Stage S4: Copywriting
 
 ## When to Use
 - Ad performance is flattening and new creative is needed, not just new copy
@@ -133,13 +133,12 @@ Skill: Produces angles formatted as cold email first lines rather than ad headli
 
 ## Flywheel Connections
 ### Feeds Into
-- ab-test-generator (S7-Growth)
-- headline-matrix (S10-Copywriting)
-- full-funnel-campaign-orchestrator (S10-Copywriting)
+- ab-test-generator (S10-Growth)
+- full-funnel-campaign-orchestrator (S4-Copywriting)
 
 ### Fed By
-- offer-extraction (S10-Copywriting)
-- schwartz-awareness-mapper (S10-Copywriting)
+- offer-extraction (S2-Audience-Positioning)
+- schwartz-awareness-mapper (S2-Audience-Positioning)
 
 ### Feedback Loop
 Reply-rate and CTR data from the live sprint should be logged back against each angle source — angles that consistently underperform get dropped from future batches, and winning angle sources get weighted higher next time this skill runs for the same avatar.

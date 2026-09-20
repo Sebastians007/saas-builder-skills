@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # User Story Writer
@@ -25,7 +25,7 @@ metadata:
 Turns a PRD's features and core user flows into individual user stories, each with acceptance criteria specific enough that a developer — or an AI coding agent — has no ambiguous gaps left to improvise on. This is the layer that stops "build the invoicing feature" from becoming five different guesses about what "done" means. Every acceptance criterion here should be something you can literally check off by testing it.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - Right after a PRD is finalized and it's time to make features buildable
@@ -127,13 +127,13 @@ Before presenting, silently check:
 
 ## Flywheel Connections
 ### Feeds Into
-- `feature-task-breakdown` (S3-Building) — stories become concrete build tasks
-- `test-case-generator` (S4-Testing) — acceptance criteria become the basis for test cases
-- `ui-component-builder` (S3-Building) — story acceptance criteria define what the built UI must actually do
+- `feature-task-breakdown` (S6-Building) — stories become concrete build tasks
+- `test-case-generator` (S7-Testing) — acceptance criteria become the basis for test cases
+- `ui-component-builder` (S6-Building) — story acceptance criteria define what the built UI must actually do
 
 ### Fed By
-- `prd-writer` (S2-Planning) — supplies the features and flows stories are derived from
-- `feature-roadmap-architect` (S2-Planning) — confirms which features are in the current phase before stories are written for them
+- `prd-writer` (S5-Planning) — supplies the features and flows stories are derived from
+- `feature-roadmap-architect` (S5-Planning) — confirms which features are in the current phase before stories are written for them
 
 ### Feedback Loop
 When `test-case-generator` or `browser-verifier` finds behavior that doesn't match any written acceptance criterion, that's a sign a story was missed or underspecified — feed it back here to add the missing story rather than patching the gap ad hoc in code.

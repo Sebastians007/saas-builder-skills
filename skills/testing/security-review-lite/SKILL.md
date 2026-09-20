@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Security Review Lite
@@ -24,7 +24,7 @@ metadata:
 A baseline security pass sized for a small SaaS shipped by a non-technical or solo founder using AI-assisted coding — the kind of app most likely to have a hardcoded API key, an unauthenticated admin route, or a form with zero input validation because nobody thought to check. This is not a penetration test and doesn't replace one before handling sensitive data at scale, but it catches the mistakes that actually happen in this workflow.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Before any first launch or any deploy to a public URL
@@ -123,13 +123,13 @@ X P0, X P1, X P2. [One sentence on overall risk level for this specific app.]
 
 ## Flywheel Connections
 ### Feeds Into
-- env-secrets-manager (S5-Deployment)
-- compliance-checker (S8-Meta)
-- browser-verifier (S4-Testing)
+- env-secrets-manager (S8-Deployment)
+- compliance-checker (S11-Meta)
+- browser-verifier (S7-Testing)
 
 ### Fed By
-- auth-flow-builder (S3-Building)
-- edge-case-hunter (S4-Testing)
+- auth-flow-builder (S6-Building)
+- edge-case-hunter (S7-Testing)
 
 ### Feedback Loop
 Every P0 found should be fed back into auth-flow-builder and api-endpoint-builder's default patterns so future-built endpoints don't repeat the same class of mistake.

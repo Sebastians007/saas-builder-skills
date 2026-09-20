@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S5-Deployment
+  stage: S8-Deployment
 ---
 
 # Cloudflare Deployer
@@ -23,7 +23,7 @@ metadata:
 Takes a feature that has already passed testing and puts it live on Cloudflare Workers or Pages, safely and repeatably. It produces a pre-deploy checklist, the exact deploy commands to run, and a post-deploy verification pass so the founder knows the app actually works in production, not just that the command exited with code 0.
 
 ## Stage
-This skill belongs to Stage S5: Deployment
+This skill belongs to Stage S8: Deployment
 
 ## When to Use
 - A feature or bug fix has passed testing (S4) and is ready to ship
@@ -154,13 +154,13 @@ Skill pulls the last deployment ID, checks `wrangler tail` for the actual error,
 
 ## Flywheel Connections
 ### Feeds Into
-- ci-cd-pipeline-builder (S5-Deployment)
-- monitoring-alerting-setup (S6-Operations)
-- incident-runbook-writer (S6-Operations)
+- ci-cd-pipeline-builder (S8-Deployment)
+- monitoring-alerting-setup (S9-Operations)
+- incident-runbook-writer (S9-Operations)
 
 ### Fed By
-- browser-verifier (S4-Testing)
-- security-review-lite (S4-Testing)
+- browser-verifier (S7-Testing)
+- security-review-lite (S7-Testing)
 
 ### Feedback Loop
 - Failed deploys and post-deploy incidents should tighten the pre-deploy checklist so the same failure mode gets caught before the next deploy, not after.

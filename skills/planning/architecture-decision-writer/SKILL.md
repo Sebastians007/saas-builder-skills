@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # Architecture Decision Writer
@@ -25,7 +25,7 @@ metadata:
 Produces a short, honest comparison of 2-3 real technical approaches to a feature or the whole app, with actual tradeoffs (not just a list of pros), and one clear recommendation. This exists because non-technical founders using AI coding tools often get a stack picked FOR them mid-conversation, with no record of why, and no idea what they gave up. An ADR makes that decision visible, reversible in principle, and revisitable when it stops fitting.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - A PRD exists and it's time to pick how the app will actually be built (database, hosting, auth, framework)
@@ -158,12 +158,12 @@ Before presenting, silently check:
 
 ## Flywheel Connections
 ### Feeds Into
-- `data-model-diagrammer` (S3-Building) — the chosen database approach determines the data model shape
-- `feature-task-breakdown` (S3-Building) — tasks are written against the chosen stack
-- `tech-debt-detector` (S2-Planning) — checks later whether the build actually followed the ADR
+- `data-model-diagrammer` (S6-Building) — the chosen database approach determines the data model shape
+- `feature-task-breakdown` (S6-Building) — tasks are written against the chosen stack
+- `tech-debt-detector` (S5-Planning) — checks later whether the build actually followed the ADR
 
 ### Fed By
-- `prd-writer` (S2-Planning) — the must-have features define what the architecture needs to support
+- `prd-writer` (S5-Planning) — the must-have features define what the architecture needs to support
 - `tech-stack-finder` (S1-Research) — surfaces real candidate stacks before this skill compares them
 
 ### Feedback Loop

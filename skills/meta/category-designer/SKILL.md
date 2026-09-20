@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S8-Meta
+  stage: S11-Meta
 ---
 
 # Category Designer
@@ -23,7 +23,7 @@ metadata:
 Decides whether a cluster of new skill ideas needs a brand new stage or actually belongs inside an existing one, and if a new stage is warranted, defines its scope, naming, and its connections to the rest of the flywheel. This exists to stop the pack from turning into 80 loosely related files with no shared logic — every stage should represent one coherent phase of building or running a SaaS product.
 
 ## Stage
-This skill belongs to Stage S8: Meta
+This skill belongs to Stage S11: Meta
 
 ## When to Use
 - A founder has 3+ new skill ideas that don't cleanly fit any of the 8 existing stages (Research, Planning, Building, Testing, Deployment, Operations, Growth, Meta)
@@ -148,12 +148,12 @@ Outcome: no new stage created; `investor-update-writer` recommended as an additi
 
 ## Flywheel Connections
 ### Feeds Into
-- `create-skill` (S8-Meta) — once a stage or skill gap is confirmed, this hands off the actual scaffolding
-- `self-improver` (S8-Meta) — stage additions get logged as pack-evolution history
+- `create-skill` (S11-Meta) — once a stage or skill gap is confirmed, this hands off the actual scaffolding
+- `self-improver` (S11-Meta) — stage additions get logged as pack-evolution history
 
 ### Fed By
-- `self-improver` (S8-Meta) — retrospectives often surface the repeated gaps that trigger a category redesign
-- `skill-finder` (S8-Meta) — repeated "no good match" results from skill-finder are a signal a category is missing
+- `self-improver` (S11-Meta) — retrospectives often surface the repeated gaps that trigger a category redesign
+- `skill-finder` (S11-Meta) — repeated "no good match" results from skill-finder are a signal a category is missing
 
 ### Feedback Loop
 Every stage decision (new or folded-in) gets logged so future category requests can be checked against precedent instead of re-litigating the same boundary questions.

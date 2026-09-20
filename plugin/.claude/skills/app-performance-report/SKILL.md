@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
 ---
 
 # App Performance Report
@@ -24,7 +24,7 @@ metadata:
 This skill converts raw monitoring/analytics numbers into a one-page plain-language report: what's healthy, what's not, and the one thing to fix this week. It exists because founders have dashboards full of numbers they never open because none of it says what to actually do.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - Monthly or weekly health check on a live app
@@ -141,13 +141,13 @@ Skill: Asks for the alert list, separates noise (minor latency blips on non-crit
 
 ## Flywheel Connections
 ### Feeds Into
-- incident-runbook-writer (S6-Operations)
-- load-test-builder (S4-Testing)
-- signup-conversion-tracker (S7-Growth)
+- incident-runbook-writer (S9-Operations)
+- load-test-builder (S7-Testing)
+- signup-conversion-tracker (S10-Growth)
 
 ### Fed By
-- monitoring-alerting-setup (S6-Operations)
-- backup-recovery-builder (S6-Operations)
+- monitoring-alerting-setup (S9-Operations)
+- backup-recovery-builder (S9-Operations)
 
 ### Feedback Loop
 Recurring performance issues that keep landing in "fix this week" should get written into incident-runbook-writer so the same problem isn't re-diagnosed from scratch every report cycle.

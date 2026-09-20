@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S6-Operations
+  stage: S9-Operations
 ---
 
 # Incident Runbook Writer
@@ -24,7 +24,7 @@ metadata:
 Writes a one-page, print-or-pin-able runbook that tells a stressed founder exactly what to do in the first 15 minutes of an outage or bad bug — check this, say this to customers, escalate to this person, log this. No enterprise incident-command-system roles, no 40-page playbook — just the minimum that keeps a small team from freezing when something breaks.
 
 ## Stage
-This skill belongs to Stage S6: Operations
+This skill belongs to Stage S9: Operations
 
 ## When to Use
 - The app is live with paying customers and there's no written plan for "what do I do if it breaks"
@@ -147,12 +147,12 @@ Keep it short: write one paragraph on what happened and why, one sentence on wha
 
 ## Flywheel Connections
 ### Feeds Into
-- monitoring-alerting-setup (S6-Operations)
-- test-case-generator (S4-Testing)
+- monitoring-alerting-setup (S9-Operations)
+- test-case-generator (S7-Testing)
 
 ### Fed By
-- monitoring-alerting-setup (S6-Operations)
-- backup-recovery-builder (S6-Operations)
+- monitoring-alerting-setup (S9-Operations)
+- backup-recovery-builder (S9-Operations)
 
 ### Feedback Loop
 Every real incident logged should add a new monitor, test case, or comm-template fix back into the runbook so the next incident of the same shape is handled faster.

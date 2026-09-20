@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -24,7 +24,7 @@ metadata:
 This skill finds the one specific action that most strongly predicts a user will stick around, by testing candidate events from PostHog data against actual retention and cross-checking the result against real user interviews. It replaces "activation" as a vague concept with one precise, instrumentable definition that onboarding, trial sequencing, and dashboards can all be built around.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The product has no defined activation event, or the current one was picked by guesswork

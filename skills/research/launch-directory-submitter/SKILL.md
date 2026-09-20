@@ -139,12 +139,12 @@ User: "I built a CLI tool for developers, not live yet."
 ## Flywheel Connections
 ### Feeds Into
 - `user-acquisition-analyzer` (S1-Research) — launch is one channel; this hands off to planning sustained acquisition after it
-- `signup-conversion-tracker` (S7-Growth) — measures the actual results of the launch
-- `ab-test-generator` (S7-Growth) — can test alternate taglines/copy post-launch
+- `signup-conversion-tracker` (S10-Growth) — measures the actual results of the launch
+- `ab-test-generator` (S10-Growth) — can test alternate taglines/copy post-launch
 
 ### Fed By
 - `unique-value-prop-audit` (S1-Research) — supplies the sharpened one-liner this skill builds copy around
-- `browser-verifier` (S4-Testing) — confirms the app is actually ready before this skill greenlights a launch
+- `browser-verifier` (S7-Testing) — confirms the app is actually ready before this skill greenlights a launch
 
 ### Feedback Loop
 Actual launch performance (upvotes, signups, comments) tracked via `signup-conversion-tracker` should feed back to refine which platforms and copy patterns this skill recommends for similar product types in the future.

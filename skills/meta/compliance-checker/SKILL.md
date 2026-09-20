@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S8-Meta
+  stage: S11-Meta
 ---
 
 # Compliance Checker
@@ -24,7 +24,7 @@ metadata:
 Runs a baseline GRC-style audit of a SaaS app's legal and data-protection posture before it takes on real users. This is not a substitute for a lawyer, but it applies real control-mapping discipline — the same lens a GRC analyst uses on a WISP (Written Information Security Program) review — instead of generic "get a privacy policy" startup-blog advice. It checks what data the app actually collects, what jurisdiction's rules apply, and whether the controls on paper match what the app actually does.
 
 ## Stage
-This skill belongs to Stage S8: Meta
+This skill belongs to Stage S11: Meta
 
 ## When to Use
 - Before opening public signups or taking the first paying customer
@@ -170,13 +170,13 @@ Outcome: cookie consent marked "missing, medium severity" with a specific fix (a
 
 ## Flywheel Connections
 ### Feeds Into
-- `cloudflare-deployer` (S5-Deployment) — blockers must clear before go-live deployment
-- `incident-runbook-writer` (S6-Operations) — WISP gap findings often require a written incident response plan
-- `security-review-lite` (S4-Testing) — compliance findings on data handling feed into the pre-launch security pass
+- `cloudflare-deployer` (S8-Deployment) — blockers must clear before go-live deployment
+- `incident-runbook-writer` (S9-Operations) — WISP gap findings often require a written incident response plan
+- `security-review-lite` (S7-Testing) — compliance findings on data handling feed into the pre-launch security pass
 
 ### Fed By
-- `auth-flow-builder` (S3-Building) — auth/data collection points determine what personal data actually flows through the app
-- `multi-tenant-manager` (S6-Operations) — tenant data isolation posture is an input to the WISP-style review
+- `auth-flow-builder` (S6-Building) — auth/data collection points determine what personal data actually flows through the app
+- `multi-tenant-manager` (S9-Operations) — tenant data isolation posture is an input to the WISP-style review
 
 ### Feedback Loop
 Each audit's findings are logged so recurring gaps (e.g. always missing DPAs) get flagged earlier in future builds via `self-improver`, tightening the default checklist over time.

@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S6-Operations
+  stage: S9-Operations
 ---
 
 # Seed Data Generator
@@ -24,7 +24,7 @@ metadata:
 Generates realistic, structurally-correct fake data — users, organizations, records, transactions — so a founder can develop, test, and demo their app without ever touching real customer data. Produces both the data itself (or a script that generates it) and a plan for keeping it out of production.
 
 ## Stage
-This skill belongs to Stage S6: Operations
+This skill belongs to Stage S9: Operations
 
 ## When to Use
 - A new feature needs a populated database to actually look/work right during development
@@ -128,13 +128,13 @@ Explicitly state where this data should run (local/staging/demo env only) and wa
 
 ## Flywheel Connections
 ### Feeds Into
-- test-case-generator (S4-Testing)
-- multi-tenant-manager (S6-Operations)
-- user-acceptance-test-planner (S4-Testing)
+- test-case-generator (S7-Testing)
+- multi-tenant-manager (S9-Operations)
+- user-acceptance-test-planner (S7-Testing)
 
 ### Fed By
-- data-model-diagrammer (S3-Building)
-- multi-tenant-manager (S6-Operations)
+- data-model-diagrammer (S6-Building)
+- multi-tenant-manager (S9-Operations)
 
 ### Feedback Loop
 Bugs found using seed data (missing edge cases, unrealistic distributions) should feed back into richer seed generation rules for next time.

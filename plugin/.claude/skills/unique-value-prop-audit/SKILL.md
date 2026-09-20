@@ -127,8 +127,8 @@ User: "We help small law firms manage cases better."
 ## Flywheel Connections
 ### Feeds Into
 - `launch-directory-submitter` (S1-Research) — sharpened one-liner feeds directly into launch copy
-- `marketing-site-seo-audit` (S7-Growth) — audited value prop should be checked against full page copy
-- `prd-writer` (S2-Planning) — the sharpened positioning can anchor the product spec's framing
+- `marketing-site-seo-audit` (S10-Growth) — audited value prop should be checked against full page copy
+- `prd-writer` (S5-Planning) — the sharpened positioning can anchor the product spec's framing
 
 ### Fed By
 - `feature-differentiator` (S1-Research) — supplies the real differentiators to ground rewrites in

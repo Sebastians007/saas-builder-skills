@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # UI Component Builder
@@ -24,7 +24,7 @@ metadata:
 Turns a plain-language description of one piece of UI into a tightly scoped build task: what props it takes, what states it can be in, how it behaves on mobile vs desktop, and what it explicitly does NOT touch. Exists to stop the common failure where "add a settings panel" turns into the AI agent restyling the whole app.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - Building one new UI piece (form, modal, table, card, nav item) for an existing app
@@ -146,13 +146,13 @@ Outcome: form component ready to drop in, consistent with the already-defined AP
 
 ## Flywheel Connections
 ### Feeds Into
-- test-case-generator (S4-Testing)
-- browser-verifier (S4-Testing)
-- accessibility-auditor (S4-Testing)
+- test-case-generator (S7-Testing)
+- browser-verifier (S7-Testing)
+- accessibility-auditor (S7-Testing)
 
 ### Fed By
-- api-endpoint-builder (S3-Building)
-- feature-task-breakdown (S3-Building)
+- api-endpoint-builder (S6-Building)
+- feature-task-breakdown (S6-Building)
 
 ### Feedback Loop
 When accessibility-auditor or browser-verifier flags issues (missing states, broken responsive behavior), feed those back so future component scaffolds include that state/behavior by default.

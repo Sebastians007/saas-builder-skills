@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # Feature Task Breakdown
@@ -24,7 +24,7 @@ metadata:
 Turns one PRD feature or user story into an ordered list of small, testable implementation tasks, each scoped so a single AI coding session can finish it and prove it works before the next one starts. Prevents the most common failure mode in AI-assisted building: asking the agent for "the whole feature" and getting a half-working pile of code that's hard to debug.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - The user has a PRD or user story and wants to start coding it
@@ -146,14 +146,14 @@ Outcome: avoids a tangled cross-feature build session.
 
 ## Flywheel Connections
 ### Feeds Into
-- data-model-diagrammer (S3-Building)
-- api-endpoint-builder (S3-Building)
-- ui-component-builder (S3-Building)
-- test-case-generator (S4-Testing)
+- data-model-diagrammer (S6-Building)
+- api-endpoint-builder (S6-Building)
+- ui-component-builder (S6-Building)
+- test-case-generator (S7-Testing)
 
 ### Fed By
-- user-story-writer (S2-Planning)
-- mvp-feature-slicer (S2-Planning)
+- user-story-writer (S5-Planning)
+- mvp-feature-slicer (S5-Planning)
 
 ### Feedback Loop
 When a task turns out too big or fails verification during building, note it back into this skill's future breakdowns so task sizing gets tighter over time.

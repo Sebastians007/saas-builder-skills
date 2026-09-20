@@ -131,9 +131,9 @@ User: "Competitors charge $49-99/mo for similar project management tools, is tha
 
 ## Flywheel Connections
 ### Feeds Into
-- `defensibility-calculator` (S2-Planning) — checks if this pricing/margin survives competitive pressure over time
-- `prd-writer` (S2-Planning) — tier feature gates become product requirements
-- `signup-conversion-tracker` (S7-Growth) — tracks whether real signups match the assumed tier mix
+- `defensibility-calculator` (S5-Planning) — checks if this pricing/margin survives competitive pressure over time
+- `prd-writer` (S5-Planning) — tier feature gates become product requirements
+- `signup-conversion-tracker` (S10-Growth) — tracks whether real signups match the assumed tier mix
 
 ### Fed By
 - `competitor-teardown` (S1-Research) — supplies real competitor pricing data to anchor against

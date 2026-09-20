@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
 ---
 
 # Signup Conversion Tracker
@@ -24,7 +24,7 @@ metadata:
 This skill builds the visit-to-signup-to-activation-to-paid funnel for a live SaaS app, finds the single stage losing the most people, and tells the founder exactly one thing to fix first instead of a list of ten. It replaces "conversion feels low" with a specific number at a specific step.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user has real signup and usage data but hasn't organized it into a funnel
@@ -145,14 +145,14 @@ Skill: Notes this sits downstream of the Execution Squad sprint's booked-call st
 
 ## Flywheel Connections
 ### Feeds Into
-- in-app-nav-optimizer (S7-Growth)
-- ab-test-generator (S7-Growth)
-- onboarding-flow-builder (S3-Building)
+- in-app-nav-optimizer (S10-Growth)
+- ab-test-generator (S10-Growth)
+- onboarding-flow-builder (S6-Building)
 - pricing-model-calculator (S1-Research)
 
 ### Fed By
-- ab-test-generator (S7-Growth)
-- monitoring-alerting-setup (S6-Operations)
+- ab-test-generator (S10-Growth)
+- monitoring-alerting-setup (S9-Operations)
 
 ### Feedback Loop
 Each time a fix ships (onboarding change, nav fix, pricing test), re-run this funnel on the same stage definitions to confirm the drop-off actually moved before declaring victory and picking the next priority stage.

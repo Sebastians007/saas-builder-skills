@@ -122,9 +122,9 @@ User: "Is a dark mode toggle a differentiator for my app?"
 
 ## Flywheel Connections
 ### Feeds Into
-- `mvp-feature-slicer` (S2-Planning) — turns the ranked list into an actual build scope
+- `mvp-feature-slicer` (S5-Planning) — turns the ranked list into an actual build scope
 - `unique-value-prop-audit` (S1-Research) — differentiators become candidate value-prop claims
-- `feature-roadmap-architect` (S2-Planning) — table-stakes and deferred features become later roadmap items
+- `feature-roadmap-architect` (S5-Planning) — table-stakes and deferred features become later roadmap items
 
 ### Fed By
 - `competitor-teardown` (S1-Research) — supplies the competitor feature baseline this skill classifies against

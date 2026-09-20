@@ -18,7 +18,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
 ---
 
 # A/B Test Generator
@@ -26,7 +26,7 @@ metadata:
 This skill turns a vague "let's test this" idea into a real experiment with a locked hypothesis, one metric, a required sample size, and a stop date decided before the test starts. It exists to stop founders from eyeballing small-sample results and calling a coin flip a win.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user wants to test two versions of a pricing page, onboarding step, CTA, or email
@@ -163,12 +163,12 @@ Skill: Explains this tests everything at once — if it wins, they won't know wh
 
 ## Flywheel Connections
 ### Feeds Into
-- signup-conversion-tracker (S7-Growth)
+- signup-conversion-tracker (S10-Growth)
 - unique-value-prop-audit (S1-Research)
 - pricing-model-calculator (S1-Research)
 
 ### Fed By
-- signup-conversion-tracker (S7-Growth)
+- signup-conversion-tracker (S10-Growth)
 - competitor-teardown (S1-Research)
 
 ### Feedback Loop

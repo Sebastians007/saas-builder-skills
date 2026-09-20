@@ -128,9 +128,9 @@ User: "B2B SaaS for accounting firms, $50k marketing budget, no existing audienc
 
 ## Flywheel Connections
 ### Feeds Into
-- `signup-conversion-tracker` (S7-Growth) — tracks real results of the chosen channel
-- `funnel-planner` (S8-Meta) — channel choice feeds the broader funnel design
-- `ab-test-generator` (S7-Growth) — tests message variants within the chosen channel
+- `signup-conversion-tracker` (S10-Growth) — tracks real results of the chosen channel
+- `funnel-planner` (S11-Meta) — channel choice feeds the broader funnel design
+- `ab-test-generator` (S10-Growth) — tests message variants within the chosen channel
 
 ### Fed By
 - `unique-value-prop-audit` (S1-Research) — sharpened messaging should be used in whichever channel is chosen

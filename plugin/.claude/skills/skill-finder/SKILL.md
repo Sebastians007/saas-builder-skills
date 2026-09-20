@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S8-Meta
+  stage: S11-Meta
 ---
 
 # Skill Finder
@@ -23,7 +23,7 @@ metadata:
 Takes a plain-language description of what the founder is trying to do and maps it to the 1-3 actual skills in the pack that fit, using the full skill reference table below. This exists so a non-technical founder never has to memorize 52 skill names — they just say what they're stuck on.
 
 ## Stage
-This skill belongs to Stage S8: Meta
+This skill belongs to Stage S11: Meta
 
 ## When to Use
 - The founder describes a problem or task but doesn't know a skill exists for it
@@ -195,7 +195,7 @@ Before presenting, silently check:
 ## Flywheel Connections
 ### Feeds Into
 - Every skill in the pack — this is the entry point that routes to any of the other 51 skills
-- `create-skill` (S8-Meta) — when no match exists
+- `create-skill` (S11-Meta) — when no match exists
 
 ### Fed By
 - None — this is a cross-cutting utility skill meant to be the first stop, not downstream of anything

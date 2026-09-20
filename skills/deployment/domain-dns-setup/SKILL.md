@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S5-Deployment
+  stage: S8-Deployment
 ---
 
 # Domain & DNS Setup
@@ -23,7 +23,7 @@ metadata:
 Connects a custom domain (or subdomain) to a Cloudflare-hosted Worker or Pages app, with the DNS records set up correctly the first time and SSL working, instead of the trial-and-error most founders do when they've never touched DNS before.
 
 ## Stage
-This skill belongs to Stage S5: Deployment
+This skill belongs to Stage S8: Deployment
 
 ## When to Use
 - The app is deployed on a `*.workers.dev` or `*.pages.dev` URL and needs a real domain
@@ -137,11 +137,11 @@ Skill checks propagation status with `dig`, checks for a blocking CAA record, an
 
 ## Flywheel Connections
 ### Feeds Into
-- cloudflare-deployer (S5-Deployment)
-- marketing-site-seo-audit (S7-Growth)
+- cloudflare-deployer (S8-Deployment)
+- marketing-site-seo-audit (S10-Growth)
 
 ### Fed By
-- cloudflare-deployer (S5-Deployment)
+- cloudflare-deployer (S8-Deployment)
 
 ### Feedback Loop
 - Any DNS/SSL failure mode found here (a CAA block, a propagation surprise) should get logged so the next domain setup for this founder checks it upfront instead of rediscovering it.

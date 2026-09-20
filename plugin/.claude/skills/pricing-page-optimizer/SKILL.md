@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -24,7 +24,7 @@ metadata:
 This skill audits a SaaS pricing page against a fixed pricing-psychology checklist — plan structure, naming, feature matrix, CTAs, objection handling — then produces a rewritten version with a before/after rationale for every change. It's about how the page presents the price, not what the price should be (pricing-model-calculator handles that).
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user has a live pricing page and a conversion rate that feels low but hasn't been diagnosed

@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # MVP Feature Slicer
@@ -25,7 +25,7 @@ metadata:
 Takes an already-large or growing feature list and cuts it down to the smallest set that still makes a real, testable product — one a real user could actually use to get the core outcome and that would tell you something true if it flopped. This exists because the single most common way non-technical founders using AI tools fail isn't bad code, it's never shipping because the definition of "v1" kept growing. This skill's job is to say no to more things than it says yes to.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - Right after a PRD is written, if the Must-Have list still has more than ~8 items
@@ -121,13 +121,13 @@ Before presenting, silently check:
 
 ## Flywheel Connections
 ### Feeds Into
-- `feature-roadmap-architect` (S2-Planning) — the MVP list becomes Phase 1; cut features become later phases
-- `feature-task-breakdown` (S3-Building) — MVP features get broken into buildable tasks next
-- `user-acceptance-test-planner` (S4-Testing) — the "define done" sentence becomes the acceptance test for launch readiness
+- `feature-roadmap-architect` (S5-Planning) — the MVP list becomes Phase 1; cut features become later phases
+- `feature-task-breakdown` (S6-Building) — MVP features get broken into buildable tasks next
+- `user-acceptance-test-planner` (S7-Testing) — the "define done" sentence becomes the acceptance test for launch readiness
 
 ### Fed By
-- `prd-writer` (S2-Planning) — supplies the full feature list and core outcome this skill slices down
-- `defensibility-calculator` (S2-Planning) — flags which feature is the actual moat, so it doesn't get cut by mistake
+- `prd-writer` (S5-Planning) — supplies the full feature list and core outcome this skill slices down
+- `defensibility-calculator` (S5-Planning) — flags which feature is the actual moat, so it doesn't get cut by mistake
 
 ### Feedback Loop
 After launch, if `signup-conversion-tracker` or early user feedback shows a cut feature was actually essential, feed that back into future MVP scoping — the cut test should get sharper about what "core" really means for this specific product category over time.

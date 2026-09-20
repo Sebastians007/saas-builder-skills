@@ -14,7 +14,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S4-Testing
+  stage: S7-Testing
 ---
 
 # Regression Test Builder
@@ -22,7 +22,7 @@ metadata:
 Takes a bug that just got fixed and converts it into a repeatable test or manual checklist step, so the fix is permanent instead of temporary. Bugs that come back are a trust killer with users — this skill exists so "we fixed that already" stays true.
 
 ## Stage
-This skill belongs to Stage S4: Testing
+This skill belongs to Stage S7: Testing
 
 ## When to Use
 - Immediately after fixing any bug that a real user hit or that was found in testing
@@ -117,13 +117,13 @@ Expected result: [what "still fixed" looks like]
 
 ## Flywheel Connections
 ### Feeds Into
-- browser-verifier (S4-Testing)
-- ci-cd-pipeline-builder (S5-Deployment)
-- incident-runbook-writer (S6-Operations)
+- browser-verifier (S7-Testing)
+- ci-cd-pipeline-builder (S8-Deployment)
+- incident-runbook-writer (S9-Operations)
 
 ### Fed By
-- browser-verifier (S4-Testing)
-- tech-debt-detector (S2-Planning)
+- browser-verifier (S7-Testing)
+- tech-debt-detector (S5-Planning)
 
 ### Feedback Loop
 Track which regression tests fail repeatedly over time — a fix that keeps needing a new regression test signals the underlying code needs refactoring, not just more tests.

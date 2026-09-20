@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -24,7 +24,7 @@ metadata:
 This skill designs the full in-trial experience — in-app nudges and emails, segmented by what the user has actually done, timed against the trial countdown. It replaces one generic "your trial ends in 3 days" email with a playbook that treats an activated power user completely differently from someone who never logged in twice.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user is launching a new free trial and needs the in-trial experience designed from scratch

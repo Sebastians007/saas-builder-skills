@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # Tech Debt Detector
@@ -25,7 +25,7 @@ metadata:
 Reads either an existing codebase or a written plan/PRD/ADR and flags shortcuts, vague or hand-waved areas, and decisions nobody actually made — before they get built on top of and become expensive to fix. This is planning-stage risk control: catching "TODO: figure out auth later" or "we'll just hardcode this for now" while it's still cheap to fix, not six months in when three other features depend on the shortcut.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - Before starting a new build phase on top of an existing codebase
@@ -128,13 +128,13 @@ Reviewed against: <PRD/ADR name, or "no plan on file — flagged below">
 
 ## Flywheel Connections
 ### Feeds Into
-- `feature-roadmap-architect` (S2-Planning) — high-severity debt gets slotted into the roadmap before new features that depend on it
-- `architecture-decision-writer` (S2-Planning) — vague/undecided structural findings often need a real ADR to resolve
-- `security-review-lite` (S4-Testing) — structural risk findings around auth/data access feed the security pass
+- `feature-roadmap-architect` (S5-Planning) — high-severity debt gets slotted into the roadmap before new features that depend on it
+- `architecture-decision-writer` (S5-Planning) — vague/undecided structural findings often need a real ADR to resolve
+- `security-review-lite` (S7-Testing) — structural risk findings around auth/data access feed the security pass
 
 ### Fed By
-- `architecture-decision-writer` (S2-Planning) — provides the "what was actually decided" baseline to check the build against
-- `feature-task-breakdown` (S3-Building) — completed tasks are what gets reviewed for shortcuts taken during implementation
+- `architecture-decision-writer` (S5-Planning) — provides the "what was actually decided" baseline to check the build against
+- `feature-task-breakdown` (S6-Building) — completed tasks are what gets reviewed for shortcuts taken during implementation
 
 ### Feedback Loop
 Recurring high-severity findings in the same area (e.g., auth, data model) across multiple review passes should trigger a dedicated ADR and a roadmap phase to fix it properly, rather than being re-flagged and deferred indefinitely.

@@ -17,7 +17,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S2-Planning
+  stage: S5-Planning
 ---
 
 # Roadmap Visualizer
@@ -25,7 +25,7 @@ metadata:
 Takes the output of `prd-writer`, `feature-roadmap-architect`, or `mvp-feature-slicer` and publishes it as a live, visual roadmap board — phases as columns, features as cards, status tracked and updated over time. This exists because a markdown roadmap gets written once and never looked at again; a board the founder can actually glance at gets used.
 
 ## Stage
-This skill belongs to Stage S2: Planning
+This skill belongs to Stage S5: Planning
 
 ## When to Use
 - After `feature-roadmap-architect` produces a phased plan and the founder wants to see it, not read it
@@ -125,12 +125,12 @@ User: "mark the auth flow as done"
 
 ## Flywheel Connections
 ### Feeds Into
-- feature-task-breakdown (S3-Building) — once a phase's cards are visible, break the next one into build tasks
-- app-performance-report (S7-Growth) — roadmap completion is a useful context line in a status report
+- feature-task-breakdown (S6-Building) — once a phase's cards are visible, break the next one into build tasks
+- app-performance-report (S10-Growth) — roadmap completion is a useful context line in a status report
 
 ### Fed By
-- feature-roadmap-architect (S2-Planning) — supplies the phased structure this skill visualizes
-- mvp-feature-slicer (S2-Planning) — supplies the v1 scope that becomes the first board
+- feature-roadmap-architect (S5-Planning) — supplies the phased structure this skill visualizes
+- mvp-feature-slicer (S5-Planning) — supplies the v1 scope that becomes the first board
 
 ### Feedback Loop
 - As features get marked done on the board over multiple sessions, the completion trend itself becomes useful data for `self-improver` to judge whether the roadmap's original phase sizing was realistic.

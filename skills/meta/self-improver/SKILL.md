@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S8-Meta
+  stage: S11-Meta
 ---
 
 # Self Improver
@@ -23,7 +23,7 @@ metadata:
 Runs a retrospective on a finished project or sprint and converts the findings into specific, actionable changes to how the skill pack gets used — not a vague "communicate better" lesson, but concrete edits like "always run compliance-checker before deployment" or "skip technical-spike-brief for features under 2 days." This is the skill that exists specifically to break repeating failure loops.
 
 ## Stage
-This skill belongs to Stage S8: Meta
+This skill belongs to Stage S11: Meta
 
 ## When to Use
 - A project just launched, shipped, or was killed and there's a natural pause to reflect
@@ -148,12 +148,12 @@ Outcome: retro produces one concrete process change plus a "what worked" note to
 
 ## Flywheel Connections
 ### Feeds Into
-- `create-skill` (S8-Meta) — pack gaps found in retros become new skill candidates
-- `category-designer` (S8-Meta) — repeated gaps across multiple retros can justify a new stage
-- `feature-roadmap-architect` (S2-Planning) — timeline lessons feed into more realistic future estimates
+- `create-skill` (S11-Meta) — pack gaps found in retros become new skill candidates
+- `category-designer` (S11-Meta) — repeated gaps across multiple retros can justify a new stage
+- `feature-roadmap-architect` (S5-Planning) — timeline lessons feed into more realistic future estimates
 
 ### Fed By
-- `compliance-checker` (S8-Meta) — compliance gaps found late are a common retro input
+- `compliance-checker` (S11-Meta) — compliance gaps found late are a common retro input
 - `deal-review`-style operational skills across all stages — any completed project is fair input, but most directly `feature-roadmap-architect` (S2) and deployment skills (S5)
 
 ### Feedback Loop

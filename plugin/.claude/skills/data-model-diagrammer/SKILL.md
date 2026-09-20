@@ -16,7 +16,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S3-Building
+  stage: S6-Building
 ---
 
 # Data Model Diagrammer
@@ -24,7 +24,7 @@ metadata:
 Turns a plain-language description of a feature or app into a concrete database schema: tables, columns, types, keys, and relationships, plus a text-based ER diagram anyone can read without special tools. Gets the data layer right before any backend code is written, since a bad schema is the most expensive thing to fix later.
 
 ## Stage
-This skill belongs to Stage S3: Building
+This skill belongs to Stage S6: Building
 
 ## When to Use
 - Starting a new feature that needs to store data and the tables don't exist yet
@@ -144,13 +144,13 @@ Outcome: clean additive migration with zero risk to existing data.
 
 ## Flywheel Connections
 ### Feeds Into
-- api-endpoint-builder (S3-Building)
-- seed-data-generator (S6-Operations)
-- multi-tenant-manager (S6-Operations)
+- api-endpoint-builder (S6-Building)
+- seed-data-generator (S9-Operations)
+- multi-tenant-manager (S9-Operations)
 
 ### Fed By
-- feature-task-breakdown (S3-Building)
-- prd-writer (S2-Planning)
+- feature-task-breakdown (S6-Building)
+- prd-writer (S5-Planning)
 
 ### Feedback Loop
 When query performance issues or awkward joins show up during testing or operations, feed those findings back into this skill so future schemas index and normalize better from the start.

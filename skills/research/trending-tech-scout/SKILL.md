@@ -114,8 +114,8 @@ User: "current_stack: Next.js 13, Firebase, category_of_interest: general"
 ## Flywheel Connections
 ### Feeds Into
 - `tech-stack-finder` (S1-Research) — adopt-now findings become candidate stack components
-- `architecture-decision-writer` (S2-Planning) — documents a decision to switch or adopt something new
-- `tech-debt-detector` (S2-Planning) — freshness findings can flag components as debt-in-waiting
+- `architecture-decision-writer` (S5-Planning) — documents a decision to switch or adopt something new
+- `tech-debt-detector` (S5-Planning) — freshness findings can flag components as debt-in-waiting
 
 ### Fed By
 - `tech-stack-finder` (S1-Research) — an existing stack recommendation can be checked here for freshness before finalizing

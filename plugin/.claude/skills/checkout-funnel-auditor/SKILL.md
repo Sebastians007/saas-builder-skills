@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S7-Growth
+  stage: S10-Growth
   adapted_from: "rfstudioco/agentic_growth_team (MIT)"
 ---
 
@@ -24,7 +24,7 @@ metadata:
 This skill walks a SaaS checkout, signup, or plan-upgrade flow step by step, flags friction and trust gaps against a fixed checklist, and produces a ranked fix list scored by effort vs. expected lift. It replaces "checkout conversion feels low" with specific, fixable steps.
 
 ## Stage
-This skill belongs to Stage S7: Growth
+This skill belongs to Stage S10: Growth
 
 ## When to Use
 - The user has step-level drop-off numbers (from PostHog funnels) showing a specific checkout/upgrade step is losing people

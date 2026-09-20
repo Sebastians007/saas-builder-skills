@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S6-Operations
+  stage: S9-Operations
 ---
 
 # Backup & Recovery Builder
@@ -23,7 +23,7 @@ metadata:
 Builds a backup plan sized to a small live SaaS — regular automated backups of the database and any user-uploaded files, a written restore procedure, and a scheduled drill that actually proves the restore works. A backup nobody has restored from is not a backup, it's a hope.
 
 ## Stage
-This skill belongs to Stage S6: Operations
+This skill belongs to Stage S9: Operations
 
 ## When to Use
 - The app just went live with real customer data and no backup plan exists
@@ -112,7 +112,7 @@ This is the step most people skip and the whole point of this skill. Recommend r
 
 ## Error Handling
 - If the user has never backed up anything, don't overwhelm — set up the single most important backup (the primary database) first, then expand
-- If data_sensitivity is customer-pii or payment-data, flag that backups themselves need to be encrypted/access-restricted, and note this overlaps with compliance-checker (S8-Meta)
+- If data_sensitivity is customer-pii or payment-data, flag that backups themselves need to be encrypted/access-restricted, and note this overlaps with compliance-checker (S11-Meta)
 - If the database platform has native point-in-time recovery (like D1 time-travel), recommend using it as the baseline before building custom export jobs — don't reinvent what's already provided
 - If the user can't say what their acceptable data loss window is, default to "24 hours" and flag it as an assumption to revisit
 - If a restore drill has never been run, treat that as the single highest-priority action item in the output, above any new tooling
@@ -130,12 +130,12 @@ This is the step most people skip and the whole point of this skill. Recommend r
 
 ## Flywheel Connections
 ### Feeds Into
-- incident-runbook-writer (S6-Operations)
-- compliance-checker (S8-Meta)
+- incident-runbook-writer (S9-Operations)
+- compliance-checker (S11-Meta)
 
 ### Fed By
-- cloudflare-deployer (S5-Deployment)
-- data-model-diagrammer (S3-Building)
+- cloudflare-deployer (S8-Deployment)
+- data-model-diagrammer (S6-Building)
 
 ### Feedback Loop
 Every restore drill result (success, time taken, gaps found) should update the restore procedure and the next drill date — a drill that reveals a problem is the plan improving, not failing.

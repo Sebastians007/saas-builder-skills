@@ -15,7 +15,7 @@ compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, any AI agent
 metadata:
   author: saas-builder-skills
   version: "1.0"
-  stage: S8-Meta
+  stage: S11-Meta
 ---
 
 # Create Skill
@@ -23,7 +23,7 @@ metadata:
 Turns a repeated manual task into a properly formatted SKILL.md file that matches the rest of the pack exactly — same front-matter schema, same section structure, same quality bar. This is how the pack grows without every new skill looking like it was written by a different person with different habits.
 
 ## Stage
-This skill belongs to Stage S8: Meta
+This skill belongs to Stage S11: Meta
 
 ## When to Use
 - The founder has done the same multi-step task 3+ times manually (a sign it's worth codifying)
@@ -134,12 +134,12 @@ Outcome: no new file created; founder pointed to the existing skill.
 
 ## Flywheel Connections
 ### Feeds Into
-- `category-designer` (S8-Meta) — when a new skill doesn't fit any stage, this routes back to category design first
-- `skill-finder` (S8-Meta) — every new skill created must be added to skill-finder's reference table so it's discoverable
+- `category-designer` (S11-Meta) — when a new skill doesn't fit any stage, this routes back to category design first
+- `skill-finder` (S11-Meta) — every new skill created must be added to skill-finder's reference table so it's discoverable
 
 ### Fed By
-- `self-improver` (S8-Meta) — retrospectives are the most common source of "this should be a skill" ideas
-- `category-designer` (S8-Meta) — approved new stages/slots hand off directly into this skill for drafting
+- `self-improver` (S11-Meta) — retrospectives are the most common source of "this should be a skill" ideas
+- `category-designer` (S11-Meta) — approved new stages/slots hand off directly into this skill for drafting
 
 ### Feedback Loop
 Each newly created skill is a data point on where the pack had gaps — tracking how often `create-skill` fires for the same theme signals to `category-designer` when a cluster deserves its own stage.
