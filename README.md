@@ -2,10 +2,10 @@
 
 **Turn any AI into your app-building and growth team.**
 
-83 AI-powered skills across 10 stages with a closed-loop flywheel. Research the idea, plan it properly, build one feature at a time, actually verify it works, deploy it, run it, build the funnel that sells it, write the copy, and grow it — with Claude Code or any AI agent.
+85 AI-powered skills across 10 stages with a closed-loop flywheel. Research the idea, plan it properly, build one feature at a time, actually verify it works, deploy it, run it, build the funnel that sells it, write the copy, grow it, and see the whole thing visually instead of buried in markdown — with Claude Code or any AI agent.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-83-brightgreen)](skills/)
+[![Skills](https://img.shields.io/badge/skills-85-brightgreen)](skills/)
 
 Works with: **Claude Code** · **ChatGPT** · **Gemini CLI** · **Cursor** · **Windsurf** · **any AI that reads text**
 
@@ -47,10 +47,10 @@ S10 Copywriting ← S9 Funnels ← S8 Meta ← S7 Growth ← S6 Operations
 ### S1 — Research (10 skills)
 tech-stack-finder · pricing-model-calculator · competitor-teardown · feature-differentiator · underserved-market-finder · saas-idea-validator · unique-value-prop-audit · launch-directory-submitter · user-acquisition-analyzer · trending-tech-scout
 
-### S2 — Planning (7 skills)
-**The anchor stage.** `prd-writer` and `mvp-feature-slicer` are the two skills that fix the "6 months, no working app" failure mode — they force real clarity before any code gets written.
+### S2 — Planning (8 skills)
+**The anchor stage.** `prd-writer` and `mvp-feature-slicer` are the two skills that fix the "6 months, no working app" failure mode — they force real clarity before any code gets written. `roadmap-visualizer` turns the plan into a live tracked board instead of a markdown file nobody reopens.
 
-prd-writer · architecture-decision-writer · tech-debt-detector · defensibility-calculator · user-story-writer · feature-roadmap-architect · mvp-feature-slicer
+prd-writer · architecture-decision-writer · tech-debt-detector · defensibility-calculator · user-story-writer · feature-roadmap-architect · mvp-feature-slicer · roadmap-visualizer
 
 ### S3 — Building (7 skills)
 feature-task-breakdown · technical-spike-brief · data-model-diagrammer · api-endpoint-builder · ui-component-builder · auth-flow-builder · onboarding-flow-builder
@@ -80,10 +80,10 @@ Cross-cutting utilities that operate on the pack itself.
 
 category-designer · compliance-checker · create-skill · funnel-planner · self-improver · skill-finder
 
-### S9 — Funnels (15 skills)
-Real funnel *types* with page templates included, plus a router and a copy skill. Adapted from funnel-architect-plugin.
+### S9 — Funnels (16 skills)
+Real funnel *types* with page templates included, plus a router, a copy skill, and `funnel-map-visualizer` — which draws the whole funnel as one visual map with real per-step conversion data once PostHog is connected. Adapted from funnel-architect-plugin.
 
-application-funnel · challenge-funnel · ecommerce-funnel · evergreen-webinar-funnel · group-funnel · high-ticket-funnel · membership-funnel · optin-funnel · product-launch-funnel · saas-funnel · tripwire-funnel · vsl-funnel · webinar-funnel · funnel-select · funnel-copy
+application-funnel · challenge-funnel · ecommerce-funnel · evergreen-webinar-funnel · group-funnel · high-ticket-funnel · membership-funnel · optin-funnel · product-launch-funnel · saas-funnel · tripwire-funnel · vsl-funnel · webinar-funnel · funnel-select · funnel-copy · funnel-map-visualizer
 
 ### S10 — Copywriting (8 skills)
 Direct-response copywriting frameworks, reframed for SaaS landing pages, onboarding, and pricing — not generic ad-agency copy.

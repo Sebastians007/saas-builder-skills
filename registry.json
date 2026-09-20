@@ -1,8 +1,8 @@
 {
   "name": "saas-builder-skills",
-  "description": "83 AI-powered skills across 10 stages for building, testing, deploying, growing, and running full sales/marketing funnels for web apps and SaaS products.",
-  "version": "2.0.0",
-  "skill_count": 83,
+  "description": "85 AI-powered skills across 10 stages for building, testing, deploying, growing, and visually tracking SaaS apps and their funnels.",
+  "version": "2.1.0",
+  "skill_count": 85,
   "skills": [
     {
       "slug": "competitor-teardown",
@@ -93,6 +93,12 @@
       "folder": "skills/planning/prd-writer",
       "stage": "S2-Planning",
       "description": "Turns a vague app idea into a real Product Requirements Doc that locks down the problem, the one target user, the core user flows, and a hard line between must-have and nice-to-have features before any code gets written."
+    },
+    {
+      "slug": "roadmap-visualizer",
+      "folder": "skills/planning/roadmap-visualizer",
+      "stage": "S2-Planning",
+      "description": "Turns a written roadmap or feature list into a live, visual, trackable board (phases as columns, features as cards with status) published as an Artifact \u2014 instead of a markdown file nobody re-opens."
     },
     {
       "slug": "tech-debt-detector",
@@ -393,6 +399,12 @@
       "folder": "skills/funnels/funnel-copy",
       "stage": "S9-Funnels",
       "description": "Writes the actual headline, CTA, benefit stack, objection-handling, and email copy for any funnel page using proven direct-response formulas (AIDA, PAS, benefit stacking) instead of generic marketing-speak."
+    },
+    {
+      "slug": "funnel-map-visualizer",
+      "folder": "skills/funnels/funnel-map-visualizer",
+      "stage": "S9-Funnels",
+      "description": "Turns a planned or live funnel into one visual map showing every step, the page/copy at each step, and (once tracking exists) real conversion numbers per step \u2014 published as an Artifact instead of scattered SKILL.md workflow output."
     },
     {
       "slug": "funnel-select",
