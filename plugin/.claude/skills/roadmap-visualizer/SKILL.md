@@ -40,7 +40,7 @@ This skill belongs to Stage S5: Planning
 ```
 {
   roadmap_source: string       # phased feature list, usually from feature-roadmap-architect output
-  project_name: string         # what to title the board and name the project folder from
+  project_name: string         # what to title the board — ask for the brand/business name too if not already known from context
   current_status: object[]     # (optional) known status per feature: "not-started" | "in-progress" | "done" | "blocked"
   update_mode: string          # "create" | "update" — whether this is a new board or refreshing an existing one
 }
@@ -52,7 +52,7 @@ This skill belongs to Stage S5: Planning
 Read the phased roadmap (from `feature-roadmap-architect` or the PRD). Each phase becomes a column. Each feature/task becomes a card. If status isn't given, ask the founder which items are done, in progress, or not started — don't guess.
 
 ### Step 2: Set Up the Project Folder
-Create `[project-name-slug]-roadmap/` in the user's working directory if it doesn't already exist (on an update, reuse the existing one). Inside it:
+Confirm the brand/business name if not already clear from context (see `shared/references/output-conventions.md` — never default to the project name alone). Create `[brand-slug]-[project-name-slug]-roadmap/` in the user's working directory if it doesn't already exist (on an update, reuse the existing one). Inside it:
 - `data/roadmap.json` — the structured source of truth: phases, cards, statuses
 - `roadmap.html` — the rendered board, regenerated from `roadmap.json` every time
 

@@ -39,6 +39,7 @@ This skill belongs to Stage S1: Research
 ## Input Schema
 ```
 {
+  brand_or_business: string       # required for the project folder name — ask if not already known from context
   idea_or_pivot: string           # what's being researched — the offer/product/service
   target_segment: string?         # if already narrowed, otherwise the skill helps find it
   geography: string?              # default: United States
@@ -58,7 +59,7 @@ Tell the user what will be built before building it:
 Don't wait for elaborate confirmation — a simple "yes"/"go"/"do it" is enough, same as the funnel orchestrator's approval gate.
 
 ### Step 3: Set Up the Project Folder and Publish a Skeleton
-Before running any component skill, create `[idea-slug]-research/` in the user's working directory:
+Before running any component skill, confirm the brand/business name if it isn't already clear from context — never default to the offer name alone (see `shared/references/output-conventions.md`). Create `[brand-slug]-[idea-slug]-research/` in the user's working directory:
 - `brief/research-report.md` — the compiled report as markdown (written last, Step 5)
 - `data/report-sections.json` — structured section data, updated as each component finishes
 - `report.html` — the rendered page, written immediately with every section marked "researching..." and regenerated after each component completes

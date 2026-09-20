@@ -52,7 +52,7 @@ This skill belongs to Stage S3: Funnel Build
 Pull the step sequence from `funnel-builder-orchestrator`'s output for the chosen type (e.g. Low-Ticket/Tripwire: landing page → order bump → one-time-offer → thank-you/upsell). Confirm the order and what lives at each step (page, email, ad) before building anything.
 
 ### Step 2: Set Up the Project Folder
-Reuse the funnel's existing project folder if `funnel-builder-orchestrator` already created one (`[offer]-funnel/`); otherwise create it. Inside it:
+Reuse the funnel's existing project folder if `funnel-builder-orchestrator` already created one (`[brand]-[offer]-funnel/`); otherwise create it, confirming the brand/business name first if not already known (see `shared/references/output-conventions.md`). Inside it:
 - `data/funnel-map.json` — the structured source of truth: steps, types, copy summaries, live numbers if any
 - `funnel-map.html` — the rendered map, regenerated from `funnel-map.json` every time
 

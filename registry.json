@@ -1,7 +1,7 @@
 {
   "name": "saas-builder-skills",
-  "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence, for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps \u2014 all output saved as local files, never published Artifacts.",
-  "version": "4.2.0",
+  "description": "87 AI-powered skills across 11 stages, ordered to match real usage sequence.",
+  "version": "4.3.0",
   "skill_count": 87,
   "skills": [
     {

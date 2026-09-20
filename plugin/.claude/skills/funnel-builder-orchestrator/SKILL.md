@@ -88,6 +88,7 @@ those. If you can make a smart assumption for a missing detail, make it.
 
 **The full intake checklist** (what you need — get it however you can):
 
+0. **The brand/business:** What business or brand is this for? (Required for the project folder name — never assume, always confirm if not already stated.)
 1. **The offer:** What is it and who is it for?
 2. **The transformation:** What is the one concrete outcome the customer gets?
 3. **The price:** Free, paid, or TBD?
@@ -332,21 +333,25 @@ You now have everything needed to set it up:
 
 ### Creating the Folder
 
-Derive a slug from the offer name:
+**Confirm the brand/business name first if it isn't already clear from context** — never derive the folder name from the offer alone. A founder running multiple businesses or brands needs to tell projects apart at a glance in a flat folder listing (see `shared/references/output-conventions.md`).
+
+Derive a slug from the brand name AND the offer name:
 - Lowercase, spaces → hyphens, remove special characters
-- Append `-funnel`
-- Example: "Cash Flow Academy Webinar" → `cash-flow-academy-webinar-funnel`
+- Format: `[brand-slug]-[offer-slug]-funnel`
+- Example: brand "Cash Flow Academy", offer "Webinar" → `cash-flow-academy-webinar-funnel` (brand and offer happen to overlap here — for a distinct brand + offer, e.g. brand "SmartBuzzAI", offer "Shadow AI Risk Review", it's `smartbuzzai-shadow-ai-risk-review-funnel`)
 
 Create the folder inside the user's workspace (the mounted folder):
 
 ```python
 import os, re, datetime
 
+brand_name = "[BRAND/BUSINESS NAME FROM INTAKE]"
 offer_name = "[OFFER NAME FROM INTAKE]"
 funnel_type = "[FUNNEL TYPE]"  # e.g. "webinar", "lead-magnet", "book"
 
-slug = re.sub(r"[^a-z0-9]+", "-", offer_name.lower()).strip("-")
-project_dir = os.path.join("[WORKSPACE PATH]", f"{slug}-funnel")
+brand_slug = re.sub(r"[^a-z0-9]+", "-", brand_name.lower()).strip("-")
+offer_slug = re.sub(r"[^a-z0-9]+", "-", offer_name.lower()).strip("-")
+project_dir = os.path.join("[WORKSPACE PATH]", f"{brand_slug}-{offer_slug}-funnel")
 os.makedirs(project_dir, exist_ok=True)
 
 # Always create these core folders

@@ -23,10 +23,14 @@ Every visual/document output this pack produces (research reports, roadmap board
 
 ## Project folder naming convention
 
-`[idea-or-offer-slug]-[type]/` in the user's current working directory, e.g.:
-- `shadow-ai-review-research/` (research-report-builder)
-- `shadow-ai-review-funnel/` (funnel-builder-orchestrator)
-- `my-app-roadmap/` (roadmap-visualizer)
+`[brand-or-business-slug]-[idea-or-offer-slug]-[type]/` in the user's current working directory — **always lead with the brand/business name**, never just the offer name. A founder running multiple businesses (or an agency running multiple clients) needs to tell projects apart at a glance in a flat folder listing — `shadow-ai-review-research/` could belong to anyone; `smartbuzzai-shadow-ai-review-research/` can only belong to one thing.
+
+Examples:
+- `smartbuzzai-shadow-ai-review-research/` (research-report-builder)
+- `smartbuzzai-shadow-ai-review-funnel/` (funnel-builder-orchestrator)
+- `acmeapp-roadmap/` (roadmap-visualizer)
+
+**If the brand/business name isn't already known from context, ask for it before creating the folder** — don't default to the offer name alone and don't guess.
 
 Standard subfolders:
 - `brief/` — the compiled report/brief as markdown, and any PDF export
