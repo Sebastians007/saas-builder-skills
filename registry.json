@@ -1,8 +1,8 @@
 {
   "name": "saas-builder-skills",
-  "description": "84 AI-powered skills across 11 stages for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps.",
-  "version": "3.1.0",
-  "skill_count": 84,
+  "description": "85 AI-powered skills across 11 stages for building, testing, deploying, growing, marketing, and generating complete funnel assets for SaaS apps.",
+  "version": "3.2.0",
+  "skill_count": 85,
   "skills": [
     {
       "slug": "competitor-teardown",
@@ -257,6 +257,12 @@
       "description": "Generates realistic fake data for development, testing, and demos so an app can be built, tested, and shown off without touching real customer data. Use this skill when the user asks about \"I need test data for my app\", \"generate fake users for my database\", \"seed my dev database\", \"I want to demo m"
     },
     {
+      "slug": "twelve-factor-auditor",
+      "folder": "skills/operations/twelve-factor-auditor",
+      "stage": "S6-Operations",
+      "description": "Audits a SaaS app against the Twelve-Factor App methodology (2011, still the cloud-native standard) and reports exactly which of the 12 rules the app is breaking, in plain language, with a concrete fix for each. Use this skill when the user asks about \"is my app cloud-native\", \"am I doing this the r"
+    },
+    {
       "slug": "ab-test-generator",
       "folder": "skills/growth/ab-test-generator",
       "stage": "S7-Growth",
@@ -395,6 +401,12 @@
       "description": "Extracts one specific, real buyer for the SaaS product \u2014 not a demographic bucket \u2014 so every later headline, email, and pricing page is written to a single person instead of \"our users\" in general. Use this skill when the user asks about defining their target customer, ideal user, or buyer persona, "
     },
     {
+      "slug": "copy-framework-selector",
+      "folder": "skills/copywriting/copy-framework-selector",
+      "stage": "S10-Copywriting",
+      "description": "Picks the right classic copywriting framework (AIDA, PAS, BAB, PASTOR, StoryBrand SB7, QUEST, 4 Ps) for a piece of copy based on the audience's awareness stage, instead of defaulting to one framework for everything. Use this skill when the user asks about \"what structure should this copy follow\", \"w"
+    },
+    {
       "slug": "full-funnel-campaign-orchestrator",
       "folder": "skills/copywriting/full-funnel-campaign-orchestrator",
       "stage": "S10-Copywriting",
@@ -405,12 +417,6 @@
       "folder": "skills/copywriting/generic-language-killer",
       "stage": "S10-Copywriting",
       "description": "Strips vague, corporate, or AI-sounding language out of SaaS copy and replaces it with specific, human wording \u2014 a final QA pass that catches \"seamlessly empowers your workflow\" before it ships. Use this skill when the user asks about copy that sounds generic, fluffy, or AI-written, or says \"this so"
-    },
-    {
-      "slug": "headline-matrix",
-      "folder": "skills/copywriting/headline-matrix",
-      "stage": "S10-Copywriting",
-      "description": "Generates a structured matrix of headline variations for a SaaS landing page, pricing page, ad, or email subject line using proven direct-response headline formulas, grouped by type so testing covers real angle variation instead of minor word swaps. Use this skill when the user asks about writing la"
     },
     {
       "slug": "objection-crusher",

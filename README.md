@@ -2,10 +2,10 @@
 
 **Turn any AI into your app-building and growth team.**
 
-84 AI-powered skills across 11 stages with a closed-loop flywheel. Research the idea, plan it properly, build one feature at a time, actually verify it works, deploy it, run it, pick the right funnel type and generate every finished asset it needs, write the copy, grow it, and see the whole thing visually instead of buried in markdown — with Claude Code or any AI agent.
+85 AI-powered skills across 11 stages with a closed-loop flywheel. Research the idea, plan it properly, build one feature at a time, actually verify it works, deploy it, run it, pick the right funnel type and generate every finished asset it needs, write the copy, grow it, and see the whole thing visually instead of buried in markdown — with Claude Code or any AI agent.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-84-brightgreen)](skills/)
+[![Skills](https://img.shields.io/badge/skills-85-brightgreen)](skills/)
 
 Works with: **Claude Code** · **ChatGPT** · **Gemini CLI** · **Cursor** · **Windsurf** · **any AI that reads text**
 
@@ -21,7 +21,7 @@ Structurally adapted from three MIT-licensed source repos, fully rewritten and r
 
 ## Repo structure
 
-- `skills/{stage}/{skill-name}/SKILL.md` — the 84 skill definitions
+- `skills/{stage}/{skill-name}/SKILL.md` — the 85 skill definitions
 - `shared/references/` — glossary + flywheel connection map
 - `registry.json` — machine-readable skill catalog
 - `.claude-plugin/` — Claude Code plugin manifest
@@ -37,7 +37,7 @@ claude plugin install saas-builder-skills@saas-builder-skills
 
 Or drop the `skills/*/*/` folders directly into `~/.claude/skills/` for a flat, no-plugin install.
 
-## The 10-stage flywheel
+## The 11-stage flywheel
 
 ```
 S1 Research → S2 Planning → S3 Building → S4 Testing → S5 Deployment
@@ -67,10 +67,10 @@ Built for **Cloudflare** (Workers/Pages/D1/R2 + wrangler), not Vercel.
 
 cloudflare-deployer · ci-cd-pipeline-builder · domain-dns-setup · env-secrets-manager
 
-### S6 — Operations (5 skills)
-Scoped for a solo founder or tiny team — no enterprise over-engineering.
+### S6 — Operations (6 skills)
+Scoped for a solo founder or tiny team — no enterprise over-engineering. `twelve-factor-auditor` checks the app against the decades-old Twelve-Factor App standard (config, statelessness, dev/prod parity) before/after a first production deploy.
 
-monitoring-alerting-setup · backup-recovery-builder · multi-tenant-manager · incident-runbook-writer · seed-data-generator
+monitoring-alerting-setup · backup-recovery-builder · multi-tenant-manager · incident-runbook-writer · seed-data-generator · twelve-factor-auditor
 
 ### S7 — Growth (13 skills)
 Post-launch only. All data-driven skills here point at **PostHog** (free tier, open-source) as the analytics backbone — no paid BI tools. `growth-dashboard-builder` is the flagship: one central place to see acquisition → activation → retention → revenue → referral, instead of guessing.
@@ -88,9 +88,9 @@ Routing and visualization only — actual funnel-type building and asset generat
 funnel-select · funnel-map-visualizer
 
 ### S10 — Copywriting (8 skills)
-Direct-response copywriting frameworks, reframed for SaaS landing pages, onboarding, and pricing — not generic ad-agency copy.
+Direct-response copywriting frameworks, reframed for SaaS landing pages, onboarding, and pricing — not generic ad-agency copy. `copy-framework-selector` picks AIDA/PAS/BAB/PASTOR/StoryBrand/QUEST/4-Ps based on the audience's awareness stage instead of defaulting to one framework for everything. (`headline-matrix` was removed — S11's `headline-hook-generator` covers the same job with more depth.)
 
-avatar-extraction · offer-extraction · headline-matrix · objection-crusher · schwartz-awareness-mapper · ad-angle-multiplier · full-funnel-campaign-orchestrator · generic-language-killer
+avatar-extraction · offer-extraction · objection-crusher · schwartz-awareness-mapper · ad-angle-multiplier · full-funnel-campaign-orchestrator · generic-language-killer · copy-framework-selector
 
 ### S11 — Asset Generation (13 skills)
 **Proprietary — owned outright, not MIT-adapted.** Produces complete, ready-to-deploy copy and HTML in one pass (not outlines or placeholders): full pages, full email sequences, full scripts. `funnel-builder-orchestrator` runs the whole build end-to-end and is the entry point; every other skill here also works standalone.
