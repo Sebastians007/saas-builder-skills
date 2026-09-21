@@ -37,7 +37,7 @@ This skill belongs to Stage S9: Operations
 ## Input Schema
 ```
 team_size: number                  # usually 1-3 for this pack's audience
-roles: string[] | none             # e.g. ["Sebastian - founder/eng"], empty if solo
+roles: string[] | none             # e.g. ["Alex - founder/eng"], empty if solo
 customer_comm_channel: string      # e.g. "email list", "status page", "in-app banner", "none yet"
 critical_systems: string[]         # from monitoring-alerting-setup output if available
 has_status_page: boolean

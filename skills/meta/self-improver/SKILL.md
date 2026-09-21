@@ -133,12 +133,12 @@ Planned: <x> | Actual: <y> | Variance: <why, in one line>
 
 ## Examples
 **Example 1**
-User: "SalesPro deployment always takes way longer than expected. Third time now."
+User: "the deployment pipeline deployment always takes way longer than expected. Third time now."
 The skill checks this against prior retros, confirms it's a genuine repeat, traces it to skipped `env-secrets-manager` setup each time, and writes a hard standing rule: "always run env-secrets-manager before first cloudflare-deployer call on any new environment."
 Outcome: a specific, checkable rule added to prevent a 4th recurrence.
 
 **Example 2**
-User: "We just launched BlackTally, let's do a quick retro."
+User: "We just launched Acme, let's do a quick retro."
 The skill reconstructs the timeline, finds compliance work was rushed at the last minute (a skipped-step finding, not bad luck since `compliance-checker` existed and wasn't run early), and adds the standing rule to run compliance-checker at planning stage, not launch week.
 Outcome: retro produces one concrete process change plus a "what worked" note to repeat (fast core build).
 

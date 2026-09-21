@@ -104,12 +104,12 @@ The expected experience is conversational:
 
 ```text
 User:
-SmartBuzzAI is pivoting into AI cybersecurity.
+Acme is pivoting into AI cybersecurity.
 First service is an AI Use Policy and Shadow AI Risk Review.
 
 Orchestrator:
-- opens or creates SmartBuzzAI/project.json
-- opens or creates SmartBuzzAI/hub.html
+- opens or creates Acme/project.json
+- opens or creates Acme/hub.html
 - classifies this as an existing company + new service pivot
 - reads existing website/context if available
 - researches the market and competitors

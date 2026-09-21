@@ -52,7 +52,7 @@ This skill belongs to Stage S5: Planning
 Read the phased roadmap (from `feature-roadmap-architect` or the PRD). Each phase becomes a column. Each feature/task becomes a card. If status isn't given, ask the founder which items are done, in progress, or not started — don't guess.
 
 ### Step 2: Set Up the Brand Folder and Find the Shared Hub
-Confirm the brand/business name if not already clear from context. The root folder is the brand name alone (e.g. `SmartBuzzAI`), never the offer/project name. **Check whether `[BrandName]/hub.html` and `hub-data.json` already exist** — if so, read them and add the Roadmap section's data rather than creating a new folder or a competing page. If no hub exists yet, create `[BrandName]/hub.html` and `hub-data.json` with all 7 sections, marking everything but Roadmap as "not started yet."
+Confirm the brand/business name if not already clear from context. The root folder is the brand name alone (e.g. `Acme`), never the offer/project name. **Check whether `[BrandName]/hub.html` and `hub-data.json` already exist** — if so, read them and add the Roadmap section's data rather than creating a new folder or a competing page. If no hub exists yet, create `[BrandName]/hub.html` and `hub-data.json` with all 7 sections, marking everything but Roadmap as "not started yet."
 
 ### Step 3: Write the Roadmap Data into the Shared Data File
 Update the Roadmap section of `hub-data.json` with the phase/card/status structure. This file is what actually gets edited when status changes — `hub.html` is always a full regeneration of it, never hand-edited.

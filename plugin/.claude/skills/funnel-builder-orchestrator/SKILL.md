@@ -333,7 +333,7 @@ You now have everything needed to set it up:
 
 ### Creating the Folder
 
-**Confirm the brand/business name first if it isn't already clear from context.** The root folder is the brand name alone — exactly as the user writes it (e.g. `SmartBuzzAI`), never slugified, and never with the offer appended. The same way a company isn't named "CrowdStrike-Falcon-EDR" on disk, one business gets one root folder no matter how many offers or funnels it has (see `shared/references/output-conventions.md`). The offer name is a detail inside that folder, not part of its name.
+**Confirm the brand/business name first if it isn't already clear from context.** The root folder is the brand name alone — exactly as the user writes it (e.g. `Acme`), never slugified, and never with the offer appended. The same way a company isn't named "CrowdStrike-Falcon-EDR" on disk, one business gets one root folder no matter how many offers or funnels it has (see `shared/references/output-conventions.md`). The offer name is a detail inside that folder, not part of its name.
 
 Reuse the brand's existing root folder if one already exists (from a prior research or roadmap run, or a previous funnel) — never create a second root folder for the same business.
 
@@ -342,7 +342,7 @@ Create `[BrandName]/funnel/` inside the user's workspace:
 ```python
 import os, re, datetime
 
-brand_name = "[BRAND/BUSINESS NAME FROM INTAKE]"   # exact user-facing name, e.g. "SmartBuzzAI" — do not lowercase or slugify
+brand_name = "[BRAND/BUSINESS NAME FROM INTAKE]"   # exact user-facing name, e.g. "Acme" — do not lowercase or slugify
 offer_name = "[OFFER NAME FROM INTAKE]"             # used inside the folder for file/brief content, never for the folder name itself
 funnel_type = "[FUNNEL TYPE]"  # e.g. "webinar", "lead-magnet", "book"
 
@@ -484,7 +484,7 @@ numbered folder prefixes keep assets in build order so the folder reads like a
 checklist.
 
 **After saving each file**, include a one-liner in the chat output:
-> `✓ Saved → SmartBuzzAI/funnel/01-webinar-script/webinar-script.md`
+> `✓ Saved → Acme/funnel/01-webinar-script/webinar-script.md`
 
 This lets the user track progress in real time and know exactly where to find
 each piece.

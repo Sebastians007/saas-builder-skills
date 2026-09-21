@@ -155,7 +155,7 @@ This is a baseline operational gap-check, not legal advice. For sensitive data (
 
 ## Examples
 **Example 1**
-User: "Can I open signups on BlackTally tomorrow? We handle tax prep client data."
+User: "Can I open signups on Acme tomorrow? We handle tax prep client data."
 The skill flags `sensitive_data_flag: true` (financial + potentially SSN-adjacent data), runs the WISP-style check, finds no written retention policy and no DPA with the hosting provider, and marks these as blockers.
 Outcome: launch recommendation is "fix blockers first" with a 2-item punch list before go-live.
 

@@ -7,7 +7,7 @@ The project root uses the user-facing brand/product/company name when known.
 Examples:
 
 ```text
-SmartBuzzAI/
+Acme/
 Acme CRM/
 Internal Finance Tool/
 ```

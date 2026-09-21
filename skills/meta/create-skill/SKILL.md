@@ -120,7 +120,7 @@ Before presenting, silently check:
 ## Examples
 **Example 1**
 User: "I keep manually writing the same 'what changed this week' update for myself every Friday. Can this be a skill?"
-The skill checks the master list, finds no exact match, confirms S7-Growth or S8-Meta fit, and drafts `weekly-status-writer` with a 5-step workflow (pull recent git commits, pull recent decisions, draft summary, self-check for hero-copy tone per Sebastian's engineer-tone preference, output).
+The skill checks the master list, finds no exact match, confirms S7-Growth or S8-Meta fit, and drafts `weekly-status-writer` with a 5-step workflow (pull recent git commits, pull recent decisions, draft summary, self-check for hero-copy tone per the user's engineer-tone preference, output).
 Outcome: new SKILL.md file ready to add to the pack.
 
 **Example 2**
